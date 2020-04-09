@@ -19,19 +19,8 @@ bot.on('message', async (msg) =>{
     cmd = cmdArray[0]
     args = cmdArray.slice(1)
 
-    //let command = commands.getCommand(cmd);
-    //if(command) command.run(bot, msg, args)
-
-
-
-    if (cmd === 'join') {
-      // Only try to join the sender's voice channel if they are in one themselves
-      if (msg.member.voice.channel) {
-        const connection = await msg.member.voice.channel.join();
-      } else {
-        msg.reply('You need to join a voice channel first!');
-      }
-    }
+    let command = commands.getCommand(cmd);
+    if(command) command.run(bot, msg, args)
 
   }
 });
