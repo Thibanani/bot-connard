@@ -21,7 +21,21 @@ bot.on('message', async (msg) =>{
 
     let command = commands.getCommand(cmd);
     if(command) command.run(bot, msg, args)
+
+
+
+    if (cmd === 'join') {
+      // Only try to join the sender's voice channel if they are in one themselves
+      if (message.member.voice.channel) {
+        const connection = await message.member.voice.channel.join();
+      } else {
+        message.reply('You need to join a voice channel first!');
+      }
+    }
+
   }
 });
+
+
 
 bot.login(config.token);
