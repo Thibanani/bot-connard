@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const bot = new Discord.Client({DisableEveryone: true});
 const config = require('./config.js');
 const commands = require('./commands.js');
-const dispatcher = connection.play('./audio.mp3');
+
 
 
 bot.on('ready', async() =>{
