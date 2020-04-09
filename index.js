@@ -10,6 +10,9 @@ bot.on('ready', async() =>{
 bot.on('message', async (msg) =>{
   if(msg.content == 'bonjour'){
     msg.channel.send('Yo!')
+    if(msg.content == 'jtm'){
+      msg.channel.send('connard!')
+    }
   }
 });
 
