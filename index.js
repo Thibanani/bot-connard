@@ -41,12 +41,6 @@ bot.on('message', async (msg) =>{
           msg.reply('You need to join a voice channel first!');
         }
       }
-      if(cmd==='parle'){
-
-
-
-
-    }
 });
 
 
