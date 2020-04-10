@@ -23,7 +23,7 @@ bot.on('message', async (msg) =>{
     //let command = commands.getCommand(cmd);
     //if(command) command.run(bot, msg, args)
 
-      if (cmd.content === 'viens') {
+      if (cmd === 'viens') {
           if (msg.member.voice.channel) {
             const connection = await msg.member.voice.channel.join();
 
