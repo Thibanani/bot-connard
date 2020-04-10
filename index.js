@@ -35,12 +35,13 @@ bot.on('message', async (msg) =>{
 
             dispatcher.setVolume(0.5); // half the volume
 
-          }
 
-        } else {
-          msg.reply('You need to join a voice channel first!');
-        }
+
+          } else {
+            msg.reply('You need to join a voice channel first!');
+          }
       }
+  }
 });
 
 
