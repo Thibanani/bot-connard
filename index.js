@@ -25,26 +25,26 @@ bot.on('message', async (msg) =>{
 
       if (cmd === 'viens') {
         if (msg.member.voice.channel) {
-
-          const ytdl = require('ytdl-core');
-          const connection = await msg.member.voice.channel.join();
-          //const dispatcher = connection.play('./audio.mp3');
-          const dispatcher = connection.play(ytdl('https://www.youtube.com/watch?v=ZlAU_w7-Xp8', { filter: 'audioonly' }));
-
-          dispatcher.pause();
-          dispatcher.resume();
-
-          dispatcher.setVolume(0.5); // half the volume
-
-          dispatcher.on('finish', () => {
-            console.log('Finished playing!');
-          });
-
-          dispatcher.destroy(); // end the stream
-
         } else {
           msg.reply('You need to join a voice channel first!');
         }
+      }
+      if(cmd==='parle'){
+        const ytdl = require('ytdl-core');
+        const connection = await msg.member.voice.channel.join();
+        //const dispatcher = connection.play('./audio.mp3');
+        const dispatcher = connection.play(ytdl('https://www.youtube.com/watch?v=ZlAU_w7-Xp8', { filter: 'audioonly' }));
+
+        dispatcher.pause();
+        dispatcher.resume();
+
+        dispatcher.setVolume(0.5); // half the volume
+
+        dispatcher.on('finish', () => {
+          console.log('Finished playing!');
+        });
+
+        dispatcher.destroy(); // end the stream
       }
 
     }
