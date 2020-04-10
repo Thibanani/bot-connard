@@ -26,20 +26,19 @@ bot.on('message', async (msg) =>{
       if (cmd === 'viens') {
           if (msg.member.voice.channel) {
             const connection = await msg.member.voice.channel.join();
-
-            const dispatcher = connection.play('/home/discord/audio.mp3');
-            //const dispatcher = connection.play(ytdl('https://www.youtube.com/watch?v=ZlAU_w7-Xp8', { filter: 'audioonly' }));
-
-            dispatcher.pause();
-            dispatcher.resume();
-
-            dispatcher.setVolume(0.5); // half the volume
-
-
-
           } else {
             msg.reply('You need to join a voice channel first!');
           }
+      }
+
+      if (cmd === 'parle') {
+        const dispatcher = connection.play('./audio.mp3');
+        //const dispatcher = connection.play(ytdl('https://www.youtube.com/watch?v=ZlAU_w7-Xp8', { filter: 'audioonly' }));
+
+        dispatcher.pause();
+        dispatcher.resume();
+
+        dispatcher.setVolume(0.5); // half the volume
       }
   }
 });
