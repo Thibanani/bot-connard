@@ -7,7 +7,7 @@ module.exports.run = async (bot, msg, args)=> {
     dispatcher.pause();
     dispatcher.resume();
 
-    dispatcher.setVolume(1.5);
+    dispatcher.setVolume(3);
     dispatcher.on('finish', () => {
       console.log('Finished playing!');
     });
