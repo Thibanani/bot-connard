@@ -26,25 +26,26 @@ bot.on('message', async (msg) =>{
       if (cmd === 'viens') {
           if (msg.member.voice.channel) {
             const connection = await msg.member.voice.channel.join();
-            connection.play('./audio.mp3');
+            //connection.play('./audio.mp3');
           } else {
             msg.reply('You need to join a voice channel first!');
           }
       }
 
       if (cmd === 'parle') {
+        const connection = await msg.member.voice.channel.join();
         connection.play('./audio.mp3');
-        //const dispatcher = connection.play(ytdl('https://www.youtube.com/watch?v=ZlAU_w7-Xp8', { filter: 'audioonly' }));
+        const dispatcher = connection.play(ytdl('https://www.youtube.com/watch?v=ZlAU_w7-Xp8', { filter: 'audioonly' }));
 
-        //dispatcher.pause();
-        //dispatcher.resume();
+        dispatcher.pause();
+        dispatcher.resume();
 
-        //dispatcher.setVolume(0.5); // half the volume
-        //dispatcher.on('finish', () => {
-          //console.log('Finished playing!');
-        //});
+        dispatcher.setVolume(1.5);
+        dispatcher.on('finish', () => {
+          console.log('Finished playing!');
+        });
 
-        //dispatcher.destroy(); // end the stream
+        dispatcher.destroy(); // end the stream
       }
   }
 });
