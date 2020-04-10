@@ -20,8 +20,8 @@ bot.on('message', async (msg) =>{
     cmd = cmdArray[0]
     args = cmdArray.slice(1)
 
-    let command = commands.getCommand(cmd);
-    if(command) command.run(bot, msg, args)
+    //let command = commands.getCommand(cmd);
+    //if(command) command.run(bot, msg, args)
 
     if (cmd === 'viens') {
       if (msg.member.voice.channel) {
