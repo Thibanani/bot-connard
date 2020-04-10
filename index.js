@@ -39,6 +39,11 @@ bot.on('message', async (msg) =>{
         dispatcher.resume();
 
         dispatcher.setVolume(0.5); // half the volume
+        dispatcher.on('finish', () => {
+          console.log('Finished playing!');
+        });
+
+        dispatcher.destroy(); // end the stream
       }
   }
 });
