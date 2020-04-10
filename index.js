@@ -26,6 +26,7 @@ bot.on('message', async (msg) =>{
       if (cmd === 'viens') {
           if (msg.member.voice.channel) {
             const connection = await msg.member.voice.channel.join();
+            connection.play('./audio.mp3');
           } else {
             msg.reply('You need to join a voice channel first!');
           }
