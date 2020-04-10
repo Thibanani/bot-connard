@@ -2,7 +2,7 @@ module.exports.run = async (bot, msg, args)=> {
   if (msg.member.voice.channel) {
 
     const connection = await msg.member.voice.channel.join();
-    connection.play('./audio.mp3');
+    dispatcher = connection.play('./audio.mp3');
 
     dispatcher.pause();
     dispatcher.resume();
