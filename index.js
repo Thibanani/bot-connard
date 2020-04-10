@@ -32,7 +32,7 @@ bot.on('message', async (msg) =>{
       }
 
       if (cmd === 'parle') {
-        const dispatcher = connection.play('./audio.mp3');
+        const dispatcher = connection.play('/home/discord/audio.mp3');
         //const dispatcher = connection.play(ytdl('https://www.youtube.com/watch?v=ZlAU_w7-Xp8', { filter: 'audioonly' }));
 
         dispatcher.pause();
