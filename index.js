@@ -32,18 +32,18 @@ bot.on('message', async (msg) =>{
       }
 
       if (cmd === 'parle') {
-        const dispatcher = connection.play('/home/discord/audio.mp3');
+        connection.play('./audio.mp3');
         //const dispatcher = connection.play(ytdl('https://www.youtube.com/watch?v=ZlAU_w7-Xp8', { filter: 'audioonly' }));
 
-        dispatcher.pause();
-        dispatcher.resume();
+        //dispatcher.pause();
+        //dispatcher.resume();
 
-        dispatcher.setVolume(0.5); // half the volume
-        dispatcher.on('finish', () => {
-          console.log('Finished playing!');
-        });
+        //dispatcher.setVolume(0.5); // half the volume
+        //dispatcher.on('finish', () => {
+          //console.log('Finished playing!');
+        //});
 
-        dispatcher.destroy(); // end the stream
+        //dispatcher.destroy(); // end the stream
       }
   }
 });
