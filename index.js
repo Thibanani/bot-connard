@@ -11,15 +11,19 @@ bot.on('ready', async() =>{
 });
 
 bot.on('message', async (msg) =>{
-  if(msg.content == 'Bonj'){
+  if(msg.content == 'Bonjour'){
     msg.channel.send('Connard!')
   }
 
   if(msg.content.startsWith(config.prefix)){
-    cmd = msg.content.substring(config.prefix.length)//.split(" ")
-    //cmd = cmdArray[0]
-    //args = cmdArray.slice(1)
+    cmdArray = msg.content.substring(config.prefix.length).split(" ")
+    cmd = cmdArray[0]
+    args = cmdArray.slice(1)
 
+    let command = commands.getCommand(cmd);
+    if(command) command.run(bot, msg, args);
+
+    cmd = cmdArray[0]+cmdArray[1]
     let command = commands.getCommand(cmd);
     if(command) command.run(bot, msg, args);
 
