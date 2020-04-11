@@ -6,7 +6,7 @@ module.exports.run = async (bot, msg, args)=> {
     connection.play('./audio.mp3', pause());
     connection.play('./audio.mp3', resume());
 
-    connection.disconnect();
+    voiceChannel.leave();
   } else {
     msg.reply('Seules les dieux me donne des ordres. Connard!');
   }
