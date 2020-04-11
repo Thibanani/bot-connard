@@ -23,10 +23,6 @@ bot.on('message', async (msg) =>{
     let command = commands.getCommand(cmd);
     if(command) command.run(bot, msg, args);
 
-    cmd = cmdArray[0]+cmdArray[1]
-    let command = commands.getCommand(cmd);
-    if(command) command.run(bot, msg, args);
-
   }
 });
 
