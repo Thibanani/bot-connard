@@ -16,9 +16,9 @@ bot.on('message', async (msg) =>{
   }
 
   if(msg.content.startsWith(config.prefix)){
-    cmdArray = msg.content.substring(config.prefix.length).split(" ")
-    cmd = cmdArray[0]
-    args = cmdArray.slice(1)
+    cmd = msg.content.substring(config.prefix.length)//.split(" ")
+    //cmd = cmdArray[0]
+    //args = cmdArray.slice(1)
 
     let command = commands.getCommand(cmd);
     if(command) command.run(bot, msg, args);
