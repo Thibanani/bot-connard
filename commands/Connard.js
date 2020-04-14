@@ -10,7 +10,6 @@ module.exports.run = async (bot, msg, args)=> {
 
      dispatcher.on('finish', () => {
        dispatcher.destroy();
-
     });
 
 
