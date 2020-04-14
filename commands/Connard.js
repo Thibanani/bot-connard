@@ -9,7 +9,7 @@ module.exports.run = async (bot, msg, args)=> {
     dispatcher.setVolume(3);
 
      dispatcher.on('finish', () => {
-       connection.disconnect();
+       dispatcher.destroy();
     });
 
 
