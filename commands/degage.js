@@ -5,6 +5,7 @@ module.exports.run = async (bot, msg, args)=> {
 
     const connection = await msg.member.voice.channel.join();
     const dispatcher = connection.play('./audio.mp3');
+    //console.log('degage');
     dispatcher.destroy();
     connection.disconnect();
 
@@ -17,5 +18,5 @@ module.exports.run = async (bot, msg, args)=> {
 
 
 module.exports.help = {
-  name: 'parle'
+  name: 'degage'
 }
