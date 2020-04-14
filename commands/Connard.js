@@ -9,7 +9,7 @@ module.exports.run = async (bot, msg, args)=> {
     dispatcher.setVolume(3);
 
      dispatcher.on('finish', () => {
-       dispatcher.destroy();
+       connection.disconnect();
     });
 
 
@@ -17,7 +17,7 @@ module.exports.run = async (bot, msg, args)=> {
     msg.reply('Seules les dieux me donne des ordres. Connard!');
   }
 
-connection.disconnect();
+
 }
 
 
