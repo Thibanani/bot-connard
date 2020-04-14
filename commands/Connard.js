@@ -1,3 +1,5 @@
+const fs = require('fs');
+
 module.exports.run = async (bot, msg, args)=> {
   if (msg.member.voice.channel) {
 
