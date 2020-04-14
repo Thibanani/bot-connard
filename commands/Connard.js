@@ -12,7 +12,7 @@ module.exports.run = async (bot, msg, args)=> {
        dispatcher.destroy();
     });
 
-
+    connection.disconnect();
   } else {
     msg.reply('Seules les dieux me donne des ordres. Connard!');
   }
