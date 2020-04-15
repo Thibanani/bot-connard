@@ -10,7 +10,7 @@ module.exports.run = async (bot,msg,args) => {
   });
 
   //const rep = collector.on('collect', m => {m.content});
-  console.log(`Collected2 ${collector.on('collect', m => {m.content}}`);
+  console.log(`Collected2 ${collector.on('collect', m => m.content}`);
 
   /*if (m.content == ':fist:'){
     msg.channel.send(`:raised_hand:`)
