@@ -1,8 +1,9 @@
-const rep = require('/app/repartie.js');
 module.exports.run = async (bot,msg,args) => {
+  const rep = require('/app/repartie.js');
 
-  msg.channel.send(`${repatie.pfc1[1]}`)
+  msg.channel.send(`${rep.pfc1[1]}`)
   msg.channel.send(`On rappel pour les débiles : pierre :fist:    feuille :raised_hand:    ciseaux :v:`)
+
   const user = msg.author.id
   const filter = m => user === m.author.id;
   const collector = msg.channel.createMessageCollector(filter, { max: 1,time: 15000 });
