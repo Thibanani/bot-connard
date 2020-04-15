@@ -1,7 +1,7 @@
 module.exports.run = async (bot,msg,args) => {
   const rep = require('/app/repartie.js');
 
-  msg.channel.send(`${rep.getpfc1[0]}`)
+  msg.channel.send(`${rep.getpfc1[1]}`)
   msg.channel.send(`On rappel pour les débiles : pierre :fist:    feuille :raised_hand:    ciseaux :v:`)
 
   const user = msg.author.id
