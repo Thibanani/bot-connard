@@ -2,7 +2,6 @@ module.exports.run = async (bot,msg,args) => {
   //const rep = require('/app/repartie.js');
 
   const pfc1 = [`Ha ouai, tu veux qu'on se règle`,`Viens chte bz`];
-  console.log(Math.floor(Math.random() * (pfc1.length - 0+1)+ 0));
   msg.channel.send(`${pfc1[Math.floor(Math.random() * (pfc1.length - 0+1)+ 0)]}`)
   msg.channel.send(`On rappel pour les débiles : pierre :fist:    feuille :raised_hand:    ciseaux :v:`)
 
