@@ -7,7 +7,7 @@ module.exports.run = async (bot,msg,args) => {
 
   collector.on('collect', m => {
   	console.log(`Collected :${m.content}`);
-    if ((m.author.username == 'kikogeek' )||(m.author.username == 'Thibanani' )||(m.author.username == 'Seyross' )){
+    if ((m.author.username == 'kikogeek' )||(m.author.username == 'ho' )||(m.author.username == 'Seyross' )){
       if (m.content == '✊'){
         msg.channel.send(`:v:`)
         msg.channel.send(`Vous êtes mon maitre`)
