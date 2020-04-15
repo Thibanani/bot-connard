@@ -3,7 +3,8 @@ module.exports.run = async (bot,msg,args) => {
 
   const pfc1 = [`Ha ouai, tu veux qu'on se règle`,`Viens chte bz`];
   console.log(Math.floor(Math.random() * (pfc1.length - 0+1)+ 0));
-  msg.channel.send(`${pfc1[randnum = Math.floor(Math.random() * (pfc1.length - 0+1)+ 0)]}`)
+  msg.channel.send(`${pfc1[0]}`)
+  msg.channel.send(`${pfc1[1]}`)
   msg.channel.send(`On rappel pour les débiles : pierre :fist:    feuille :raised_hand:    ciseaux :v:`)
 
   const user = msg.author.id
