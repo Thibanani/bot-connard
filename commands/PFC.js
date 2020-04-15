@@ -6,19 +6,20 @@ module.exports.run = async (bot,msg,args) => {
   const collector = msg.channel.createMessageCollector(filter, { max: 1,time: 15000 });
 
   collector.on('collect', m => {
-  	console.log(`Collected ${m.content}`);
+  	console.log(`Collected :${m.content}`);
+    const rep = m.content.substring(' ')
 
-    if (m.content.substring(' ') === ':fist:'){
+    if (rep === ':fist:'){
       msg.channel.send(`:raised_hand:`)
       msg.channel.send(`Bas alors on est nul, tocard`)
       msg.channel.send('1')
 
-    }else if (m.content == ':raised_hand:') {
+    }else if (rep == ':raised_hand:') {
       msg.channel.send(`:v:`)
       msg.channel.send(`Bas alors on est nul, tocard`)
       msg.channel.send('2')
 
-    }else if (m.content == ':v:') {
+    }else if (rep == ':v:') {
       msg.channel.send(`:fist:`)
       msg.channel.send(`Bas alors on est nul, tocard`)
       msg.channel.send('3')
