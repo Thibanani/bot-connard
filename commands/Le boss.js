@@ -1,5 +1,5 @@
 module.exports.run = async (bot,msg,args) => {
-  if ((msg.author.username == 'kikogeek' )||(msg.author.username == 'Thibanani' )||(msg.author.username == 'Seyross' )){
+  if ((msg.author.username == 'Kiko-kun' )||(msg.author.username == 'Thibanani' )||(msg.author.username == 'Seyross' )){
     msg.channel.send(`Le boss, mais c'est ${msg.author.username}`)
   }
   else{
