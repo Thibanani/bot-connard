@@ -4,7 +4,7 @@ module.exports.run = async (bot,msg,args) => {
   const user = msg.author.id
   const filter = m => user === m.author.id;
   const collector = msg.channel.createMessageCollector(filter, { max: 1,time: 15000 });
-  console.log(`Collected2 ${collector.on('collect', m.content)}`);
+  console.log(`Collected2 ${collector.content}`);
 
   collector.on('collect', m => {
   	console.log(`Collected ${m.content}`);
