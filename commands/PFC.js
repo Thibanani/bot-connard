@@ -20,7 +20,7 @@ module.exports.run = async (bot,msg,args) => {
         msg.channel.send(`:raised_hand:`)
         msg.channel.send(`Vous êtes mon maitre`)
 
-      }else{msg.channel.send(`Sale couard !`)}
+      }else{msg.channel.send(`Apprend à jouer avec $help`)}
     }
 
     else{
