@@ -10,15 +10,18 @@ module.exports.run = async (bot,msg,args) => {
   	console.log(`Collected ${m.content}`);
   });
 
-  if (m.content == :fist:){
+  if (m.content == ':fist:'){
     msg.channel.send(`:raised_hand:`)
     msg.channel.send(`Bas alors on est nul, tocard`)
-  }else if (m.content == :raised_hand:) {
+
+  }else if (m.content == ':raised_hand:') {
     msg.channel.send(`:v:`)
     msg.channel.send(`Bas alors on est nul, tocard`)
-  }else if (m.content == :v:) {
+
+  }else if (m.content == ':v:') {
     msg.channel.send(`:fist:`)
     msg.channel.send(`Bas alors on est nul, tocard`)
+
   }else{msg.channel.send(`Sale couard !`)}
 
 
