@@ -1,4 +1,4 @@
-const repartie = require('/app/repartie.js');
+const rep = require('/app/repartie.js');
 module.exports.run = async (bot,msg,args) => {
 
   msg.channel.send(`${repatie.pfc1[1]}`)
