@@ -6,9 +6,7 @@ module.exports.run = async (bot,msg,args) => {
   const collector = msg.channel.createMessageCollector(filter, { max: 1,time: 15000 });
   console.log(`Collected2 ${collector.on('collect',m)}`);
 
-  collector.on('collect', m => {
-  	console.log(`Collected ${m.content}`);
-  });
+  collector.on('collect', m => {Collected ${m.content}});
 
   //const rep = collector.on('collect', m => {m.content});
   //console.log(`Collected2 ${collector.on('collect', m.content)}`);
