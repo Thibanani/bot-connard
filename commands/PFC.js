@@ -7,19 +7,19 @@ module.exports.run = async (bot,msg,args) => {
 
   collector.on('collect', m => {
   	console.log(`Collected :${m.content}`);
-    const rep = m.content.substring(' ')
+    //const rep = m.content.substring(' ')
 
-    if (rep === ':fist:'){
+    if (m.content == '✊'){
       msg.channel.send(`:raised_hand:`)
       msg.channel.send(`Bas alors on est nul, tocard`)
       msg.channel.send('1')
 
-    }else if (rep == ':raised_hand:') {
+    }else if (`${m.content}` == ':raised_hand:') {
       msg.channel.send(`:v:`)
       msg.channel.send(`Bas alors on est nul, tocard`)
       msg.channel.send('2')
 
-    }else if (rep == ':v:') {
+    }else if (`${m.content}` == ':v:') {
       msg.channel.send(`:fist:`)
       msg.channel.send(`Bas alors on est nul, tocard`)
       msg.channel.send('3')
