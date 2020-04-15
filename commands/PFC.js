@@ -36,7 +36,7 @@ module.exports.run = async (bot,msg,args) => {
         msg.channel.send(`:fist:`)
         msg.channel.send(`Bas alors on est nul, tocard`)
 
-      }else if{msg.channel.send(`Apprend à jouer avec $help`)}
+      }else{msg.channel.send(`Apprend à jouer avec $help`)}
     }
   });
 
