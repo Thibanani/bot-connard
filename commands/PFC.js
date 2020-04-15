@@ -4,7 +4,7 @@ module.exports.run = async (bot,msg,args) => {
   function random(min, max){
        min = Math.ceil(0);
        max = Math.floor(2);
-       randnum = Math.floor(Math.random() * (max - min +1)+ min);
+       randnum = Math.floor(Math.random() * (max - min)+ min);
   }
   const pfc1 = [`Ha ouai, tu veux qu'on se règle`,`Viens chte bz`];
   random(0,1)
