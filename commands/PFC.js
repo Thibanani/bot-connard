@@ -3,9 +3,7 @@ module.exports.run = async (bot,msg,args) => {
   msg.channel.send(`On rappel pour les débiles : pierre:fist:; feuille:raised_hand:; ciseaux:v:`)
   const user = msg.author.id
 
-  const filter = (user) => {
-	return user.id === msg.author.id;
-};
+  const filter = m => user === m.author.id;
   const collector = msg.channel.createMessageCollector(filter, { time: 15000 });
 
   collector.on('collect', m => {
