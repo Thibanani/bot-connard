@@ -9,7 +9,9 @@ module.exports.run = async (bot,msg,args) => {
   collector.on('collect', m => {
   	console.log(`Collected ${m.content}`);
   });
+  console.log(`Collected ${collector.collected.content}`);
 
+  /*
   if (m.content == ':fist:'){
     msg.channel.send(`:raised_hand:`)
     msg.channel.send(`Bas alors on est nul, tocard`)
@@ -22,7 +24,7 @@ module.exports.run = async (bot,msg,args) => {
     msg.channel.send(`:fist:`)
     msg.channel.send(`Bas alors on est nul, tocard`)
 
-  }else{msg.channel.send(`Sale couard !`)}
+  }else{msg.channel.send(`Sale couard !`)}*/
 
 
 }
