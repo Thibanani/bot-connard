@@ -1,16 +1,9 @@
 module.exports.run = async (bot,msg,args) => {
   //const rep = require('/app/repartie.js');
 
-  function random(min, max){
-       min = Math.ceil(0);
-       max = Math.floor(2);
-       randnum = Math.floor(Math.random() * (max - min)+ min);
-  }
   const pfc1 = [`Ha ouai, tu veux qu'on se règle`,`Viens chte bz`];
-  random(0,1)
-  console.log(randnum);
-  console.log(pfc1[randnum]);
-  msg.channel.send(`${pfc1[randnum]}`)
+  console.log(Math.floor(Math.random() * (pfc1.length - 0+1)+ 0));
+  msg.channel.send(`${pfc1[randnum = Math.floor(Math.random() * (pfc1.length - 0+1)+ 0)]}`)
   msg.channel.send(`On rappel pour les débiles : pierre :fist:    feuille :raised_hand:    ciseaux :v:`)
 
   const user = msg.author.id
