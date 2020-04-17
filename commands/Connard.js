@@ -3,7 +3,7 @@ const fs = require('fs');
 module.exports.run = async (bot, msg, args)=> {
   if (args != ''){
 
-    if (args.voice.channel) {
+    if (msg.args.voice.channel) {
 
       const connection = await msg.member.voice.channel.join();
       const dispatcher = connection.play('./connard.mp3');//, {volume: 2});
