@@ -17,7 +17,7 @@ module.exports.run = async (bot, msg, args)=> {
     } else {
       msg.reply('Il est pas la. Connard!');
     }
-
+    
   }else if (msg.member.voice.channel) {
     const connection = await msg.member.voice.channel.join();
     const dispatcher = connection.play('./connard.mp3');//, {volume: 2});
