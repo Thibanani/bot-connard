@@ -11,10 +11,6 @@ bot.on('ready', async() =>{
 });
 
 bot.on('message', async (msg) =>{
-  if(msg.content == 'Bonjour'){
-    msg.channel.send('Connard!')
-  }
-
   if(msg.content.startsWith(config.prefix)){
     cmdArray = msg.content.substring(config.prefix.length).split(" ")
     cmd = cmdArray[0]
