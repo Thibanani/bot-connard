@@ -3,7 +3,7 @@ const bot = new Discord.Client({DisableEveryone: true});
 const config = require('./config.js');
 const commands = require('./commands.js');
 
-const bonjour = ["Salut beau gosse","Ouai, salut ouai","Yo","Bonjour à toi","HOOOO, sa gambit ou quoi ?"]
+const bonjour = ["Salut beau gosse","Ouai, salut ouai","Yo","Bonjour à toi","HOOOO, sa gambit ou quoi ?","jtm bb"]
 
 bot.on('ready', async() =>{
   console.log('Le bot est lancé.');
