@@ -1,6 +1,7 @@
 const fs = require('fs');
 
 module.exports.run = async (bot, msg, args)=> {
+  console.log(args);
   if (args != ''){
     user = args
     if (msg.users == args) {
