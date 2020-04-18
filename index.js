@@ -3,7 +3,7 @@ const bot = new Discord.Client({DisableEveryone: true});
 const config = require('./config.js');
 const commands = require('./commands.js');
 
-
+const bonjour = ["Salut beau gosse","Ouai, salut ouai","Yo","Bonjour à toi","HOOOO, sa gambit ou quoi ?"]
 
 bot.on('ready', async() =>{
   console.log('Le bot est lancé.');
@@ -11,8 +11,8 @@ bot.on('ready', async() =>{
 });
 
 bot.on('message', async (msg) =>{
-  if(msg.content == 'Bonjour'){
-    msg.channel.send('Ouai, salut ouai.')
+  if((msg.content == 'Bonjour')(msg.content == 'Salut')){
+    msg.channel.send(bonjour[Math.floor(Math.random() * (bonjour.length - 0)+ 0)])
   }
 
   if(msg.content.startsWith(config.prefix)){
