@@ -15,7 +15,7 @@ module.exports.run = async (bot, msg, args)=> {
       });
 
     } else {
-      msg.reply('Il est pas la. Connard!');
+      msg.reply('Il est pas la!');
     }
 
   }else if (msg.member.voice.channel) {
@@ -29,7 +29,7 @@ module.exports.run = async (bot, msg, args)=> {
     });
 
   }else {
-    msg.reply('Seules les dieux me donne des ordres. Connard!');
+    msg.reply('Seules les dieux me donne des ordres!');
   }
 }
 

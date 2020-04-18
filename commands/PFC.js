@@ -30,15 +30,15 @@ module.exports.run = async (bot,msg,args) => {
     else{
       if (m.content == '✊'){
         msg.channel.send(`:raised_hand:`)
-        msg.channel.send(`Bas alors on est nul, tocard`)
+        msg.channel.send(`Bas alors on est nul!`)
 
       }else if (m.content == '✋') {
         msg.channel.send(`:v:`)
-        msg.channel.send(`Bas alors on est nul, tocard`)
+        msg.channel.send(`Bas alors on est nul!`)
 
       }else if (m.content == '✌️') {
         msg.channel.send(`:fist:`)
-        msg.channel.send(`Bas alors on est nul, tocard`)
+        msg.channel.send(`Bas alors on est nul!`)
 
       }else{msg.channel.send(`Apprend à jouer avec $help`)}
     }

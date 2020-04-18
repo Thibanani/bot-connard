@@ -11,7 +11,7 @@ module.exports.run = async (bot, msg, args)=> {
     });
 
   } else {
-    msg.reply('Seules les dieux me donne des ordres. Connard!');
+    msg.reply('Seules les dieux me donne des ordres!');
   }
 }
 
