@@ -4,8 +4,8 @@ const config = require('./config.js');
 const commands = require('./commands.js');
 
 
-const bonjour = ["Salut beau gosse","Ouai, salut ouai","Yo","Bonjour à toi","HOOOO, sa gambit ou quoi ?","jtm bb"];
-const bonsoir = ["Bonsoir","Bonsoir, jeune gueux","Comment von-je ?"];
+const bonjour = ["Salut beau gosse","Ouai, salut ouai","Yo","Bonjour à toi","HOOOO, sa gambit ou quoi ?","jtm bb","https://tenor.com/view/penguin-hello-hi-heythere-cutie-gif-3950966"];
+const bonsoir = ["Bonsoir","Bonsoir, jeune gueux","Comment von-je ?","https://tenor.com/view/mcfly-carlito-bonsoir-gif-10468909"];
 
 bot.on('ready', async() =>{
   console.log('Le bot est lancé.');
@@ -17,7 +17,7 @@ bot.on('message', async (msg) =>{
     msg.channel.send(bonjour[Math.floor(Math.random() * (bonjour.length - 0)+ 0)])
   }
   if(msg.content == 'Bonsoir'){
-    msg.channel.send(`https://tenor.com/view/penguin-hello-hi-heythere-cutie-gif-3950966`)
+    msg.channel.send(bonsoir[Math.floor(Math.random() * (bonsoir.length - 0)+ 0)])
   }
 
   if(msg.content.startsWith(config.prefix)){
