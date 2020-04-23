@@ -2,6 +2,7 @@ const Discord = require('discord.js');
 const bot = new Discord.Client({DisableEveryone: true});
 const config = require('./config.js');
 const commands = require('./commands.js');
+const
 
 const bonjour = ["Salut beau gosse","Ouai, salut ouai","Yo","Bonjour à toi","HOOOO, sa gambit ou quoi ?","jtm bb"]
 const bonsoir = ["Bonsoir","Bonsoir, jeune gueux","Comment von-je ?"]
@@ -16,7 +17,7 @@ bot.on('message', async (msg) =>{
     msg.channel.send(bonjour[Math.floor(Math.random() * (bonjour.length - 0)+ 0)])
   }
   if(msg.content == 'Bonsoir'){
-    msg.channel.send(`${www.tenor.com/view/penguin-hello-hi-heythere-cutie-gif-3950966}`)
+    msg.channel.send(`${tenor.com/view/penguin-hello-hi-heythere-cutie-gif-3950966}`)
   }
 
   if(msg.content.startsWith(config.prefix)){
