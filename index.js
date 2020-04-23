@@ -9,7 +9,7 @@ const bonsoir = ["Bonsoir","Bonsoir, jeune gueux","Comment von-je ?"];
 
 bot.on('ready', async() =>{
   console.log('Le bot est lancé.');
-  bot.user.setActivity('Québecqwé')S<
+  bot.user.setActivity('Québecqwé');
 });
 
 bot.on('message', async (msg) =>{
