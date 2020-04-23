@@ -13,7 +13,7 @@ bot.on('ready', async() =>{
 });
 
 bot.on('message', async (msg) =>{
-  if((msg.content == 'Bonjour')||(msg.content == 'Salut'){
+  if((msg.content == 'Bonjour')||(msg.content == 'Salut')){
     msg.channel.send(bonjour[Math.floor(Math.random() * (bonjour.length - 0)+ 0)])
   }
   if(msg.content == 'Bonsoir'){
