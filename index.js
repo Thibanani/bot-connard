@@ -17,7 +17,7 @@ bot.on('message', async (msg) =>{
     msg.channel.send(bonjour[Math.floor(Math.random() * (bonjour.length - 0)+ 0)])
   }
   if(msg.content == 'Bonsoir'){
-    msg.channel.send(`${www.tenor.com/view/penguin-hello-hi-heythere-cutie-gif-3950966}`)
+    msg.channel.send(`https://tenor.com/view/penguin-hello-hi-heythere-cutie-gif-3950966`)
   }
 
   if(msg.content.startsWith(config.prefix)){
