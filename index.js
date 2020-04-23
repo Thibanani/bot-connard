@@ -15,19 +15,18 @@ bot.on('ready', async() =>{
 bot.on('message', async (msg) =>{
   if((msg.content == 'Bonjour')||(msg.content == 'Salut')){
     msg.channel.send(bonjour[Math.floor(Math.random() * (bonjour.length - 0)+ 0)])
-  }
-  if(msg.content == 'Bonsoir'){
-    msg.channel.send(bonsoir[Math.floor(Math.random() * (bonsoir.length - 0)+ 0)])
-  }
 
-  if(msg.content.startsWith(config.prefix)){
+  }else if(msg.content == 'Bonsoir'){
+    msg.channel.send(bonsoir[Math.floor(Math.random() * (bonsoir.length - 0)+ 0)])
+
+  }else if(msg.content.startsWith(config.prefix)){
+
     cmdArray = msg.content.substring(config.prefix.length).split(" ")
     cmd = cmdArray[0]
     args = cmdArray.slice(1)
 
     let command = commands.getCommand(cmd);
     if(command) command.run(bot, msg, args);
-
   }
 });
 
