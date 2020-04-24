@@ -1,5 +1,5 @@
 const Client = require('./Client');
-const Player = require('./Player');
+//const Player = require('./Player');
 const Grid = require('./Grid');
 const Util = require('./util/Util');
 const Logger = require('./util/Logger');
