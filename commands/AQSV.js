@@ -7,7 +7,7 @@ module.exports.run = async (bot, msg, args)=> {
     dispatcher.setVolume(2);
 
      dispatcher.on('finish', () => {
-       delay(1000);
+       delay(500);
 
        const dispatcher = connection.play('./AQSV_2.mp3');//, {volume: 2});
        dispatcher.setVolume(2);
@@ -26,5 +26,5 @@ module.exports.run = async (bot, msg, args)=> {
 
 
 module.exports.help = {
-  name: 'QR'
+  name: 'qr'
 }
