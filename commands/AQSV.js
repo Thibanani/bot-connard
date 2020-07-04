@@ -1,3 +1,8 @@
+package com.mkyong;
+
+import java.util.Date;
+import java.util.concurrent.TimeUnit;
+
 module.exports.run = async (bot, msg, args)=> {
   if (msg.member.voice.channel) {
 
@@ -7,7 +12,7 @@ module.exports.run = async (bot, msg, args)=> {
     dispatcher.setVolume(2);
 
      dispatcher.on('finish', () => {
-       Thread.sleep(500);
+       TimeUnit.sleep(500);
        const dispatcher = connection.play('./AQSV_2.mp3');//, {volume: 2});
        dispatcher.setVolume(2);
 
