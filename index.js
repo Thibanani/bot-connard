@@ -1,5 +1,5 @@
-const Discord = require('discord.js');
-const bot = new Discord.Client({DisableEveryone: true});
+const [Discord, Attachment] = require('discord.js');
+const bot = new Client({DisableEveryone: true});
 const config = require('./config.js');
 const commands = require('./commands.js');
 
