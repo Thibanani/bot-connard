@@ -2,6 +2,8 @@ module.exports.run = async (bot,msg,args) => {
   //const rep = require('/app/repartie.js');
 
   const pfc1 = [`Ha ouai, tu veux qu'on se règle`,`Viens chte bz`];
+  const pfc = ['✊','✋','✌️'];
+
   msg.channel.send(`${pfc1[Math.floor(Math.random() * (pfc1.length - 0)+ 0)]}`)
   msg.channel.send(`On rappel pour les débiles : pierre :fist:    feuille :raised_hand:    ciseaux :v:`)
 
@@ -9,36 +11,48 @@ module.exports.run = async (bot,msg,args) => {
   const filter = m => user === m.author.id;
   const collector = msg.channel.createMessageCollector(filter, { max: 1,time: 15000 });
 
+  symb = pfc2[Math.floor(Math.random() * (pfc1.length - 0)+ 0)]
+
   collector.on('collect', m => {
   	console.log(`Collected :${m.content}`);
-    if ((m.author.username == 'Kiko-kun' )||(m.author.username == 'Thibanani' )||(m.author.username == 'Seyross' )){
+    if (symb ==  '✊'){
+      msg.channel.send(`:fist:`)
       if (m.content == '✊'){
-        msg.channel.send(`:v:`)
-        msg.channel.send(`Vous êtes mon maitre`)
+        msg.channel.send(`Tu copie`)
 
       }else if (m.content == '✋') {
-        msg.channel.send(`:fist:`)
         msg.channel.send(`Vous êtes mon maitre`)
 
       }else if (m.content == '✌️') {
-        msg.channel.send(`:raised_hand:`)
+        msg.channel.send(`Bas alors on est nul!`)
+
+      }else{msg.channel.send(`Apprend à jouer avec $help`)}
+    }
+
+    else if (symb ==  '✋'){
+      msg.channel.send(`:raised_hand:`)
+      if (m.content == '✊'){
+        msg.channel.send(`Bas alors on est nul!`)
+
+      }else if (m.content == '✋') {
+        msg.channel.send(`Tu copie`)
+
+      }else if (m.content == '✌️') {
         msg.channel.send(`Vous êtes mon maitre`)
 
       }else{msg.channel.send(`Apprend à jouer avec $help`)}
     }
 
-    else{
+    else if (symb ==  '✌️'){
+      msg.channel.send(`:v:`)
       if (m.content == '✊'){
-        msg.channel.send(`:raised_hand:`)
-        msg.channel.send(`Bas alors on est nul!`)
+        msg.channel.send(`Vous êtes mon maitre`)
 
       }else if (m.content == '✋') {
-        msg.channel.send(`:v:`)
         msg.channel.send(`Bas alors on est nul!`)
 
       }else if (m.content == '✌️') {
-        msg.channel.send(`:fist:`)
-        msg.channel.send(`Bas alors on est nul!`)
+        msg.channel.send(`Tu copie`)
 
       }else{msg.channel.send(`Apprend à jouer avec $help`)}
     }
@@ -52,11 +66,8 @@ module.exports.run = async (bot,msg,args) => {
   });
 
 
-
-
-
 }
 
 module.exports.help = {
-  name: 'PFC'
+  name: 'PFC2'
 }
