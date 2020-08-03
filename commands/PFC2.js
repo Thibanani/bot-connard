@@ -11,7 +11,7 @@ module.exports.run = async (bot,msg,args) => {
   const filter = m => user === m.author.id;
   const collector = msg.channel.createMessageCollector(filter, { max: 1,time: 15000 });
 
-  symb = pfc2[Math.floor(Math.random() * (pfc1.length - 0)+ 0)]
+  symb = pfc[Math.floor(Math.random() * (pfc1.length - 0)+ 0)]
 
   collector.on('collect', m => {
   	console.log(`Collected :${m.content}`);
