@@ -26,7 +26,7 @@ bot.on('message', async (msg) =>{
 
   }else if((msg.content == "'^'")){
 
-    msg.channel.send(":bird: ")
+    msg.channel.send(":smiling_imp:")
 
   }else if(msg.content.startsWith(config.prefix)){
 
