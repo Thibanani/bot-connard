@@ -1,5 +1,5 @@
 module.exports.run = async (bot,msg,args) => {
-  if (args = ++) {
+  if (args = "++") {
     msg.channel.send("Votre motivation",{files: ['./Photo/AM_6.png']})
   }
   else {
