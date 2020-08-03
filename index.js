@@ -19,6 +19,11 @@ bot.on('message', async (msg) =>{
   }else if(msg.content == 'Bonsoir'){
     msg.channel.send(bonsoir[Math.floor(Math.random() * (bonsoir.length - 0)+ 0)])
 
+  }else if((msg.content == 'Wow')){
+    
+    msg.channel.send("Juste")
+    msg.channel.send("WOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOW")
+
   }else if(msg.content.startsWith(config.prefix)){
 
     cmdArray = msg.content.substring(config.prefix.length).split(" ")
