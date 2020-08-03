@@ -13,16 +13,20 @@ bot.on('ready', async() =>{
 });
 
 bot.on('message', async (msg) =>{
-  if((msg.content == 'Bonjour')||(msg.content == 'Salut')){
+  if((msg.content == 'Bonjour')||(msg.content == 'Salut')||(msg.content == 'Coucou')){
     msg.channel.send(bonjour[Math.floor(Math.random() * (bonjour.length - 0)+ 0)])
 
   }else if(msg.content == 'Bonsoir'){
     msg.channel.send(bonsoir[Math.floor(Math.random() * (bonsoir.length - 0)+ 0)])
 
   }else if((msg.content == 'Wow')){
-    
+
     msg.channel.send("Juste")
     msg.channel.send("WOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOW")
+
+  }else if((msg.content == "'^'")){
+
+    msg.channel.send(":bird: ")
 
   }else if(msg.content.startsWith(config.prefix)){
 
