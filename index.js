@@ -12,23 +12,39 @@ bot.on('ready', async() =>{
   bot.user.setActivity('Québecqwé');
 });
 
+
+/*------------------------------ Réaction message ------------------------------*/
 bot.on('message', async (msg) =>{
-  if((msg.content == 'Bonjour')||(msg.content == 'Salut')||(msg.content == 'Coucou')){
+  if((msg.content == 'Bonjour')||(msg.content == 'Salut')||(msg.content == 'Coucou')){/*------- Bonjour -------*/
     msg.channel.send(bonjour[Math.floor(Math.random() * bonjour.length)])
 
-  }else if(msg.content == 'Bonsoir'){
+  }else if(msg.content == 'Bonsoir'){/*------- Bonsoir -------*/
     msg.channel.send(bonsoir[Math.floor(Math.random() * bonsoir.length)])
 
-  }else if((msg.content == 'Wow')){
+  }else if((msg.content == 'Wow')){/*------- Chamy wow -------*/
 
     msg.channel.send("Juste")
     msg.channel.send("WOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOW")
 
-  }else if((msg.content == "'^'")){
+  }else if((msg.content == "'^'")){/*------- Charmy emote -------*/
 
     msg.channel.send(":smiling_imp:")
 
-  }else if(msg.content.startsWith(config.prefix)){
+  }else if((msg.content == "oui")||(msg.content == "Oui")||(msg.content == "OUI")){/*------- Oui -------*/
+    val_temp = Math.floor(Math.random() * 2)
+    if (val_temp == 0){
+      msg.channel.send("O")
+      msg.channel.send("U")
+      msg.channel.send("I")
+    }
+    else {
+      message.react(':regional_indicator_o:');
+      message.react(':regional_indicator_u:');
+      message.react(':regional_indicator_i:');
+    }
+
+
+  }else if(msg.content.startsWith(config.prefix)){/*------- Command -------*/
 
     cmdArray = msg.content.substring(config.prefix.length).split(" ")
     cmd = cmdArray[0]
