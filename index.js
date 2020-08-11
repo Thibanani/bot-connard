@@ -38,7 +38,7 @@ bot.on('message', async (msg) =>{
       msg.channel.send("I")
     }
     else {
-      msg.react('😄');
+      msg.react(':smile:');
     //  msg.react(":u:");
       //msg.react(":i:");
     }
