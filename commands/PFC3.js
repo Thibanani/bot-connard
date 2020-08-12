@@ -18,7 +18,7 @@ module.exports.run = async (bot,msg,args) => {
   collector.on('collect', m => {
   	console.log(`Collected :${m.content}`);
     if (symb ==  '✊'){
-      m.react(`✊`)
+      msg.react(`✊`)
       if (m.content == '✊'){
         msg.channel.send(`Tu copie`)
 
@@ -32,7 +32,7 @@ module.exports.run = async (bot,msg,args) => {
     }
 
     else if (symb ==  '✋'){
-      m.react(`✋`)
+      msg.react(`✋`)
       if (m.content == '✊'){
         msg.channel.send(`Bas alors on est nul!`)
 
@@ -46,7 +46,7 @@ module.exports.run = async (bot,msg,args) => {
     }
 
     else if (symb ==  '✌️'){
-      m.react(`✌️`)
+      msg.react(`✌️`)
       if (m.content == '✊'){
         msg.channel.send(`Vous êtes mon maitre`)
 
