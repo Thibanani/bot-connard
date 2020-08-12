@@ -6,7 +6,7 @@ module.exports.run = async (bot,msg,args) => {
   	//.setURL('https://discord.js.org/')
   	.setAuthor('Par moi')
   	.setDescription('Tu trouveras toutes mes fonctions ici et tâche de ne plus de déranger')
-  	//.setThumbnail('https://i.imgur.com/wSTFkRM.png')
+  	.setThumbnail('🖕')
   	.addFields( /*------------------- Pour Les commande vocale -------------*/
       { name: '\u200B', value: '\u200B' },
   		{ name: 'Mes meilleurs réactions vocale',
