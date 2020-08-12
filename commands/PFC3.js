@@ -9,7 +9,7 @@ module.exports.run = async (bot,msg,args) => {
 
   const user = msg.author.id
   const filter = m => user === m.author.id;
-  const collector = msg.channel.createReactionCollector(filter, { max: 1,time: 15000 });
+  const collector = msg.createReactionCollector(filter, { max: 1,time: 15000 });
 
   symb = pfc[Math.floor(Math.random() * pfc.length)]
 
