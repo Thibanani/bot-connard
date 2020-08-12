@@ -1,5 +1,5 @@
 module.exports.run = async (bot,msg,args) => {
-
+  const Discord = require('discord.js');
   const exampleEmbed = new Discord.MessageEmbed()
   	.setColor('#0099ff')
   	.setTitle('Pour toi le boulet')
