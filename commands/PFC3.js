@@ -6,18 +6,20 @@ module.exports.run = async (bot,msg,args) => {
 
 
 
-  const filter = m => bot.id === msg.author.id;
+  const filter = m => bot.id === m.author.id;
   const collector = msg.channel.createMessageCollector(filter, { max: 1,time: 15000 });
 
+  console.log(`ICI`);
   symb = pfc[Math.floor(Math.random() * pfc.length)]
 
 
+  msg.channel.send(`${pfc1[Math.floor(Math.random() * pfc1.length)]}`)
+  msg.channel.send(`On rappel pour les débiles : pierre :fist:    feuille :raised_hand:    ciseaux :v:`)
 
   collector.on('collect', m => {
-    msg.channel.send(`${pfc1[Math.floor(Math.random() * pfc1.length)]}`)
-    msg.channel.send(`On rappel pour les débiles : pierre :fist:    feuille :raised_hand:    ciseaux :v:`)
-
   	console.log(`Collected :${m.content}`);
+
+
   });
 
   collector.on('end', collected => {
