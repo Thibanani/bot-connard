@@ -7,7 +7,7 @@ module.exports.run = async (bot,msg,args) => {
 
 
 
-  const filter_1 = m => m.author.id === bot.user.id && m.content === `On rappel pour les débiles :  pierre :fist:    feuille :raised_hand:    ciseaux :v:`;
+  const filter_1 = m => m.author.id === bot.user.id && m.content === `On rappelle pour les débiles :  pierre :fist:    feuille :raised_hand:    ciseaux :v:`;
   const collector_1 = msg.channel.createMessageCollector(filter_1, { max: 1,time: 15000 });
   symb = pfc[Math.floor(Math.random() * pfc.length)]
 
