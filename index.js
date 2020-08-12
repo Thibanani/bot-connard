@@ -38,9 +38,9 @@ bot.on('message', async (msg) =>{
       msg.channel.send("I")
     }
     else {
-      msg.react(`:regional_indicator_o:`);
-      msg.react(`:regional_indicator_u:`);
-      msg.react(`:regional_indicator_i:`);
+      msg.react(`:smile:`);
+      //msg.react(`:regional_indicator_u:`);
+      //msg.react(`:regional_indicator_i:`);
     }
 
 
