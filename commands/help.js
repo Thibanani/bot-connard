@@ -20,9 +20,9 @@ module.exports.run = async (bot,msg,args) => {
     .addFields(/*------------------- Pour Les commande texte -------------*/
   		{ name: '\u200B', value: '\u200B' },
   		{ name: 'Mes meilleurs commande texte', value: "$Leboss : C'est toi le Boss ?", inline: true },
-  		{ value: '$Charlou : :sheep:'
-      { value: '$PDF : Pour un max de rigolade'
-      { value: '$PFC : Teste moi dans un duel a mort'
+  		{ value: '$Charlou : :sheep:'},
+      { value: '$PDF : Pour un max de rigolade'},
+      { value: '$PFC : Teste moi dans un duel a mort'},
       { value: '$motiv : Juste la meilleur commande a utiliser sans modération'},
   	)
   	.setTimestamp()
