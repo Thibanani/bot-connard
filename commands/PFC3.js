@@ -19,7 +19,6 @@ module.exports.run = async (bot,msg,args) => {
     const filter_2 = (reaction, user) => user.id === msg.author.id && ((reaction.emoji.name === '✊')||(reaction.emoji.name === '✋')||(reaction.emoji.name === '✌️'));
     const collector_2 = m.createReactionCollector(filter_2, { max: 1,time: 15000 });
 
-
     collector_2.on('collect', (reaction, user) => {
 	     console.log(`Collected ${reaction.emoji.name}`);
 
@@ -84,5 +83,5 @@ module.exports.run = async (bot,msg,args) => {
 }
 
 module.exports.help = {
-  name: 'PFC3'
+  name: 'PFC'
 }
