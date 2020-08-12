@@ -11,7 +11,7 @@ module.exports.run = async (bot,msg,args) => {
   const collector_1 = msg.channel.createMessageCollector(filter_1, { max: 1,time: 15000 });
   symb = pfc[Math.floor(Math.random() * pfc.length)]
 
-  msg.channel.send(`On rappel pour les débiles :  pierre :fist:    feuille :raised_hand:    ciseaux :v:`)
+  msg.channel.send(`On rappelle pour les débiles :  pierre :fist:    feuille :raised_hand:    ciseaux :v:`)
 
   collector_1.on('collect', m => {
   	console.log(`Collected :${m.content}`);
@@ -25,7 +25,7 @@ module.exports.run = async (bot,msg,args) => {
        if (symb ==  '✊'){
          m.react(`✊`)
          if (reaction.emoji.name == '✊'){
-           msg.channel.send(`Tu copie`)
+           msg.channel.send(`Tu copies`)
 
          }else if (reaction.emoji.name == '✋') {
            msg.channel.send(`Vous êtes mon maitre`)
@@ -42,7 +42,7 @@ module.exports.run = async (bot,msg,args) => {
            msg.channel.send(`Bas alors on est nul!`)
 
          }else if (reaction.emoji.name == '✋') {
-           msg.channel.send(`Tu copie`)
+           msg.channel.send(`Tu copies`)
 
          }else if (reaction.emoji.name == '✌️') {
            msg.channel.send(`Vous êtes mon maitre`)
@@ -59,7 +59,7 @@ module.exports.run = async (bot,msg,args) => {
            msg.channel.send(`Bas alors on est nul!`)
 
          }else if (reaction.emoji.name == '✌️') {
-           msg.channel.send(`Tu copie`)
+           msg.channel.send(`Tu copies`)
 
          }else{msg.channel.send(`Apprend à jouer avec $help`)}
        }
