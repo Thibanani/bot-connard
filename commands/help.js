@@ -19,7 +19,7 @@ module.exports.run = async (bot,msg,args) => {
   	)
     .addFields(/*------------------- Pour Les commande texte -------------*/
   		{ name: '\u200B', value: '\u200B' },
-  		{ name: 'Mes meilleurs commande texte', value: "$Leboss : C'est toi le Boss ?", inline: true },
+  		{ name: 'Mes meilleurs commande texte', value: "$Leboss : C'est toi le Boss ?\n $Charlou : :sheep:", inline: true },
   		{ value: '$Charlou : :sheep:'},
       { value: '$PDF : Pour un max de rigolade'},
       { value: '$PFC : Teste moi dans un duel a mort'},
