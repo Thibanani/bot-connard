@@ -3,9 +3,9 @@ module.exports.run = async (bot,msg,args) => {
 
   const pfc1 = [`Ha ouai, tu veux qu'on se règle`,`Viens chte bz`];
   const pfc = ['✊','✋','✌️'];
-
-
   msg.channel.send(`${pfc1[Math.floor(Math.random() * pfc1.length)]}`)
+
+
 
   const filter = m => bot.user.id === m.author.id;
   const collector_1 = msg.channel.createMessageCollector(filter, { max: 1,time: 15000 });
@@ -74,7 +74,7 @@ module.exports.run = async (bot,msg,args) => {
     });
   });
 
-  collector.on('end', collected => {
+  collector_1.on('end', collected => {
     if (collected.size == 0) {
       msg.channel.send("Et la c'est le bug, appeller le 36-30")
     }
