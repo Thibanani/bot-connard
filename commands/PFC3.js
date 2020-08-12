@@ -6,10 +6,10 @@ module.exports.run = async (bot,msg,args) => {
 
 
 
-  const filter = m => bot.id === m.author.id;
+  const filter = m => bot.user.id === m.author.id;
   const collector = msg.channel.createMessageCollector(filter, { max: 1,time: 15000 });
 
-  console.log(`ICI`);
+
   symb = pfc[Math.floor(Math.random() * pfc.length)]
 
 
