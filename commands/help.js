@@ -21,6 +21,7 @@ module.exports.run = async (bot,msg,args) => {
   	.setTimestamp()
   	.setFooter("L'auteur c'est moi");
 
+
   msg.channel.send(exampleEmbed);
 
 }
