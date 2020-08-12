@@ -2,11 +2,11 @@ module.exports.run = async (bot,msg,args) => {
   const Discord = require('discord.js');
   const exampleEmbed = new Discord.MessageEmbed()
   	.setColor('#0099ff')
-  	.setTitle('Pour toi le boulet')
+  	.setTitle('Pour toi le boulet 🖕')
   	//.setURL('https://discord.js.org/')
   	.setAuthor('Par moi')
   	.setDescription('Tu trouveras toutes mes fonctions ici et tâche de ne plus de déranger')
-  	.setThumbnail('🖕')
+  	//.setThumbnail('🖕') //Image en haut a droite
   	.addFields( /*------------------- Pour Les commande vocale -------------*/
       { name: '\u200B', value: '\u200B' },
   		{ name: 'Mes meilleurs réactions vocale',
