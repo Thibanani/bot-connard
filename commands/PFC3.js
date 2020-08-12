@@ -7,7 +7,7 @@ module.exports.run = async (bot,msg,args) => {
 
 
 
-  const filter = m => bot.user.id === m.author.id;
+  const filter = m => bot.user.id === m.author.id && m.content === `On rappel pour les débiles : pierre :fist:    feuille :raised_hand:    ciseaux :v:`;
   const collector_1 = msg.channel.createMessageCollector(filter, { max: 1,time: 15000 });
   symb = pfc[Math.floor(Math.random() * pfc.length)]
 
@@ -16,11 +16,11 @@ module.exports.run = async (bot,msg,args) => {
   collector_1.on('collect', m => {
   	console.log(`Collected :${m.content}`);
 
-    const filter = reaction => user.id === reaction.author.id;
+    const filter = (reaction, user) => user.id === reaction.author.id;
     const collector_2 = m.createReactionCollector(filter, { max: 1,time: 15000 });
 
 
-    collector_2.on('collect', (reaction) => {
+    collector_2.on('collect', (reaction, user) => {
 	     console.log(`Collected ${reaction.emoji.name}`);
 
        if (symb ==  '✊'){
