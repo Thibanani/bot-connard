@@ -8,11 +8,11 @@ module.exports.run = async (bot, msg, args) => {
      msg.channel.bulkDelete(args[0]).then(() => {
           msg.channel
                .send("**" + args[0] + "** messages supprimer")
-               .then(m => m.delete(6000))
+               .then(msg => msg.delete(6000))
      })
 
 }
 
 module.exports.help = {
-  name: 'del'
+  name: 'clean'
 }
