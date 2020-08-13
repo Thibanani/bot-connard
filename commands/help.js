@@ -15,7 +15,7 @@ module.exports.run = async (bot,msg,args) => {
     .addFields(/*------------------- Pour Les commande texte -------------*/
   		{ name: '\u200B', value: '\u200B' },
   		{ name: 'Mes meilleurs commandes texte',
-      value: "$Leboss : C'est toi le Boss ? \n $Charlou : :sheep: \n $PDF : Pour un max de rigolade \n $PFC : Teste moi dans un duel a mort \n $clean [N] Pour suprimer N message \n $motiv : A utiliser sans modération :741411176298184895:", inline: true },
+      value: "$Leboss : C'est toi le Boss ? \n $Charlou : :sheep: \n $PDF : Pour un max de rigolade \n $PFC : Teste moi dans un duel a mort \n $clean [N] Pour suprimer N message \n $motiv : A utiliser sans modération :Motiv:", inline: true },
       { name: '\u200B', value: '\u200B' },
   	)
   	.setTimestamp()
