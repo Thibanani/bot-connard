@@ -4,7 +4,7 @@ module.exports.run = async (bot,msg,args) => {
   	.setColor('#0099ff')
   	.setTitle('Pour toi le boulet 🖕')
   	//.setURL('https://discord.js.org/')
-  	.setAuthor('Par moi')
+  	//.setAuthor('Par moi')
   	.setDescription('Tu trouveras toutes mes fonctions ici et tâche de ne plus de déranger')
   	//.setThumbnail('🖕') //Image en haut a droite
   	.addFields( /*------------------- Pour Les commande vocale -------------*/
