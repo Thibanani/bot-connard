@@ -1,6 +1,6 @@
 module.exports.run = async (bot,msg,args) => {
   msg.channel.send("Ce soir à 20H en avant premiére se dévoile Charlou du 57")
-
+/*
   const temps = Date.now();
   const evenement = Date.setHours(20);
 
@@ -12,7 +12,7 @@ module.exports.run = async (bot,msg,args) => {
   msg.channel.Send(h);
   msg.channel.Send(m);
   msg.channel.Send(s);
-  //msg.channel.send(h +':'+ m +':'+ s)
+  //msg.channel.send(h +':'+ m +':'+ s)*/
 }
 
 module.exports.help = {
