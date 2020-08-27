@@ -10,6 +10,7 @@ module.exports.run = async (bot,msg,args) => {
   const h = restant.getHours();
   const m = restant.getMinutes() ;
   const s = restant.getSeconds();
+  
   msg.channel.send(h:m:s)
 
 }
