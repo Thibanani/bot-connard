@@ -13,7 +13,7 @@ module.exports.run = async (bot,msg,args) => {
   const m = restant.getMinutes() ;
   const s = restant.getSeconds();
 
-  msg.channel.send(h:m:s)
+  msg.channel.send(h +':'+ m +':'+ s)
 }
 
 module.exports.help = {
