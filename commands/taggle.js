@@ -4,7 +4,7 @@ module.exports.run = async (bot, msg, args)=> {
   if (msg.member.voice.channel) {
 
     const connection = await msg.member.voice.channel.join();
-    const dispatcher = connection.play('./taggl.mp3');//, {volume: 2});
+    const dispatcher = connection.play('./src/Audio/taggl.mp3');//, {volume: 2});
 
     dispatcher.setVolume(2);
 

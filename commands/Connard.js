@@ -7,7 +7,7 @@ module.exports.run = async (bot, msg, args)=> {
     if (msg.users == args) {
 
       const connection = await msg.member.voice.channel.join();
-      const dispatcher = connection.play('./connard.mp3');//, {volume: 2});
+      const dispatcher = connection.play('./src/Audio/connard.mp3');//, {volume: 2});
 
       dispatcher.setVolume(2);
 
@@ -21,7 +21,7 @@ module.exports.run = async (bot, msg, args)=> {
 
   }else if (msg.member.voice.channel) {
     const connection = await msg.member.voice.channel.join();
-    const dispatcher = connection.play('./connard.mp3');//, {volume: 2});
+    const dispatcher = connection.play('./src/Audio/connard.mp3');//, {volume: 2});
 
     dispatcher.setVolume(2);
 
