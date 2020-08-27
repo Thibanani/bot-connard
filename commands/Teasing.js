@@ -1,7 +1,6 @@
 module.exports.run = async (bot,msg,args) => {
   msg.channel.send("Ce soir en avant premiére se dévoile Charlou du 57")
 
-  msg.channel.send(temps)
   Date temps = new Date.now();
   Date evenement = new Date(2020,08,27).setHours(20);
   Date restant = new Date;
@@ -9,7 +8,7 @@ module.exports.run = async (bot,msg,args) => {
   restant = evenement - temps;
 
   const h = restant.getHours();
-  const m = restant.getMinutes() ;
+  const m = restant.getMinutes();
   const s = restant.getSeconds();
 
   msg.channel.send(h +':'+ m +':'+ s)
