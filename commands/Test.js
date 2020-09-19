@@ -1,6 +1,6 @@
 module.exports.run = async (bot, msg, args)=> {
 
-  alias = client.guild.config.alias;
+  //alias = bot.guild.config.alias;
 
   /*---------- Vérification de la permission ----------*/
   if(!msg.member.hasPermission("MOVE_MEMBERS")) {
