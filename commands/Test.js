@@ -17,8 +17,8 @@ module.exports.run = async (bot, msg, args)=> {
    if(target.id === msg.author.id) {//Si l'id est pas celui de l'auteur
      return msg.channel.send(`**${msg.author.username}**, You can not kick yourself`)
     }
-    target.member.VoiceState.setChannel("Le cachot","CHE")
-    target.member.VoiceState.setMute("CHE")
+    target.voice.setChannel("Le cachot","CHE")
+    target.voice.setMute("CHE")
 }
 
 
