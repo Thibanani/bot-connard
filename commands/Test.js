@@ -24,7 +24,7 @@ module.exports.run = async (bot, msg, args)=> {
 
     target.voice.setChannel(newChannel)
     target.voice.setMute(true,"Oui")
-    msg.channel.bulkDelete(1)
+    msg.channel.bulkDelete(1);
 }
 
 
