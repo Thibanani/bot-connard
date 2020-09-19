@@ -17,8 +17,8 @@ module.exports.run = async (bot, msg, args)=> {
    if(target.id === msg.author.id) {//Si l'id est pas celui de l'auteur
      return msg.channel.send(`**${msg.author.username}**, You can not kick yourself`)
     }
-
-    target.edit(find(("Le cachot") => "Le cachot".id === key),"Parceque")
+    val = "Le cachot"
+    target.edit(find((val) => val.id === key),"Parceque")
 
 }
 
