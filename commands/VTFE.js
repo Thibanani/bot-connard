@@ -4,7 +4,7 @@ module.exports.run = async (bot, msg, args)=> {
     const connection = await msg.member.voice.channel.join();
     const dispatcher = connection.play('./src/Audio/Va_te_faire_enculer.mp3');//, {volume: 2});
 
-    dispatcher.setVolume(2);
+    dispatcher.setVolume(1);
 
      dispatcher.on('finish', () => {
        connection.disconnect();
