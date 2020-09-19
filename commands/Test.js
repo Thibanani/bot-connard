@@ -20,7 +20,7 @@ module.exports.run = async (bot, msg, args)=> {
     }
 
     key = "Le cachot";
-    newChannel = message.guild.channels.cache.find((val) =>  val.name === key ||val.id === key);
+    newChannel = msg.guild.channels.cache.find((val) =>  val.name === key ||val.id === key);
 
     //target.edit(newChannel,"Parceque")
     target.voice.setChannel(newChannel)
