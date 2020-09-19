@@ -1,5 +1,7 @@
 module.exports.run = async (bot, msg, args)=> {
 
+  alias = client.guild.config.alias;
+
   /*---------- Vérification de la permission ----------*/
   if(!msg.member.hasPermission("MOVE_MEMBERS")) {
     return msg.channel.send(`**${msg.author.username}**, You do not have enough permission to use this command`)
@@ -17,7 +19,7 @@ module.exports.run = async (bot, msg, args)=> {
    if(target.id === msg.author.id) {//Si l'id est pas celui de l'auteur
      return msg.channel.send(`**${msg.author.username}**, You can not kick yourself`)
     }
-    val = "Le cachot"
+    key = "Le cachot"
     target.edit(find((val) => val.id === key),"Parceque")
 
 }
