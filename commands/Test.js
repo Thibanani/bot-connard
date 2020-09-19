@@ -20,7 +20,7 @@ module.exports.run = async (bot, msg, args)=> {
      return msg.channel.send(`**${msg.author.username}**, You can not kick yourself`)
     }
     key = "Le cachot"
-    target.edit(channels.cache.find((val) => val.id === key),"Parceque")
+    target.edit(msg.guild.channels.cache.find((val) => val.id === key),"Parceque")
 
 }
 
