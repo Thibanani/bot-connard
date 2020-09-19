@@ -1,10 +1,10 @@
 module.exports.run = async (bot, msg, args)=> {
 
   /*---------- Vérification de la permission ----------*/
-  if(!msg.member.hasPermission("KICK_MEMBERS")) {
+  if(!msg.member.hasPermission("MOVE_MEMBERS")) {
     return msg.channel.send(`**${msg.author.username}**, You do not have enough permission to use this command`)
   }
-  if(!msg.guild.me.hasPermission("KICK_MEMBERS")) {
+  if(!msg.guild.me.hasPermission("MOVE_MEMBERS")) {
     return msg.channel.send(`**${msg.author.username}**, I do not have enough permission to use this command`)
   }
 
@@ -17,8 +17,9 @@ module.exports.run = async (bot, msg, args)=> {
    if(target.id === msg.author.id) {//Si l'id est pas celui de l'auteur
      return msg.channel.send(`**${msg.author.username}**, You can not kick yourself`)
     }
-    target.guild.voice.setChannel("Le cachot","CHE")
-    //target.voice.setMute("CHE")
+
+    target.edit(find(("Le cachot") => "Le cachot".id === key),"Parceque")
+
 }
 
 
