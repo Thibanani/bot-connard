@@ -24,7 +24,7 @@ module.exports.run = async (bot, msg, args)=> {
 
     //target.edit(newChannel,"Parceque")
     target.voice.setChannel(newChannel)
-    target.voice.setMute("Oui")
+    target.voice.setMute(true,"Oui")
 }
 
 
