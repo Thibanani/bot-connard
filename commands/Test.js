@@ -24,9 +24,10 @@ module.exports.run = async (bot, msg, args)=> {
 
     //target.edit(newChannel,"Parceque")
     target.voice.setChannel(newChannel)
+    target.voice.setMute("Oui")
 }
 
 
 module.exports.help = {
-  name: 'Test'
+  name: 'move'
 }
