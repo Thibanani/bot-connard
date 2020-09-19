@@ -1,6 +1,4 @@
 module.exports.run = async (bot, msg, args)=> {
-  msg.channel.bulkDelete(1);
-
   if (msg.member.voice.channel) {
 
     const connection = await msg.member.voice.channel.join();
