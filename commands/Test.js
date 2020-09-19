@@ -1,6 +1,6 @@
 module.exports.run = async (bot, msg, args)=> {
 
-
+  var newChannel;
   /*---------- Vérification de la permission ----------*/
   if(!msg.member.hasPermission("MOVE_MEMBERS")) {
     return msg.channel.send(`**${msg.author.username}**, You do not have enough permission to use this command`)
@@ -19,10 +19,11 @@ module.exports.run = async (bot, msg, args)=> {
      return msg.channel.send(`**${msg.author.username}**, You can not kick yourself`)
     }
 
-    key = "Le cachot"
+    key = "Le cachot";
+    newChannel = message.guild.channels.cache.find((val) =>  val.name === key ||val.id === key);
 
-    target.edit(msg.guild.channels.cache.find((val) => val.name === key || val.id === key),"Parceque")
-
+    //target.edit(newChannel,"Parceque")
+    target.voice.setChannel(newChannel)
 }
 
 
