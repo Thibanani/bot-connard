@@ -1,6 +1,5 @@
 module.exports.run = async (bot, msg, args)=> {
 
-  alias = bot.guild.config.alias;
 
   /*---------- Vérification de la permission ----------*/
   if(!msg.member.hasPermission("MOVE_MEMBERS")) {
@@ -20,15 +19,9 @@ module.exports.run = async (bot, msg, args)=> {
      return msg.channel.send(`**${msg.author.username}**, You can not kick yourself`)
     }
 
-    //key = "Le cachot"
-    for (var key in alias) {
-      if (alias[key].includes("Le cachot")) {
-        //newChannelId = key;
-        newChannel = message.guild.channels.cache.find((val) => val.id === key);
-        break;
-      }
-    }
-    target.edit(msg.guild.channels.cache.find((val) => val.id === key),"Parceque")
+    key = "Le cachot"
+
+    target.edit(msg.guild.channels.cache.find((val) => val.name === key || val.id === key),"Parceque")
 
 }
 
