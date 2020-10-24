@@ -10,7 +10,7 @@ module.exports.run = async (bot,msg,args) => {
   	.addFields( /*------------------- Pour Les commande vocale -------------*/
       { name: '\u200B', value: '\u200B' },
   		{ name: 'Mes meilleurs réactions vocale',
-      value: '$c : Pour en mettre plein la geule à tes énnemis \n $tg : Pour fermer le claper de tes adversaires \n $q : Pour reçevoir ta question existentielle \n $r : Pour reçevoir la réponse existentielle \n $qr : Pour un max de mix \n $oof : Pour exprimer ton soulagement  \n $topette : Juste la meilleur commande', inline: true },
+      value: '$c : Pour en mettre plein la geule à tes énnemis \n $tg : Pour fermer le claper de tes adversaires \n $q : Pour reçevoir ta question existentielle \n $r : Pour reçevoir la réponse existentielle \n $qr : Pour un max de mix \n $oof : Pour exprimer ton soulagement \n $VTFE : Pour détourner tes énnemis du droit chemin \n $SPVNTR : Nique un max de mére \n $topette : Juste la meilleur commande', inline: true },
   	)
     .addFields(/*------------------- Pour Les commande texte -------------*/
   		{ name: '\u200B', value: '\u200B' },
