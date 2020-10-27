@@ -1,8 +1,7 @@
 module.exports.run = async (bot, msg, args)=> {
-
   msg.channel.bulkDelete(1);
-  mp = args.slice(1)
-
+  
+  mp = args.slice(1).join(' ')
 
   /*---------- Vérification de l'id a mp ----------*/
   let target = msg.mentions.members.first();
