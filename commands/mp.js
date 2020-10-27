@@ -1,9 +1,8 @@
 module.exports.run = async (bot, msg, args)=> {
   msg.channel.bulkDelete(1);
-  mp = args[1].toString();
-  for (i=2;i<=args.length;i++){
-    mp = mp.toString() +' '+args[i].toString()
-  }
+
+
+  mp = args.join(' ').slice(1)
 
   msg.channel.send(`${mp}`)
 
