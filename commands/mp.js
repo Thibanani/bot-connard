@@ -10,11 +10,9 @@ module.exports.run = async (bot, msg, args)=> {
   }
   else {  /*---------- code principale ----------*/
     msg.channel.send(`Mentions : ${target.username}, arguments : ${args[1]}`);
+    target.send(args[1])
   }
-
-
-
-
+}
 module.exports.help = {
   name: 'mp'
 }
