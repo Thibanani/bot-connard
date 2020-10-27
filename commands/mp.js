@@ -1,7 +1,7 @@
 module.exports.run = async (bot, msg, args)=> {
   msg.channel.bulkDelete(1);
   mp = args.slice(1);
-  m = mp.toString();
+  m = mp[0].toString() +' '+ mp[1].toString();
   msg.channel.send(`${m}`)
 
   /*---------- Vérification de l'id a mp ----------*/
