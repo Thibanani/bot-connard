@@ -1,5 +1,6 @@
 module.exports.run = async (bot, msg, args)=> {
 
+  String mp;
   msg.channel.bulkDelete(1);
   for (i=1;i<=args.length;i++){
     mp = mp + " " + args[i];
