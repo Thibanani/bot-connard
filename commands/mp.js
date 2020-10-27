@@ -9,7 +9,7 @@ module.exports.run = async (bot, msg, args)=> {
     msg.channel.send(`**${msg.author.username}**, T'es maso ou quoi`)
   }
   else {  /*---------- code principale ----------*/
-    target.send(args - target);
+    target.send(args);
   }
 
 
