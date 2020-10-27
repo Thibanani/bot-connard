@@ -9,8 +9,8 @@ module.exports.run = async (bot, msg, args)=> {
     msg.channel.send(`**${msg.author.username}**, T'es maso ou quoi`)
   }
   else {  /*---------- code principale ----------*/
-    msg.channel.send(`Mentions : ${target.username}, arguments : ${args[1]}`);
-    target.send(args[1])
+    msg.channel.send(`Mentions : ${target.username}, arguments : ${args}, arguments 0 : ${args[0]}, arguments 1 : ${args[1]}`);
+    target.send(args[0])
   }
 }
 module.exports.help = {
