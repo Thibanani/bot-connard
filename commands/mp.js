@@ -2,7 +2,7 @@ module.exports.run = async (bot, msg, args)=> {
 
   msg.channel.bulkDelete(1);
   do{
-    mp = mp + " " + args[i];
+    mp = mp + ' ' + args[i];
     i++
   } while(args[i]!='');
 
