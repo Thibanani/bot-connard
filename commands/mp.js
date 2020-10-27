@@ -1,10 +1,10 @@
 module.exports.run = async (bot, msg, args)=> {
 
-  String mp;
   msg.channel.bulkDelete(1);
-  for (i=1;i<=args.length;i++){
+  do{
     mp = mp + " " + args[i];
-  }
+    i++
+  } while(args[i]!='');
 
 
   /*---------- Vérification de l'id a mp ----------*/
