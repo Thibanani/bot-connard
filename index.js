@@ -49,6 +49,8 @@ bot.on('message', async (msg) =>{
     cmdArray = msg.content.substring(config.prefix.length).split(" ")
     cmd = cmdArray[0]
     args = cmdArray.slice(1)
+    msg.channel.send(cmdArray)
+    msg.channel.send(args) 
 
     let command = commands.getCommand(cmd);
     if(command) command.run(bot, msg, args);
