@@ -26,4 +26,4 @@ function attrib_lg(tab_J, nbr_lg){
   return lg
 }
 
-module.exports.attrib_lg
+module.exports.attrib_lg = attrib_lg;
