@@ -5,7 +5,7 @@ module.exports.run = async (bot, msg, args)=> {
   tab_J = args;
   var var_temp = 0;
 
-/*---------- Vérification du nbr de joueurs ----------*/
+/*--------------------  Vérification du nbr de joueurs  --------------------*/
   if (args.length <= (joueurMini-1)){
     return msg.channel.send(`Nombres de joueurs minimum : ${joueurMini}`)
   }
@@ -27,22 +27,34 @@ module.exports.run = async (bot, msg, args)=> {
   }
   msg.channel.send("=====================================")
 
-/*---------- Attribution des rôles ----------*/
+/*--------------------  Attribution des rôles  --------------------*/
 //Nombre de chaque rôle
   var nbr_lg = tab_J.length/4;
   var nbr_voy = 1;
   var nbr_vill = tab_J.length - nbr_voy - nbr_lg;
 
-
   lg = f.attrib_lg(tab_J, nbr_lg);
   voy = f.attrib_voy(tab_J, nbr_voy, lg);
 
-
-
-
+  //----------------------DEBUG
   msg.channel.send(`Joueur ${lg[0]+1} : ${tab_J[lg[0]]}, L_G`)
   msg.channel.send(`Joueur ${voy[0]+1} : ${tab_J[voy[0]]}, Voy`)
+  msg.channel.send("=====================================")
 
+
+  /*--------------------  Jeu  --------------------*/
+  do {
+    // ---------- Nuit
+    msg.channel.send("La nuit tombe")
+    msg.channel.send("=====================================")
+    nbr_vill = 0;
+    // ---------- vote
+    msg.channel.send("Le soleil se lève")
+    // ---------- fin du jeu
+    msg.channel.send("=====================================")
+
+
+  } while ((nbr_vill > nbr_lg) && (nbr_lg > 0));
 
 
 
