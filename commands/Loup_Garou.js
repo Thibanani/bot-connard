@@ -28,6 +28,7 @@ module.exports.run = async (bot, msg, args)=> {
   nbr_lg = tab_J.length/4;
   i = 0;
   do{
+    var_temp = 0;
     numéroJ_lg = Math.floor(Math.random() * tab_J.length)
 
     for (y=0; y<=(nbr_lg-1); y++){
