@@ -31,7 +31,7 @@ module.exports.run = async (bot, msg, args)=> {
 //Nombre de chaque rôle
   var nbr_lg = tab_J.length/4;
   var nbr_voy = 1;
-  var nbr_ vill = tab_J.length - nbr_voy - nbr_lg;
+  var nbr_vill = tab_J.length - nbr_voy - nbr_lg;
 
 
   lg = f.attrib_lg(tab_J, nbr_lg);
