@@ -27,7 +27,7 @@ module.exports.run = async (bot, msg, args)=> {
 
 /*---------- Attribution des rôles ----------*/
   var nbr_lg = tab_J.length/4;
-  var[] lg[nbr_lg];
+  var lg;
   i = 0;
   do{
     var_temp = 0;
