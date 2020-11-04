@@ -25,7 +25,8 @@ module.exports.run = async (bot, msg, args)=> {
   msg.channel.send("=====================================")
 
 /*---------- Attribution des rôles ----------*/
-  nbr_lg = tab_J.length/4;
+  var nbr_lg = tab_J.length/4;
+  var lg[nbr_lg]
   i = 0;
   do{
     var_temp = 0;
@@ -33,7 +34,7 @@ module.exports.run = async (bot, msg, args)=> {
 
     for (y=0; y<=(nbr_lg-1); y++){
       if ((y != i) && (numéroJ_lg == lg[y])){
-        var_temp = 1;
+        var var_temp = 1;
       }
     }
 
