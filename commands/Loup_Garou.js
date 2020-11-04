@@ -21,7 +21,7 @@ module.exports.run = async (bot, msg, args)=> {
       }
   }
 
-  for (i=0; i<=(tab_J.length-1; i++){
+  for (i=0; i<=(tab_J.length-1); i++){
     msg.channel.send(`Joeur ${i} : ${tab_J[i]}`)
   }
 
