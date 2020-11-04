@@ -12,20 +12,23 @@ module.exports.run = async (bot, msg, args)=> {
        return msg.channel.send(`**${args[i]}**, Putain mais c'est personne`)
      }
      for(y=0; y<=(args.length-1); y++){
-       if((args[i].id === tab_J[y]) && (i != y)) {//Si l'id est correct
+       if((args[i].id === tab_J[y].id) && (i != y)) {//Si l'id est correct
          return msg.channel.send(`**${args[y]}**, Il peux pas jouer deux fois`)
        }
      }
   }
 
-
+  //----------------------DEBUG
   for (i=0; i<=(tab_J.length-1); i++){
-    msg.channel.send(`Joeur ${i} : ${tab_J[i]}`)
+    msg.channel.send(`Joueur ${i} : ${tab_J[i]}`)
   }
+  msg.channel.send("=====================================")
 
+/*---------- Attribution des rôles ----------*/
+  numéroJ_lg = Math.floor(Math.random() * tab_J.length))
+  lg[0] = tab_J[numéroJ_lg];
 
-
-
+  msg.channel.send(`Joueur ${numéroJ_lg} : ${lg[0]}, L_G`)
 
 
 
