@@ -26,9 +26,8 @@ module.exports.run = async (bot, msg, args)=> {
   msg.channel.send("=====================================")
 
 /*---------- Attribution des rôles ----------*/
-  var nbr_lg = tab_J.length/4;
-  var lg;
-  i = 0;
+  var nbr_lg = tab_J.length/4, lg, i = 0;
+
   do{
     var_temp = 0;
     numéroJ_lg = Math.floor(Math.random() * tab_J.length)
