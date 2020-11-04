@@ -1,7 +1,7 @@
 module.exports.run = async (bot, msg, args)=> {
   const joueurMini = 5;
-  const[] tab_J[args.length];
-
+  const[] tab_J = new const[args.length];
+  
 /*---------- Vérification du nbr de joueurs ----------*/
   if (args.length <= (joueurMini-1)){
     return msg.channel.send(`Nombres de joueurs minimum : ${joueurMini}`)
