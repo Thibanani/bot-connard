@@ -41,7 +41,7 @@ module.exports.run = async (bot, msg, args)=> {
 
 
   msg.channel.send(`Joueur ${lg[0]+1} : ${tab_J[lg[0]]}, L_G`)
-  msg.channel.send(`Joueur ${voy[0]+1} : ${tab_J[voy[0]]}, L_G`)
+  msg.channel.send(`Joueur ${voy[0]+1} : ${tab_J[voy[0]]}, Voy`)
 
 
 
