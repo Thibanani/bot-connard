@@ -1,6 +1,7 @@
 module.exports.run = async (bot, msg, args)=> {
   const joueurMini = 5;
   tab_J = args;
+  var var_temp = 0;
 
 /*---------- Vérification du nbr de joueurs ----------*/
   if (args.length <= (joueurMini-1)){
@@ -34,7 +35,7 @@ module.exports.run = async (bot, msg, args)=> {
 
     for (y=0; y<=(nbr_lg-1); y++){
       if ((y != i) && (numéroJ_lg == lg[y])){
-        var var_temp = 1;
+        var_temp = 1;
       }
     }
 
