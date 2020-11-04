@@ -12,7 +12,7 @@ module.exports.run = async (bot, msg, args)=> {
        return msg.channel.send(`**${args[i]}**, Putain mais c'est personne`)
      }
      for(y=0; y<=(args.length-1); y++){
-       if((args[i].id === tab_J[y].id) && (i != y)) {//Si l'id est correct
+       if((args[i].id == tab_J[y].id) && (i != y)) {//Si l'id est correct
          return msg.channel.send(`**${args[y-1]}**, Il peux pas jouer deux fois`)
        }
      }
