@@ -1,6 +1,6 @@
 module.exports.run = async (bot, msg, args)=> {
   const joueurMini = 5;
-  string tab_J[args.length];
+  const[] tab_J[args.length];
 
 /*---------- Vérification du nbr de joueurs ----------*/
   if (args.length <= (joueurMini-1)){
