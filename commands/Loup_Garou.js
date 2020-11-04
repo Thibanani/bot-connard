@@ -1,3 +1,5 @@
+const f = require('./L_G/Fonction.js');
+
 module.exports.run = async (bot, msg, args)=> {
   const joueurMini = 5;
   tab_J = args;
@@ -21,36 +23,24 @@ module.exports.run = async (bot, msg, args)=> {
 
   //----------------------DEBUG
   for (i=0; i<=(tab_J.length-1); i++){
-    msg.channel.send(`Joueur ${i} : ${tab_J[i]}`)
+    msg.channel.send(`Joueur ${i+1} : ${tab_J[i]}`)
   }
   msg.channel.send("=====================================")
 
 /*---------- Attribution des rôles ----------*/
+//Nombre de chaque rôle
   var nbr_lg = tab_J.length/4;
-  var lg = [];
-  var i = 0;
+  var nbr_voy = 1;
+  var nbr_ vill = tab_J.length - nbr_voy - nbr_lg;
 
-  do{
-    var_temp = 0;
-    numéroJ_lg = Math.floor(Math.random() * tab_J.length)
 
-    for (y=0; y<=(nbr_lg-1); y++){
-      if ((y != i) && (numéroJ_lg == lg[y])){
-        var_temp = 1;
-      }
-    }
-
-    if (var_temp == 0){
-      lg[i] = numéroJ_lg;
-      i++;
-    }
-
-  } while (i <=(nbr_lg-1));
+  lg = f.attrib_lg(tab_J, nbr_lg);
 
 
 
 
-  msg.channel.send(`Joueur ${numéroJ_lg} : ${tab_J[lg[0]]}, L_G`)
+
+  msg.channel.send(`Joueur ${numéroJ_lg+1} : ${tab_J[lg[0]]}, L_G`)
 
 
 
