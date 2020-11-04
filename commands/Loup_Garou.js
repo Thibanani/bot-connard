@@ -1,6 +1,6 @@
 module.exports.run = async (bot, msg, args)=> {
   const joueurMini = 5;
-  string[] tab_J = new string[args.length];
+  tab_J = args;
 
 /*---------- Vérification du nbr de joueurs ----------*/
   if (args.length <= (joueurMini-1)){
@@ -13,17 +13,17 @@ module.exports.run = async (bot, msg, args)=> {
      }
      for(y=0; y<=(args.length-1); y++){
        if((args[i].id === tab_J[y]) && (i != y)) {//Si l'id est correct
-          return msg.channel.send(`**${args[y]}**, Il peux pas jouer deux fois`)
-        }
-        else {
-          tab_J[i] = args[i];
-        }
-      }
+         return msg.channel.send(`**${args[y]}**, Il peux pas jouer deux fois`)
+       }
+     }
   }
+
 
   for (i=0; i<=(tab_J.length-1); i++){
     msg.channel.send(`Joeur ${i} : ${tab_J[i]}`)
   }
+
+
 
 
 
