@@ -26,7 +26,8 @@ module.exports.run = async (bot, msg, args)=> {
 
 /*---------- Attribution des rôles ----------*/
   numéroJ_lg = Math.floor(Math.random() * tab_J.length)
-  int lg = {numéroJ_lg}
+  nbr_lg =
+  var lg[nbr_lg] = {numéroJ_lg}
 
   msg.channel.send(`Joueur ${numéroJ_lg} : ${tab_J[lg[0]]}, L_G`)
 
