@@ -10,7 +10,7 @@ module.exports.run = async (bot,msg,args) => {
 
   const pfc1 =["C'est entre vous","Quelqu'un ose te défier"]
   joueur_1.send(`${pfc1[Math.floor(Math.random() * pfc1.length)]}`)
-  j1 = joueur.message.channel;
+  j1 = joueur_1.message.channel;
 
 
   //collecteur du message envoyée
