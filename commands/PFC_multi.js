@@ -10,11 +10,11 @@ module.exports.run = async (bot,msg,args) => {
 
   const pfc1 =["C'est entre vous","Quelqu'un ose te défier"]
   joueur_1.send(`${pfc1[Math.floor(Math.random() * pfc1.length)]}`)
-  j1 = joueur_1.dmChannel()
+  dm_j1 = joueur_1.createDM();
 
   //collecteur du message envoyée
   const filter_0 = m => m.author.id === bot.user.id && m.content === `On rappelle pour les débiles :  pierre :fist:    feuille :raised_hand:    ciseaux :v:`;
-  const collector_0 = j1.createMessageCollector(filter_0, { max: 1,time: 15000 });
+  const collector_0 = dm_j1.createMessageCollector(filter_0, { max: 1,time: 15000 });
   joueur_1.send(`On rappelle pour les débiles :  pierre :fist:    feuille :raised_hand:    ciseaux :v:`)
 
 //---------------------------Message au joueur 1
