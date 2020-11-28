@@ -4,7 +4,7 @@ module.exports.run = async (bot, msg, args)=> {
     const connection = await msg.member.voice.channel.join();
     const dispatcher = connection.play('./src/Audio/jaccepte_pas.mp3');//, {volume: 2});
 
-    dispatcher.setVolume(0.5);
+    dispatcher.setVolume(0.75);
 
      dispatcher.on('finish', () => {
        connection.disconnect();
