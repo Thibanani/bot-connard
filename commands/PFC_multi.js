@@ -14,7 +14,7 @@ module.exports.run = async (bot,msg,args) => {
 
   //collecteur du message envoyée
   const filter_0 = m => m.author.id === bot.user.id && m.content === `On rappelle pour les débiles :  pierre :fist:    feuille :raised_hand:    ciseaux :v:`;
-  const collector_0 = joueur_1.dmChannel.createMessageCollector(filter_0, { max: 1,time: 15000 });
+  const collector_0 = joueur_1.channel.createMessageCollector(filter_0, { max: 1,time: 15000 });
   joueur_1.send(`On rappelle pour les débiles :  pierre :fist:    feuille :raised_hand:    ciseaux :v:`)
 
 //---------------------------Message au joueur 1
