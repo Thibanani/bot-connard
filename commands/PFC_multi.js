@@ -1,4 +1,5 @@
 module.exports.run = async (bot,msg,args) => {
+  var temps = 30000;
 
   let joueur_2 = msg.mentions.members.first();
   let joueur_1 = msg.author;
@@ -23,7 +24,7 @@ module.exports.run = async (bot,msg,args) => {
 
   //---------------------------collecteur de l'émoji du joueur 1
       const filter_1 = (reaction, user) => user.id === msg.author.id;
-      const collector_1 = m.createReactionCollector(filter_1, { max: 1,time: 15000 });
+      const collector_1 = m.createReactionCollector(filter_1, { max: 1,time: temps });
 
       collector_1.on('collect', (reaction_1, user) => {
          console.log(`Collected ${reaction_1.emoji.name}`);
@@ -40,7 +41,7 @@ module.exports.run = async (bot,msg,args) => {
 
     //---------------------------collecteur de l'émoji du joueur 2
             const filter_2 = (reaction, user) => user.id === joueur_2.id;
-            const collector_2 = m.createReactionCollector(filter_2, { max: 1,time: 15000 });
+            const collector_2 = m.createReactionCollector(filter_2, { max: 1,time: temps });
             collector_2.on('collect', (reaction_2, user) => {
                console.log(`Collected ${reaction_2.emoji.name}`);
 
@@ -50,7 +51,6 @@ module.exports.run = async (bot,msg,args) => {
                    joueur_2.send(`Egalité, QUI COPIE`)
 
                  }else if (reaction_2.emoji.name == '✋') {
-                   msg.channel.send(`Vous êtes mon maitre`)
                    joueur_1.send(`T'a perdue gros naze`)
                    joueur_2.send(`T'a gagné ptite salope`)
 
@@ -96,8 +96,8 @@ module.exports.run = async (bot,msg,args) => {
 
             collector_2.on('end', collected => {
               if (collected.size == 0) {
-                joueur_1.send('Sale couard !')
-                joueur_2.send('Ton adversaire a fui !')
+                joueur_2.send('Sale couard !')
+                joueur_1.send('Ton adversaire a fui !')
               }
             });
           });
