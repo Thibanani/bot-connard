@@ -9,7 +9,7 @@ module.exports.run = async (bot,msg,args) => {
   }
 
   const pfc1 =["C'est entre vous","Quelqu'un ose te défier"]
-  let dm_j1 = joueur_1.createDM()
+  dm_j1 = joueur_1.createDM()
   dm_j1.send(`${pfc1[Math.floor(Math.random() * pfc1.length)]}`)
 
 
