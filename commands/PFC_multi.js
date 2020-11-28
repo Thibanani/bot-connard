@@ -9,8 +9,9 @@ module.exports.run = async (bot,msg,args) => {
   }
 
   const pfc1 =["C'est entre vous","Quelqu'un ose te défier"]
-  joueur_1.send(`${pfc1[Math.floor(Math.random() * pfc1.length)]}`)
   dm_j1 = joueur_1.createDM();
+  dm_j1.send(`${pfc1[Math.floor(Math.random() * pfc1.length)]}`)
+
 
   //collecteur du message envoyée
   const filter_0 = m => m.author.id === bot.user.id && m.content === `On rappelle pour les débiles :  pierre :fist:    feuille :raised_hand:    ciseaux :v:`;
