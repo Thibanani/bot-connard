@@ -17,7 +17,6 @@ module.exports.run = async (bot, msg, args)=> {
   for (i=0;i<=tab_grille.length;i++){
     msg.channel.send(`${tab_grille[i][0]}${tab_grille[i][1]}${tab_grille[i][2]}${tab_grille[i][3]}${tab_grille[i][4]}${tab_grille[i][5]}|`)
   }
-  msg.channel.send()
   do {
     // ---------- Collecteur de la colonne ou jettons a placer
 
