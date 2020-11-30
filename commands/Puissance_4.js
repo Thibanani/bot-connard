@@ -10,9 +10,10 @@ module.exports.run = async (bot, msg, args)=> {
 
 
 
-  var fin = 0, joueur_prec, gagant,i;
+  var fin = 0, joueur_prec,joueur_actif, gagant,i;
   const tab_joueur = [joueur_1,joueur_2];
-  var tab_grille = new Array(new Array());
+  var tab_grille = new Array();
+  tab_grille = [new Array(),new Array(),new Array(),new Array(),new Array(),new Array()]
   tab_grille = [['|      ','|      ','|      ','|      ','|      ','|      ','|      '],['|      ','|      ','|      ','|      ','|      ','|      ','|      '],['|      ','|      ','|      ','|      ','|      ','|      ','|      '],['|      ','|      ','|      ','|      ','|      ','|      ','|      '],['|      ','|      ','|      ','|      ','|      ','|      ','|      '],['|      ','|      ','|      ','|      ','|      ','|      ','|      ']];
   //coniguration tab_grille[ligne][colonne]
 
@@ -31,6 +32,11 @@ module.exports.run = async (bot, msg, args)=> {
     collector_0.on('collect', m => {
       console.log(`Collected :${m.content}`);
       //collecteur de l'émote
+      const filter_1 = (reaction, user) => tab_joueur[joueur_actif].id === msg.author.id;
+      const collector_1 = m.createReactionCollector(filter_1, { max: 1,time: temps });
+
+      collector_1.on('collect', (reaction_1, user) => {
+         console.log(`Collected ${reaction_1.emoji.name}`);
 
     });
     // ---------- Affichage de la grille
@@ -38,7 +44,7 @@ module.exports.run = async (bot, msg, args)=> {
 
     // ---------- Vérification du gagnant
     if (1){
-      gagant = joueur[joueur_prec];
+      gagant = joueur[joueur_actif];
     }
     if (gagnant != ''){
       fin = 1;
@@ -47,9 +53,11 @@ module.exports.run = async (bot, msg, args)=> {
     // ---------- Vérification du joueur actif
     if(joueur_prec == 0){
       joueur_prec = 1;
+      joueur_actif =0;
     }
     else {
       joueur_prec = 0;
+      joueur_actif =1;
     }
 
   }while (fin == 0);
