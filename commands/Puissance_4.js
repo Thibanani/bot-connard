@@ -40,7 +40,8 @@ module.exports.run = async (bot, msg, args)=> {
 
   // ---------- Affichage de la grille
   for (i=0;i<=tab_grille.length;i++){
-    msg.channel.send(`${tab_grille[i].c1}${tab_grille[i].c2}${tab_grille[i].c3}${tab_grille[i].c4}${tab_grille[i].c5}${tab_grille[i].c6}|`)
+    msg.channel.send(`${tab_grille[0].c1}${tab_grille[0].c2}${tab_grille[0].c3}${tab_grille[0].c4}${tab_grille[0].c5}${tab_grille[0].c6}|`)
+    msg.channel.send(`${tab_grille[1].c1}${tab_grille[1].c2}${tab_grille[1].c3}${tab_grille[1].c4}${tab_grille[1].c5}${tab_grille[1].c6}|`)
   }
   do {
     // ---------- Collecteur de la colonne ou jettons a placer
