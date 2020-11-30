@@ -14,6 +14,7 @@ module.exports.run = async (bot, msg, args)=> {
   var tab_grille = [['|      ','|      ','|      ','|      ','|      ','|      '],['|      ','|      ','|      ','|      ','|      ','|      '],['|      ','|      ','|      ','|      ','|      ','|      '],['|      ','|      ','|      ','|      ','|      ','|      '],['|      ','|      ','|      ','|      ','|      ','|      '],['|      ','|      ','|      ','|      ','|      ','|      '],['|      ','|      ','|      ','|      ','|      ','|      ']];
 
   // ---------- Affichage de la grille
+  msg.channel.send(`:one::two::three::four::five::six:`)
   for (i=0;i<=tab_grille.length;i++){
     msg.channel.send(`${tab_grille[i][0]}${tab_grille[i][1]}${tab_grille[i][2]}${tab_grille[i][3]}${tab_grille[i][4]}${tab_grille[i][5]}|`)
   }
