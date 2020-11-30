@@ -50,7 +50,3 @@ module.exports.run = async (bot, msg, args)=> {
 module.exports.help = {
   name: 'P4'
 }
-
-void aff_grille {
-
-}
