@@ -22,11 +22,16 @@ module.exports.run = async (bot, msg, args)=> {
   }
   do {
     // ---------- Collecteur de la colonne ou jettons a placer
-    msg.channel.send(`<1️⃣2️⃣3️⃣4️⃣5️⃣6️⃣>`)
-    //collecteur pour être sure que le message est envoyée
-    const filter_0 = m => m.author.id === bot.user.id && m.content === `On rappelle pour les débiles :  pierre :fist:    feuille :raised_hand:    ciseaux :v:`;
-    const collector_0 = channel_1.createMessageCollector(filter_0, { max: 1,time: 15000 });
 
+    //collecteur pour être sure que le message est envoyée
+    const filter_0 = m => m.author.id === bot.user.id && m.content === `<1️⃣2️⃣3️⃣4️⃣5️⃣6️⃣>`;
+    const collector_0 = channel_1.createMessageCollector(filter_0, { max: 1,time: 15000 });
+    msg.channel.send(`<1️⃣2️⃣3️⃣4️⃣5️⃣6️⃣>`)
+
+    collector_0.on('collect', m => {
+      console.log(`Collected :${m.content}`);
+      
+    });
     // ---------- Affichage de la grille
 
 
