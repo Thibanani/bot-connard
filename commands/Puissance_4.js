@@ -13,7 +13,7 @@ module.exports.run = async (bot, msg, args)=> {
   var fin = 0, joueur_prec,joueur_actif, gagant,i;
   const tab_joueur = [joueur_1,joueur_2];
   var tab_grille = [
-                    ['|      ','|      ','|      ','|      ','|      ','|      ','|      ',],
+                    ['|      ','|      ','|      ','|      ','|      ','|      ','|      '],
                     ['|      ','|      ','|      ','|      ','|      ','|      ','|      '],
                     ['|      ','|      ','|      ','|      ','|      ','|      ','|      '],
                     ['|      ','|      ','|      ','|      ','|      ','|      ','|      '],
