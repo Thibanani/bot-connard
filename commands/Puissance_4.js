@@ -16,9 +16,9 @@ module.exports.run = async (bot, msg, args)=> {
   //coniguration tab_grille[ligne][colonne]
 
   // ---------- Affichage de la grille
-  msg.channel.send(`1️⃣2️⃣3️⃣4️⃣5️⃣6️⃣`)
+  msg.channel.send(`<1️⃣2️⃣3️⃣4️⃣5️⃣6️⃣>`)
   for (i=0;i<=tab_grille.length;i++){
-    msg.channel.send(`${tab_grille[i][0]}${tab_grille[i][1]}${tab_grille[i][2]}${tab_grille[i][3]}${tab_grille[i][4]}${tab_grille[i][5]}|`)
+    msg.channel.send(`${tab_grille[i][1]}${tab_grille[i][2]}${tab_grille[i][3]}${tab_grille[i][4]}${tab_grille[i][5]}${tab_grille[i][6]}|`)
   }
   do {
     // ---------- Collecteur de la colonne ou jettons a placer
