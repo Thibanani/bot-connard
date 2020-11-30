@@ -22,8 +22,13 @@ module.exports.run = async (bot, msg, args)=> {
 
   //Piste a dévelloper
 /*  var cards = [
-    {ligne: 1 {colonne: 1, {valeur: '|      '},}
-];*/
+    {c1: '|      ',c2: '|      ',c3: '|      ',c4: '|      ',c5: '|      ',c6: '|      ',},
+    {value: 2, name: 'Two of Clubs'},
+    {value: 3, name: 'Three of Clubs'}
+];
+
+https://stackoverflow.com/questions/48909283/discord-js-how-do-i-set-a-value-to-an-array-string
+*/
 
 
 
