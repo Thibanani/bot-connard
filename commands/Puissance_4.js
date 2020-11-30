@@ -12,9 +12,21 @@ module.exports.run = async (bot, msg, args)=> {
 
   var fin = 0, joueur_prec,joueur_actif, gagant,i;
   const tab_joueur = [joueur_1,joueur_2];
-  var tab_grille = new Array(6);
-  tab_grille = [new Array(7),new Array(7),new Array(7),new Array(7),new Array(7),new Array(7)]
-  tab_grille = [['|      ','|      ','|      ','|      ','|      ','|      ','|      '],['|      ','|      ','|      ','|      ','|      ','|      ','|      '],['|      ','|      ','|      ','|      ','|      ','|      ','|      '],['|      ','|      ','|      ','|      ','|      ','|      ','|      '],['|      ','|      ','|      ','|      ','|      ','|      ','|      '],['|      ','|      ','|      ','|      ','|      ','|      ','|      ']];
+  var tab_grille = [
+                    {'|      ','|      ','|      ','|      ','|      ','|      ','|      '},
+                    {'|      ','|      ','|      ','|      ','|      ','|      ','|      '},
+                    {'|      ','|      ','|      ','|      ','|      ','|      ','|      '},
+                    {'|      ','|      ','|      ','|      ','|      ','|      ','|      '},
+                    {'|      ','|      ','|      ','|      ','|      ','|      ','|      '},
+                    {'|      ','|      ','|      ','|      ','|      ','|      ','|      '} ];
+
+  //Piste a dévelloper
+/*  var cards = [
+    {ligne: 1 {colonne: 1, {valeur: '|      '},}
+];*/
+
+
+
   //coniguration tab_grille[ligne][colonne]
 
   // ---------- Affichage de la grille
