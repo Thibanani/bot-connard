@@ -24,7 +24,7 @@ module.exports.run = async (bot, msg, args)=> {
   do {
     // ---------- Collecteur de la colonne ou jettons a placer
 
-    //collecteur pour être sure que le message est envoyée
+    /*//collecteur pour être sure que le message est envoyée
     const filter_0 = m => m.author.id === bot.user.id && m.content === `<1️⃣2️⃣3️⃣4️⃣5️⃣6️⃣>`;
     const collector_0 = channel_1.createMessageCollector(filter_0, { max: 1,time: 15000 });
     msg.channel.send(`<1️⃣2️⃣3️⃣4️⃣5️⃣6️⃣>`)
@@ -38,7 +38,7 @@ module.exports.run = async (bot, msg, args)=> {
       collector_1.on('collect', (reaction_1, user) => {
          console.log(`Collected ${reaction_1.emoji.name}`);
 
-    });
+    });*/
     // ---------- Affichage de la grille
 
 
