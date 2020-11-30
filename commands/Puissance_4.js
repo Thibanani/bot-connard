@@ -12,16 +12,16 @@ module.exports.run = async (bot, msg, args)=> {
 
   var fin = 0, joueur_prec,joueur_actif, gagant,i;
   const tab_joueur = [joueur_1,joueur_2];
-  var tab_grille = [
+  /*var tab_grille = [
                     {'|      ','|      ','|      ','|      ','|      ','|      ','|      '},
                     {'|      ','|      ','|      ','|      ','|      ','|      ','|      '},
                     {'|      ','|      ','|      ','|      ','|      ','|      ','|      '},
                     {'|      ','|      ','|      ','|      ','|      ','|      ','|      '},
                     {'|      ','|      ','|      ','|      ','|      ','|      ','|      '},
-                    {'|      ','|      ','|      ','|      ','|      ','|      ','|      '} ];
+                    {'|      ','|      ','|      ','|      ','|      ','|      ','|      '} ];*/
 
   //Piste a dévelloper
-/*  var tab_grille = [
+  var tab_grille = [
     {c1: '|      ',c2: '|      ',c3: '|      ',c4: '|      ',c5: '|      ',c6: '|      ',},//1
     {c1: '|      ',c2: '|      ',c3: '|      ',c4: '|      ',c5: '|      ',c6: '|      ',},//2
     {c1: '|      ',c2: '|      ',c3: '|      ',c4: '|      ',c5: '|      ',c6: '|      ',},//3
@@ -31,8 +31,8 @@ module.exports.run = async (bot, msg, args)=> {
     {c1: '|      ',c2: '|      ',c3: '|      ',c4: '|      ',c5: '|      ',c6: '|      ',}//7
 ];
 
-https://stackoverflow.com/questions/48909283/discord-js-how-do-i-set-a-value-to-an-array-string
-*/
+//https://stackoverflow.com/questions/48909283/discord-js-how-do-i-set-a-value-to-an-array-string
+
 
 
 
@@ -40,7 +40,7 @@ https://stackoverflow.com/questions/48909283/discord-js-how-do-i-set-a-value-to-
 
   // ---------- Affichage de la grille
   for (i=0;i<=tab_grille.length;i++){
-    msg.channel.send(`${tab_grille[i][0]}${tab_grille[i][1]}${tab_grille[i][2]}${tab_grille[i][3]}${tab_grille[i][4]}${tab_grille[i][5]}|`)
+    msg.channel.send(`${tab_grille[i].c1}${tab_grille[i].c2}${tab_grille[i].c3}${tab_grille[i].c4}${tab_grille[i].c5}${tab_grille[i].c6}|`)
   }
   do {
     // ---------- Collecteur de la colonne ou jettons a placer
