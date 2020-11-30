@@ -13,7 +13,7 @@ module.exports.run = async (bot, msg, args)=> {
   var fin = 0, joueur_prec,joueur_actif, gagant,i;
   const tab_joueur = [joueur_1,joueur_2];
   var tab_grille = [
-                    ['|      ','|      ','|      ','|      ','|      ','|      ','|      '],
+                    ['|      ','|      ','|      ','|      ','|      ','|      ','|      ',],
                     ['|      ','|      ','|      ','|      ','|      ','|      ','|      '],
                     ['|      ','|      ','|      ','|      ','|      ','|      ','|      '],
                     ['|      ','|      ','|      ','|      ','|      ','|      ','|      '],
@@ -40,7 +40,7 @@ module.exports.run = async (bot, msg, args)=> {
 
   // ---------- Affichage de la grille
   for (i=0;i<=tab_grille.length-1;i++){
-    msg.channel.send(`${tab_grille[i][0]}${tab_grille[i][1]}${tab_grille[i][2]}${tab_grille[i][3]}${tab_grille[i][4]}${tab_grille[i][5]}|`)
+    msg.channel.send(`${tab_grille[i][0]}${tab_grille[i][1]}${tab_grille[i][2]}${tab_grille[i][3]}${tab_grille[i][4]}${tab_grille[i][5]}${tab_grille[i][6]}|`)
   }
   do {
     // ---------- Collecteur de la colonne ou jettons a placer
