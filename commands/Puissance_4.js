@@ -12,8 +12,8 @@ module.exports.run = async (bot, msg, args)=> {
 
   var fin = 0, joueur_prec,joueur_actif, gagant,i;
   const tab_joueur = [joueur_1,joueur_2];
-  var tab_grille = new Array();
-  tab_grille = [new Array(),new Array(),new Array(),new Array(),new Array(),new Array()]
+  var tab_grille = new Array(6);
+  tab_grille = [new Array(7),new Array(7),new Array(7),new Array(7),new Array(7),new Array(7)]
   tab_grille = [['|      ','|      ','|      ','|      ','|      ','|      ','|      '],['|      ','|      ','|      ','|      ','|      ','|      ','|      '],['|      ','|      ','|      ','|      ','|      ','|      ','|      '],['|      ','|      ','|      ','|      ','|      ','|      ','|      '],['|      ','|      ','|      ','|      ','|      ','|      ','|      '],['|      ','|      ','|      ','|      ','|      ','|      ','|      ']];
   //coniguration tab_grille[ligne][colonne]
 
@@ -24,10 +24,11 @@ module.exports.run = async (bot, msg, args)=> {
   do {
     // ---------- Collecteur de la colonne ou jettons a placer
 
-    /*//collecteur pour être sure que le message est envoyée
-    const filter_0 = m => m.author.id === bot.user.id && m.content === `<1️⃣2️⃣3️⃣4️⃣5️⃣6️⃣>`;
+    /*
+    //collecteur pour être sure que le message est envoyée
+    const filter_0 = m => m.author.id === bot.user.id && m.content === `<1️⃣2️⃣3️⃣4️⃣5️⃣6️⃣>:octagonal_sign:`;
     const collector_0 = channel_1.createMessageCollector(filter_0, { max: 1,time: 15000 });
-    msg.channel.send(`<1️⃣2️⃣3️⃣4️⃣5️⃣6️⃣>`)
+    msg.channel.send(`<1️⃣2️⃣3️⃣4️⃣5️⃣6️⃣>:octagonal_sign:`)
 
     collector_0.on('collect', m => {
       console.log(`Collected :${m.content}`);
@@ -37,14 +38,36 @@ module.exports.run = async (bot, msg, args)=> {
 
       collector_1.on('collect', (reaction_1, user) => {
          console.log(`Collected ${reaction_1.emoji.name}`);
+         if(reaction_1 = '1️⃣'){
+           //Vérifier si ligne complète
+           //poser le simbole
+         }
+         if(reaction_1 = '1️⃣'){
 
+         }
+         if(reaction_1 = '1️⃣'){
+
+         }
+         if(reaction_1 = '1️⃣'){
+
+         }
+         if(reaction_1 = '1️⃣'){
+
+         }
+         if(reaction_1 = '1️⃣'){
+
+         }
+         else {
+
+         }
+       });
     });*/
     // ---------- Affichage de la grille
 
 
     // ---------- Vérification du gagnant
     if (1){
-      gagant = joueur[joueur_actif];
+      gagant = joueur[joueur_prec];
     }
     if (gagnant != ''){
       fin = 1;
