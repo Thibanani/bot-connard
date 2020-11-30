@@ -12,7 +12,7 @@ module.exports.run = async (bot, msg, args)=> {
 
   var fin = 0, joueur_prec, gagant,i;
   const tab_joueur = [joueur_1,joueur_2];
-  var tab_grille = new Array();
+  var tab_grille = new Array(new Array());
   tab_grille = [['|      ','|      ','|      ','|      ','|      ','|      ','|      '],['|      ','|      ','|      ','|      ','|      ','|      ','|      '],['|      ','|      ','|      ','|      ','|      ','|      ','|      '],['|      ','|      ','|      ','|      ','|      ','|      ','|      '],['|      ','|      ','|      ','|      ','|      ','|      ','|      '],['|      ','|      ','|      ','|      ','|      ','|      ','|      ']];
   //coniguration tab_grille[ligne][colonne]
 
@@ -30,7 +30,8 @@ module.exports.run = async (bot, msg, args)=> {
 
     collector_0.on('collect', m => {
       console.log(`Collected :${m.content}`);
-      
+      //collecteur de l'émote
+
     });
     // ---------- Affichage de la grille
 
