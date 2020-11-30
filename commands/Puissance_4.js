@@ -21,10 +21,14 @@ module.exports.run = async (bot, msg, args)=> {
                     {'|      ','|      ','|      ','|      ','|      ','|      ','|      '} ];
 
   //Piste a dévelloper
-/*  var cards = [
-    {c1: '|      ',c2: '|      ',c3: '|      ',c4: '|      ',c5: '|      ',c6: '|      ',},
-    {value: 2, name: 'Two of Clubs'},
-    {value: 3, name: 'Three of Clubs'}
+/*  var tab_grille = [
+    {c1: '|      ',c2: '|      ',c3: '|      ',c4: '|      ',c5: '|      ',c6: '|      ',},//1
+    {c1: '|      ',c2: '|      ',c3: '|      ',c4: '|      ',c5: '|      ',c6: '|      ',},//2
+    {c1: '|      ',c2: '|      ',c3: '|      ',c4: '|      ',c5: '|      ',c6: '|      ',},//3
+    {c1: '|      ',c2: '|      ',c3: '|      ',c4: '|      ',c5: '|      ',c6: '|      ',},//4
+    {c1: '|      ',c2: '|      ',c3: '|      ',c4: '|      ',c5: '|      ',c6: '|      ',},//5
+    {c1: '|      ',c2: '|      ',c3: '|      ',c4: '|      ',c5: '|      ',c6: '|      ',},//6
+    {c1: '|      ',c2: '|      ',c3: '|      ',c4: '|      ',c5: '|      ',c6: '|      ',}//7
 ];
 
 https://stackoverflow.com/questions/48909283/discord-js-how-do-i-set-a-value-to-an-array-string
