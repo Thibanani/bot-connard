@@ -2,10 +2,10 @@ module.exports.run = async (bot, msg, args)=> {
   let joueur_2 = msg.mentions.members.first();
   let joueur_1 = msg.author;
 
-  if(!joueur_2) {//Si l'id est correct
+  /*if(!joueur_2) {//Si l'id est correct
     msg.channel.send(`**${msg.author.username}**, Putain mais gros mentionne quelqu'un`)
     return msg.channel.send(`**${args[i]}**, Putain mais c'est personne`)
-  }
+  }*/
 
 
 
