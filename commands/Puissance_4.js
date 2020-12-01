@@ -43,8 +43,8 @@ module.exports.run = async (bot, msg, args)=> {
     .addFields(
   		{ name: '<1️⃣2️⃣3️⃣4️⃣5️⃣6️⃣>:octagonal_sign:',
       value: "$Leboss : C'est toi le Boss ? \n $Charlou : :sheep: \n $PDF : Pour un max de rigolade \n $PFC : Teste moi dans un duel a mort \n $clean [N] Pour suprimer N message \n $motiv : A utiliser sans modération :Motiv:", inline: true },
-      { name: '\u200B', value: '\u200B' },*/
-  	)
+      { name: '\u200B', value: '\u200B' },
+  	)*/
   do {
     // ---------- Collecteur de la colonne ou jettons a placer
 
