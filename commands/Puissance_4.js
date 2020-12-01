@@ -1,6 +1,8 @@
 module.exports.run = async (bot, msg, args)=> {
-  const Discord = require('discord.js');
-  const aff_grille = new Discord.MessageEmbed()
+  var temps = 30000;
+
+  /*const Discord = require('discord.js');
+  const aff_grille = new Discord.MessageEmbed()*/
   //let joueur_2 = msg.mentions.members.first();
   let joueur_1 = msg.author;
   let joueur_2 = msg.author;
@@ -29,12 +31,12 @@ module.exports.run = async (bot, msg, args)=> {
     msg.channel.send(`${tab_grille[i][0]}${tab_grille[i][1]}${tab_grille[i][2]}${tab_grille[i][3]}${tab_grille[i][4]}${tab_grille[i][5]}${tab_grille[i][6]}|`)
   }*/
 
-  msg.channel.send(`${tab_grille[0][0]}${tab_grille[0][1]}${tab_grille[0][2]}${tab_grille[0][3]}${tab_grille[0][4]}${tab_grille[0][5]}${tab_grille[0][6]}|\n
+  /*msg.channel.send(`${tab_grille[0][0]}${tab_grille[0][1]}${tab_grille[0][2]}${tab_grille[0][3]}${tab_grille[0][4]}${tab_grille[0][5]}${tab_grille[0][6]}|\n
                     ${tab_grille[1][0]}${tab_grille[1][1]}${tab_grille[1][2]}${tab_grille[1][3]}${tab_grille[1][4]}${tab_grille[1][5]}${tab_grille[1][6]}|\n
                     ${tab_grille[2][0]}${tab_grille[2][1]}${tab_grille[2][2]}${tab_grille[2][3]}${tab_grille[2][4]}${tab_grille[2][5]}${tab_grille[2][6]}|\n
                     ${tab_grille[3][0]}${tab_grille[3][1]}${tab_grille[3][2]}${tab_grille[3][3]}${tab_grille[3][4]}${tab_grille[3][5]}${tab_grille[3][6]}|\n
                     ${tab_grille[4][0]}${tab_grille[4][1]}${tab_grille[4][2]}${tab_grille[4][3]}${tab_grille[4][4]}${tab_grille[4][5]}${tab_grille[4][6]}|\n
-                    ${tab_grille[5][0]}${tab_grille[5][1]}${tab_grille[5][2]}${tab_grille[5][3]}${tab_grille[5][4]}${tab_grille[5][5]}${tab_grille[5][6]}|`)
+                    ${tab_grille[5][0]}${tab_grille[5][1]}${tab_grille[5][2]}${tab_grille[5][3]}${tab_grille[5][4]}${tab_grille[5][5]}${tab_grille[5][6]}|`)*/
 
   /*aff_grille
     .setColor('#0099ff')
