@@ -183,7 +183,7 @@ module.exports.run = async (bot, msg, args)=> {
 
     // ---------- Vérification du gagnant
     if (gagnant == ''){
-      gagant = tab_joueur[joueur_prec];
+      gagnant = tab_joueur[joueur_prec];
     }
     if (gagnant != ''){
       fin = 1;
