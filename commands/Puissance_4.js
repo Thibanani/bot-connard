@@ -47,7 +47,7 @@ module.exports.run = async (bot, msg, args)=> {
       value: "$Leboss : C'est toi le Boss ? \n $Charlou : :sheep: \n $PDF : Pour un max de rigolade \n $PFC : Teste moi dans un duel a mort \n $clean [N] Pour suprimer N message \n $motiv : A utiliser sans modération :Motiv:", inline: true },
       { name: '\u200B', value: '\u200B' },
   	)*/
-  /*do {
+  do {
     // ---------- Collecteur de la colonne ou jettons a placer
 
 
@@ -171,15 +171,15 @@ module.exports.run = async (bot, msg, args)=> {
     })
 
     // ---------- Vérification du gagnant
-    /*if (1){
+    if (1){
       gagant = joueur[joueur_prec];
     }
     if (gagnant != ''){
       fin = 1;
-    }*/
+    }
 
     // ---------- Vérification du joueur actif
-    /*if(joueur_prec == 0){
+    if(joueur_prec == 0){
       joueur_prec = 1;
       joueur_actif =0;
     }
@@ -188,7 +188,7 @@ module.exports.run = async (bot, msg, args)=> {
       joueur_actif =1;
     }
 
-  }while (fin == 0);*/
+  }while (fin == 0);
 
 
 
