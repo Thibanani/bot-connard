@@ -14,7 +14,7 @@ module.exports.run = async (bot, msg, args)=> {
 
 
 
-  var fin = 0, joueur_prec,joueur_actif, gagant ='',i,ligne;
+  var fin = 0, joueur_prec,joueur_actif, gagnant ='',i,ligne;
   const tab_joueur = [joueur_1,joueur_2];
   var tab_grille = [
                     ['|      ','|      ','|      ','|      ','|      ','|      ','|      '],
@@ -161,7 +161,7 @@ module.exports.run = async (bot, msg, args)=> {
        collector_1.on('end', collected => {
          if (collected.size == 0) {
            msg.channel.send('Sale couard !')
-           gagant = tab_joueur[joueur_prec];
+           gagnant = tab_joueur[joueur_prec];
          }
          else{
            // ---------- Affichage de la grille
@@ -182,7 +182,7 @@ module.exports.run = async (bot, msg, args)=> {
     });
 
     // ---------- Vérification du gagnant
-    /*if (gagant == ''){
+    /*if (gagnant == ''){
       gagant = tab_joueur[joueur_prec];
     }
     if (gagnant != ''){
@@ -192,16 +192,16 @@ module.exports.run = async (bot, msg, args)=> {
     // ---------- Vérification du joueur actif
     if(joueur_prec == 0){
       joueur_prec = 1;
-      joueur_actif =0;
+      joueur_actif = 0;
     }
     else {
       joueur_prec = 0;
-      joueur_actif =1;
+      joueur_actif = 1;
     }
 
   }while (fin == 0);
 
-  msg.channel.send(`${gagant} à gagner`)
+  msg.channel.send(`${gagnant} à gagner`)
 }
 module.exports.help = {
   name: 'P4'
