@@ -31,13 +31,6 @@ module.exports.run = async (bot, msg, args)=> {
     msg.channel.send(`${tab_grille[i][0]}${tab_grille[i][1]}${tab_grille[i][2]}${tab_grille[i][3]}${tab_grille[i][4]}${tab_grille[i][5]}${tab_grille[i][6]}|`)
   }
 
-  /*msg.channel.send(`${tab_grille[0][0]}${tab_grille[0][1]}${tab_grille[0][2]}${tab_grille[0][3]}${tab_grille[0][4]}${tab_grille[0][5]}${tab_grille[0][6]}|\n
-                    ${tab_grille[1][0]}${tab_grille[1][1]}${tab_grille[1][2]}${tab_grille[1][3]}${tab_grille[1][4]}${tab_grille[1][5]}${tab_grille[1][6]}|\n
-                    ${tab_grille[2][0]}${tab_grille[2][1]}${tab_grille[2][2]}${tab_grille[2][3]}${tab_grille[2][4]}${tab_grille[2][5]}${tab_grille[2][6]}|\n
-                    ${tab_grille[3][0]}${tab_grille[3][1]}${tab_grille[3][2]}${tab_grille[3][3]}${tab_grille[3][4]}${tab_grille[3][5]}${tab_grille[3][6]}|\n
-                    ${tab_grille[4][0]}${tab_grille[4][1]}${tab_grille[4][2]}${tab_grille[4][3]}${tab_grille[4][4]}${tab_grille[4][5]}${tab_grille[4][6]}|\n
-                    ${tab_grille[5][0]}${tab_grille[5][1]}${tab_grille[5][2]}${tab_grille[5][3]}${tab_grille[5][4]}${tab_grille[5][5]}${tab_grille[5][6]}|`)*/
-
   /*aff_grille
     .setColor('#0099ff')
     .setTitle('Puissance 4')
@@ -47,11 +40,13 @@ module.exports.run = async (bot, msg, args)=> {
       value: "$Leboss : C'est toi le Boss ? \n $Charlou : :sheep: \n $PDF : Pour un max de rigolade \n $PFC : Teste moi dans un duel a mort \n $clean [N] Pour suprimer N message \n $motiv : A utiliser sans modération :Motiv:", inline: true },
       { name: '\u200B', value: '\u200B' },
   	)*/
+
+
   do {
     // ---------- Collecteur de la colonne ou jettons a placer
 
 
-    //collecteur pour être sure que le message est envoyée
+    //collecteur pour être sur que le message est envoyée
     const filter_0 = m => m.author.id === bot.user.id && m.content === `|1️⃣|2️⃣|3️⃣|4️⃣|5️⃣|6️⃣|   :octagonal_sign:`;
     const collector_0 = msg.channel.createMessageCollector(filter_0, { max: 1,time: 15000 });
     msg.channel.send(`|1️⃣|2️⃣|3️⃣|4️⃣|5️⃣|6️⃣|   :octagonal_sign:`)
@@ -174,6 +169,7 @@ module.exports.run = async (bot, msg, args)=> {
     collector_0.on('end', collected => {
       if (collected.size == 0){
           msg.channel.send("Et la c'est le bug, applé le 36-30")
+          fin = 1;
       }
     });
 
