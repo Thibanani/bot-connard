@@ -1,4 +1,6 @@
 module.exports.run = async (bot, msg, args)=> {
+  const Discord = require('discord.js');
+  const aff_grille = new Discord.MessageEmbed()
   //let joueur_2 = msg.mentions.members.first();
   let joueur_1 = msg.author;
   let joueur_2 = msg.author;
@@ -23,9 +25,26 @@ module.exports.run = async (bot, msg, args)=> {
 
 
   // ---------- Affichage de la grille
-  for (i=0;i<=tab_grille.length-1;i++){
+  /*for (i=0;i<=tab_grille.length-1;i++){
     msg.channel.send(`${tab_grille[i][0]}${tab_grille[i][1]}${tab_grille[i][2]}${tab_grille[i][3]}${tab_grille[i][4]}${tab_grille[i][5]}${tab_grille[i][6]}|`)
-  }
+  }*/
+
+  msg.channel.send(`${tab_grille[0][0]}${tab_grille[0][1]}${tab_grille[0][2]}${tab_grille[0][3]}${tab_grille[0][4]}${tab_grille[0][5]}${tab_grille[0][6]}|\n
+                    ${tab_grille[1][0]}${tab_grille[1][1]}${tab_grille[1][2]}${tab_grille[1][3]}${tab_grille[1][4]}${tab_grille[1][5]}${tab_grille[1][6]}|\n
+                    ${tab_grille[2][0]}${tab_grille[2][1]}${tab_grille[2][2]}${tab_grille[2][3]}${tab_grille[2][4]}${tab_grille[2][5]}${tab_grille[2][6]}|\n
+                    ${tab_grille[3][0]}${tab_grille[3][1]}${tab_grille[3][2]}${tab_grille[3][3]}${tab_grille[3][4]}${tab_grille[3][5]}${tab_grille[3][6]}|\n
+                    ${tab_grille[4][0]}${tab_grille[4][1]}${tab_grille[4][2]}${tab_grille[4][3]}${tab_grille[4][4]}${tab_grille[4][5]}${tab_grille[4][6]}|\n
+                    ${tab_grille[5][0]}${tab_grille[5][1]}${tab_grille[5][2]}${tab_grille[5][3]}${tab_grille[5][4]}${tab_grille[5][5]}${tab_grille[5][6]}|`)
+
+  /*aff_grille
+    .setColor('#0099ff')
+    .setTitle('Puissance 4')
+    .setDescription(`Au tour de ${joueur_1}`)
+    .addFields(
+  		{ name: '<1️⃣2️⃣3️⃣4️⃣5️⃣6️⃣>:octagonal_sign:',
+      value: "$Leboss : C'est toi le Boss ? \n $Charlou : :sheep: \n $PDF : Pour un max de rigolade \n $PFC : Teste moi dans un duel a mort \n $clean [N] Pour suprimer N message \n $motiv : A utiliser sans modération :Motiv:", inline: true },
+      { name: '\u200B', value: '\u200B' },*/
+  	)
   do {
     // ---------- Collecteur de la colonne ou jettons a placer
 
