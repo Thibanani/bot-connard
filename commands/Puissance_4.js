@@ -10,7 +10,7 @@ module.exports.run = async (bot, msg, args)=> {
 
 
 
-  var fin = 0, joueur_prec,joueur_actif, gagant,i;
+  var fin = 0, joueur_prec,joueur_actif, gagant,i,ligne;
   const tab_joueur = [joueur_1,joueur_2];
   var tab_grille = [
                     ['|      ','|      ','|      ','|      ','|      ','|      ','|      '],
@@ -45,7 +45,7 @@ module.exports.run = async (bot, msg, args)=> {
   do {
     // ---------- Collecteur de la colonne ou jettons a placer
 
-    /*
+
     //collecteur pour être sure que le message est envoyée
     const filter_0 = m => m.author.id === bot.user.id && m.content === `<1️⃣2️⃣3️⃣4️⃣5️⃣6️⃣>:octagonal_sign:`;
     const collector_0 = channel_1.createMessageCollector(filter_0, { max: 1,time: 15000 });
@@ -59,40 +59,119 @@ module.exports.run = async (bot, msg, args)=> {
 
       collector_1.on('collect', (reaction_1, user) => {
          console.log(`Collected ${reaction_1.emoji.name}`);
-         if(reaction_1 = '1️⃣'){
-           //Vérifier si ligne complète
+         if((reaction_1 = '1️⃣')&&(tab_grille[0][0]=='|      ')){//Vérifier si ligne complète
            //poser le simbole
+           ligne = 0;
+           for(i=tab_grille[0].lenght-1;i>=0;i--){
+             if((ligne==0)&&(tab_grille[0][i]=='|      ')){
+               ligne = i;
+             }
+           }
+           if (joueur_actif == joueur_1){
+             tab_grille[0][ligne]=='|🔴';
+           }
+           else {
+             tab_grille[0][ligne]=='|🟠';
+           }
          }
-         if(reaction_1 = '1️⃣'){
-
+         if((reaction_1 = '2️⃣')&&(tab_grille[1][0]=='|      ')){//Vérifier si ligne complète
+           //poser le simbole
+           ligne = 0;
+           for(i=tab_grille[1].lenght-1;i>=0;i--){
+             if((ligne==0)&&(tab_grille[1][i]=='|      ')){
+               ligne = i;
+             }
+           }
+           if (joueur_actif == joueur_1){
+             tab_grille[1][ligne]=='|🔴';
+           }
+           else {
+             tab_grille[1][ligne]=='|🟠';
+           }
          }
-         if(reaction_1 = '1️⃣'){
-
+         if((reaction_1 = '3️⃣')&&(tab_grille[2][0]=='|      ')){//Vérifier si ligne complète
+           //poser le simbole
+           ligne = 0;
+           for(i=tab_grille[2].lenght-1;i>=0;i--){
+             if((ligne==0)&&(tab_grille[2][i]=='|      ')){
+               ligne = i;
+             }
+           }
+           if (joueur_actif == joueur_1){
+             tab_grille[2][ligne]=='|🔴';
+           }
+           else {
+             tab_grille[2][ligne]=='|🟠';
+           }
          }
-         if(reaction_1 = '1️⃣'){
-
+         if((reaction_1 = '4️⃣')&&(tab_grille[3][0]=='|      ')){//Vérifier si ligne complète
+           //poser le simbole
+           ligne = 0;
+           for(i=tab_grille[3].lenght-1;i>=0;i--){
+             if((ligne==0)&&(tab_grille[3][i]=='|      ')){
+               ligne = i;
+             }
+           }
+           if (joueur_actif == joueur_1){
+             tab_grille[3][ligne]=='|🔴';
+           }
+           else {
+             tab_grille[3][ligne]=='|🟠';
+           }
          }
-         if(reaction_1 = '1️⃣'){
-
+         if((reaction_1 = '5️⃣')&&(tab_grille[4][0]=='|      ')){//Vérifier si ligne complète
+           //poser le simbole
+           ligne = 0;
+           for(i=tab_grille[4].lenght-1;i>=0;i--){
+             if((ligne==0)&&(tab_grille[4][i]=='|      ')){
+               ligne = i;
+             }
+           }
+           if (joueur_actif == joueur_1){
+             tab_grille[4][ligne]=='|🔴';
+           }
+           else {
+             tab_grille[4][ligne]=='|🟠';
+           }
          }
-         if(reaction_1 = '1️⃣'){
-
+         if((reaction_1 = '6️⃣')&&(tab_grille[5][0]=='|      ')){//Vérifier si ligne complète
+           //poser le simbole
+           ligne = 0;
+           for(i=tab_grille[5].lenght-1;i>=0;i--){
+             if((ligne==0)&&(tab_grille[5][i]=='|      ')){
+               ligne = i;
+             }
+           }
+           if (joueur_actif == joueur_1){
+             tab_grille[5][ligne]=='|🔴';
+           }
+           else {
+             tab_grille[5][ligne]=='|🟠';
+           }
+         }
+         if (reaction_1 = ':octagonal_sign:'){
+           fin = 1;
+           gagant = joueur[joueur_prec];
          }
          else {
-
+           msg.channel.send('Apprend a jouer');
          }
        });
-    });*/
+    });
     // ---------- Affichage de la grille
-
+    msg.channel.bulkDelete(8).then(() => {//suprimer l'ancienne grille
+      for (i=0;i<=tab_grille.length-1;i++){
+        msg.channel.send(`${tab_grille[i][0]}${tab_grille[i][1]}${tab_grille[i][2]}${tab_grille[i][3]}${tab_grille[i][4]}${tab_grille[i][5]}${tab_grille[i][6]}|`)
+      }
+    })
 
     // ---------- Vérification du gagnant
-    if (1){
+    /*if (1){
       gagant = joueur[joueur_prec];
     }
     if (gagnant != ''){
       fin = 1;
-    }
+    }*/
 
     // ---------- Vérification du joueur actif
     if(joueur_prec == 0){
