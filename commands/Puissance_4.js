@@ -48,7 +48,7 @@ module.exports.run = async (bot, msg, args)=> {
 
     //collecteur pour être sure que le message est envoyée
     const filter_0 = m => m.author.id === bot.user.id && m.content === `<1️⃣2️⃣3️⃣4️⃣5️⃣6️⃣>:octagonal_sign:`;
-    const collector_0 = channel_1.createMessageCollector(filter_0, { max: 1,time: 15000 });
+    const collector_0 = msg.channel.createMessageCollector(filter_0, { max: 1,time: 15000 });
     msg.channel.send(`<1️⃣2️⃣3️⃣4️⃣5️⃣6️⃣>:octagonal_sign:`)
 
     collector_0.on('collect', m => {
