@@ -14,7 +14,7 @@ module.exports.run = async (bot, msg, args)=> {
 
 
 
-  var fin = 0, joueur_prec,joueur_actif, gagant,i,ligne;
+  var fin = 0, joueur_prec,joueur_actif, gagant ='',i,ligne;
   const tab_joueur = [joueur_1,joueur_2];
   var tab_grille = [
                     ['|      ','|      ','|      ','|      ','|      ','|      ','|      '],
@@ -52,9 +52,9 @@ module.exports.run = async (bot, msg, args)=> {
 
 
     //collecteur pour être sure que le message est envoyée
-    const filter_0 = m => m.author.id === bot.user.id && m.content === `<1️⃣2️⃣3️⃣4️⃣5️⃣6️⃣>:octagonal_sign:`;
+    const filter_0 = m => m.author.id === bot.user.id && m.content === `|1️⃣|2️⃣|3️⃣|4️⃣|5️⃣|6️⃣|   :octagonal_sign:`;
     const collector_0 = msg.channel.createMessageCollector(filter_0, { max: 1,time: 15000 });
-    msg.channel.send(`<1️⃣2️⃣3️⃣4️⃣5️⃣6️⃣>:octagonal_sign:`)
+    msg.channel.send(`|1️⃣|2️⃣|3️⃣|4️⃣|5️⃣|6️⃣|   :octagonal_sign:`)
 
     collector_0.on('collect', m => {
       console.log(`Collected :${m.content}`);
@@ -162,7 +162,21 @@ module.exports.run = async (bot, msg, args)=> {
            msg.channel.send('Apprend a jouer');
          }
        });
+
+       collector_1.on('end', collected => {
+         if (collected.size == 0) {
+           msg.channel.send('Sale couard !')
+           gagant = tab_joueur[joueur_prec];
+         }
+       });
     });
+
+    collector_0.on('end', collected => {
+      if (collected.size == 0){
+          msg.channel.send("Et la c'est le bug, applé le 36-30")
+      }
+    });
+
     // ---------- Affichage de la grille
     msg.channel.bulkDelete(8).then(() => {//suprimer l'ancienne grille
       for (i=0;i<=tab_grille.length-1;i++){
@@ -171,8 +185,8 @@ module.exports.run = async (bot, msg, args)=> {
     })
 
     // ---------- Vérification du gagnant
-    if (1){
-      gagant = joueur[joueur_prec];
+    if (gagant == ''){
+      gagant = tab_joueur[joueur_prec];
     }
     if (gagnant != ''){
       fin = 1;
