@@ -27,9 +27,9 @@ module.exports.run = async (bot, msg, args)=> {
 
 
   // ---------- Affichage de la grille
-  /*for (i=0;i<=tab_grille.length-1;i++){
+  for (i=0;i<=tab_grille.length-1;i++){
     msg.channel.send(`${tab_grille[i][0]}${tab_grille[i][1]}${tab_grille[i][2]}${tab_grille[i][3]}${tab_grille[i][4]}${tab_grille[i][5]}${tab_grille[i][6]}|`)
-  }*/
+  }
 
   /*msg.channel.send(`${tab_grille[0][0]}${tab_grille[0][1]}${tab_grille[0][2]}${tab_grille[0][3]}${tab_grille[0][4]}${tab_grille[0][5]}${tab_grille[0][6]}|\n
                     ${tab_grille[1][0]}${tab_grille[1][1]}${tab_grille[1][2]}${tab_grille[1][3]}${tab_grille[1][4]}${tab_grille[1][5]}${tab_grille[1][6]}|\n
@@ -47,7 +47,7 @@ module.exports.run = async (bot, msg, args)=> {
       value: "$Leboss : C'est toi le Boss ? \n $Charlou : :sheep: \n $PDF : Pour un max de rigolade \n $PFC : Teste moi dans un duel a mort \n $clean [N] Pour suprimer N message \n $motiv : A utiliser sans modération :Motiv:", inline: true },
       { name: '\u200B', value: '\u200B' },
   	)*/
-  do {
+  /*do {
     // ---------- Collecteur de la colonne ou jettons a placer
 
 
@@ -179,7 +179,7 @@ module.exports.run = async (bot, msg, args)=> {
     }*/
 
     // ---------- Vérification du joueur actif
-    if(joueur_prec == 0){
+    /*if(joueur_prec == 0){
       joueur_prec = 1;
       joueur_actif =0;
     }
@@ -188,7 +188,7 @@ module.exports.run = async (bot, msg, args)=> {
       joueur_actif =1;
     }
 
-  }while (fin == 0);
+  }while (fin == 0);*/
 
 
 
