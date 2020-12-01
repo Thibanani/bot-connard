@@ -47,9 +47,9 @@ module.exports.run = async (bot, msg, args)=> {
 
 
     //collecteur pour être sur que le message est envoyée
-    const filter_0 = m => m.author.id === bot.user.id && m.content === `|1️⃣|2️⃣|3️⃣|4️⃣|5️⃣|6️⃣|   :octagonal_sign:`;
+    const filter_0 = m => m.author.id === bot.user.id && m.content === `|1️⃣|2️⃣|3️⃣|4️⃣|5️⃣|6️⃣|7️⃣|   :octagonal_sign:`;
     const collector_0 = msg.channel.createMessageCollector(filter_0, { max: 1,time: 15000 });
-    msg.channel.send(`|1️⃣|2️⃣|3️⃣|4️⃣|5️⃣|6️⃣|   :octagonal_sign:`)
+    msg.channel.send(`|1️⃣|2️⃣|3️⃣|4️⃣|5️⃣|6️⃣|7️⃣|   :octagonal_sign:`)
 
     collector_0.on('collect', m => {
       console.log(`Collected :${m.content}`);
@@ -163,6 +163,14 @@ module.exports.run = async (bot, msg, args)=> {
            msg.channel.send('Sale couard !')
            gagant = tab_joueur[joueur_prec];
          }
+         else{
+           // ---------- Affichage de la grille
+           msg.channel.bulkDelete(8).then(() => {//suprimer l'ancienne grille
+             for (i=0;i<=tab_grille.length-1;i++){
+               msg.channel.send(`${tab_grille[i][0]}${tab_grille[i][1]}${tab_grille[i][2]}${tab_grille[i][3]}${tab_grille[i][4]}${tab_grille[i][5]}${tab_grille[i][6]}|`)
+             }
+           })
+         }
        });
     });
 
@@ -173,20 +181,13 @@ module.exports.run = async (bot, msg, args)=> {
       }
     });
 
-    // ---------- Affichage de la grille
-    msg.channel.bulkDelete(8).then(() => {//suprimer l'ancienne grille
-      for (i=0;i<=tab_grille.length-1;i++){
-        msg.channel.send(`${tab_grille[i][0]}${tab_grille[i][1]}${tab_grille[i][2]}${tab_grille[i][3]}${tab_grille[i][4]}${tab_grille[i][5]}${tab_grille[i][6]}|`)
-      }
-    })
-
     // ---------- Vérification du gagnant
-    if (gagant == ''){
+    /*if (gagant == ''){
       gagant = tab_joueur[joueur_prec];
     }
     if (gagnant != ''){
       fin = 1;
-    }
+    }*/
 
     // ---------- Vérification du joueur actif
     if(joueur_prec == 0){
