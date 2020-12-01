@@ -200,9 +200,7 @@ module.exports.run = async (bot, msg, args)=> {
 
   }while (fin == 0);
 
-
-
-
+  msg.channel.send(`${gagant} à gagner`)
 }
 module.exports.help = {
   name: 'P4'
