@@ -170,6 +170,7 @@ module.exports.run = async (bot, msg, args)=> {
                msg.channel.send(`${tab_grille[i][0]}${tab_grille[i][1]}${tab_grille[i][2]}${tab_grille[i][3]}${tab_grille[i][4]}${tab_grille[i][5]}${tab_grille[i][6]}|`)
              }
            })
+           tour_suivant = 1;
          }
        });
     });
@@ -181,6 +182,8 @@ module.exports.run = async (bot, msg, args)=> {
       }
     });
 
+    while(tour_suivant == 0);
+    tour_suivant = 0;
     // ---------- Vérification du gagnant
     if (gagnant == ''){
       gagnant = tab_joueur[joueur_prec];
@@ -198,7 +201,6 @@ module.exports.run = async (bot, msg, args)=> {
       joueur_prec = 0;
       joueur_actif = 1;
     }
-
   }while (fin == 0);
 
   msg.channel.send(`${gagnant} à gagner`)
