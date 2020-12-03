@@ -184,6 +184,7 @@ module.exports.run = async (bot, msg, args)=> {
 
     while(tour_suivant == 0);
     tour_suivant = 0;
+    
     // ---------- Vérification du gagnant
     if (gagnant == ''){
       gagnant = tab_joueur[joueur_prec];
