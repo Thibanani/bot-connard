@@ -183,7 +183,7 @@ module.exports.run = async (bot, msg, args)=> {
       });
     }
 
-    while(tour_suivant == 0);
+    /*while(tour_suivant == 0);
 
     // ---------- Vérification du gagnant
     if (gagnant == ''){
@@ -191,17 +191,17 @@ module.exports.run = async (bot, msg, args)=> {
     }
     if (gagnant != ''){
       fin = 1;
-    }
+    }*/
 
     // ---------- Vérification du joueur actif
-    if(joueur_prec == 0){
+    /*if(joueur_prec == 0){
       joueur_prec = 1;
       joueur_actif = 0;
     }
     else {
       joueur_prec = 0;
       joueur_actif = 1;
-    }
+    }*/
   }while (fin == 0);
 
   msg.channel.send(`${gagnant} à gagner`)
