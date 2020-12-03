@@ -47,9 +47,9 @@ module.exports.run = async (bot, msg, args)=> {
 
 
     //collecteur pour être sur que le message est envoyée
-    const filter_0 = m => m.author.id === bot.user.id && m.content === `|1️⃣|2️⃣|3️⃣|4️⃣|5️⃣|6️⃣|7️⃣|   :octagonal_sign:`;
+    const filter_0 = m => m.author.id === bot.user.id && m.content === `|1️⃣|2️⃣|3️⃣|4️⃣|5️⃣|6️⃣|7️⃣|   🛑`;
     const collector_0 = msg.channel.createMessageCollector(filter_0, { max: 1,time: 15000 });
-    msg.channel.send(`|1️⃣|2️⃣|3️⃣|4️⃣|5️⃣|6️⃣|7️⃣|   :octagonal_sign:`)
+    msg.channel.send(`|1️⃣|2️⃣|3️⃣|4️⃣|5️⃣|6️⃣|7️⃣|   🛑`)
 
     collector_0.on('collect', m => {
       console.log(`Collected :${m.content}`);
@@ -149,7 +149,7 @@ module.exports.run = async (bot, msg, args)=> {
              tab_grille[5][ligne]=='|🟠';
            }
          }
-         if (reaction_1 = ':octagonal_sign:'){
+         if (reaction_1 = '🛑'){
            fin = 1;
            gagant = joueur[joueur_prec];
          }
