@@ -54,7 +54,7 @@ module.exports.run = async (bot, msg, args)=> {
     collector_0.on('collect', m => {
       console.log(`Collected :${m.content}`);
       //collecteur de l'émote
-      const filter_1 = (reaction, user) => user.id === tab_joueur[joueur_actif].id;
+      const filter_1 = (reaction, user) => user === tab_joueur[joueur_actif];
       const collector_1 = m.createReactionCollector(filter_1, { max: 1,time: temps });
 
       collector_1.on('collect', (reaction_1, user) => {
