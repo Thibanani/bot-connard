@@ -45,155 +45,145 @@ module.exports.run = async (bot, msg, args)=> {
   do {
     // ---------- Collecteur de la colonne ou jettons a placer
 
+    if (tour_suivant == 1){
+      tour_suivant = 0;
+      //collecteur pour être sur que le message est envoyée
+      const filter_0 = m => m.author.id === bot.user.id && m.content === `|1️⃣|2️⃣|3️⃣|4️⃣|5️⃣|6️⃣|7️⃣|   🛑`;
+      const collector_0 = msg.channel.createMessageCollector(filter_0, { max: 1,time: 15000 });
+      msg.channel.send(`|1️⃣|2️⃣|3️⃣|4️⃣|5️⃣|6️⃣|7️⃣|   🛑`)
 
-    //collecteur pour être sur que le message est envoyée
-    const filter_0 = m => m.author.id === bot.user.id && m.content === `|1️⃣|2️⃣|3️⃣|4️⃣|5️⃣|6️⃣|7️⃣|   🛑`;
-    const collector_0 = msg.channel.createMessageCollector(filter_0, { max: 1,time: 15000 });
-    msg.channel.send(`|1️⃣|2️⃣|3️⃣|4️⃣|5️⃣|6️⃣|7️⃣|   🛑`)
+      collector_0.on('collect', m => {
+        console.log(`Collected :${m.content}`);
+        //collecteur de l'émote
+        const filter_1 = (reaction, user) => user === tab_joueur[joueur_actif];
+        const collector_1 = m.createReactionCollector(filter_1, { max: 1,time: temps });
 
-    collector_0.on('collect', m => {
-      console.log(`Collected :${m.content}`);
-      //collecteur de l'émote
-      const filter_1 = (reaction, user) => user === tab_joueur[joueur_actif];
-      const collector_1 = m.createReactionCollector(filter_1, { max: 1,time: temps });
-
-      collector_1.on('collect', (reaction_1, user) => {
-         console.log(`Collected ${reaction_1.emoji.name}`);
-         if((reaction_1 = '1️⃣')&&(tab_grille[0][0]=='|      ')){//Vérifier si ligne complète
-           //poser le simbole
-           ligne = 0;
-           for(i=tab_grille[0].lenght-1;i>=0;i--){
-             if((ligne==0)&&(tab_grille[0][i]=='|      ')){
-               ligne = i;
+        collector_1.on('collect', (reaction_1, user) => {
+           console.log(`Collected ${reaction_1.emoji.name}`);
+           if((reaction_1 = '1️⃣')&&(tab_grille[0][0]=='|      ')){//Vérifier si ligne complète
+             //poser le simbole
+             ligne = 0;
+             for(i=tab_grille[0].lenght-1;i>=0;i--){
+               if((ligne==0)&&(tab_grille[0][i]=='|      ')){
+                 ligne = i;
+               }
+             }
+             if (joueur_actif == joueur_1){
+               tab_grille[0][ligne]=='|🔴';
+             }
+             else {
+               tab_grille[0][ligne]=='|🟠';
              }
            }
-           if (joueur_actif == joueur_1){
-             tab_grille[0][ligne]=='|🔴';
+           if((reaction_1 = '2️⃣')&&(tab_grille[1][0]=='|      ')){//Vérifier si ligne complète
+             //poser le simbole
+             ligne = 0;
+             for(i=tab_grille[1].lenght-1;i>=0;i--){
+               if((ligne==0)&&(tab_grille[1][i]=='|      ')){
+                 ligne = i;
+               }
+             }
+             if (joueur_actif == joueur_1){
+               tab_grille[1][ligne]=='|🔴';
+             }
+             else {
+               tab_grille[1][ligne]=='|🟠';
+             }
+           }
+           if((reaction_1 = '3️⃣')&&(tab_grille[2][0]=='|      ')){//Vérifier si ligne complète
+             //poser le simbole
+             ligne = 0;
+             for(i=tab_grille[2].lenght-1;i>=0;i--){
+               if((ligne==0)&&(tab_grille[2][i]=='|      ')){
+                 ligne = i;
+               }
+             }
+             if (joueur_actif == joueur_1){
+               tab_grille[2][ligne]=='|🔴';
+             }
+             else {
+               tab_grille[2][ligne]=='|🟠';
+             }
+           }
+           if((reaction_1 = '4️⃣')&&(tab_grille[3][0]=='|      ')){//Vérifier si ligne complète
+             //poser le simbole
+             ligne = 0;
+             for(i=tab_grille[3].lenght-1;i>=0;i--){
+               if((ligne==0)&&(tab_grille[3][i]=='|      ')){
+                 ligne = i;
+               }
+             }
+             if (joueur_actif == joueur_1){
+               tab_grille[3][ligne]=='|🔴';
+             }
+             else {
+               tab_grille[3][ligne]=='|🟠';
+             }
+           }
+           if((reaction_1 = '5️⃣')&&(tab_grille[4][0]=='|      ')){//Vérifier si ligne complète
+             //poser le simbole
+             ligne = 0;
+             for(i=tab_grille[4].lenght-1;i>=0;i--){
+               if((ligne==0)&&(tab_grille[4][i]=='|      ')){
+                 ligne = i;
+               }
+             }
+             if (joueur_actif == joueur_1){
+               tab_grille[4][ligne]=='|🔴';
+             }
+             else {
+               tab_grille[4][ligne]=='|🟠';
+             }
+           }
+           if((reaction_1 = '6️⃣')&&(tab_grille[5][0]=='|      ')){//Vérifier si ligne complète
+             //poser le simbole
+             ligne = 0;
+             for(i=tab_grille[5].lenght-1;i>=0;i--){
+               if((ligne==0)&&(tab_grille[5][i]=='|      ')){
+                 ligne = i;
+               }
+             }
+             if (joueur_actif == joueur_1){
+               tab_grille[5][ligne]=='|🔴';
+             }
+             else {
+               tab_grille[5][ligne]=='|🟠';
+             }
+           }
+           if (reaction_1 = '🛑'){
+             fin = 1;
+             gagant = joueur[joueur_prec];
            }
            else {
-             tab_grille[0][ligne]=='|🟠';
+             msg.channel.send('Apprend a jouer');
            }
-         }
-         if((reaction_1 = '2️⃣')&&(tab_grille[1][0]=='|      ')){//Vérifier si ligne complète
-           //poser le simbole
-           ligne = 0;
-           for(i=tab_grille[1].lenght-1;i>=0;i--){
-             if((ligne==0)&&(tab_grille[1][i]=='|      ')){
-               ligne = i;
-             }
-           }
-           if (joueur_actif == joueur_1){
-             tab_grille[1][ligne]=='|🔴';
-           }
-           else {
-             tab_grille[1][ligne]=='|🟠';
-           }
-         }
-         if((reaction_1 = '3️⃣')&&(tab_grille[2][0]=='|      ')){//Vérifier si ligne complète
-           //poser le simbole
-           ligne = 0;
-           for(i=tab_grille[2].lenght-1;i>=0;i--){
-             if((ligne==0)&&(tab_grille[2][i]=='|      ')){
-               ligne = i;
-             }
-           }
-           if (joueur_actif == joueur_1){
-             tab_grille[2][ligne]=='|🔴';
-           }
-           else {
-             tab_grille[2][ligne]=='|🟠';
-           }
-         }
-         if((reaction_1 = '4️⃣')&&(tab_grille[3][0]=='|      ')){//Vérifier si ligne complète
-           //poser le simbole
-           ligne = 0;
-           for(i=tab_grille[3].lenght-1;i>=0;i--){
-             if((ligne==0)&&(tab_grille[3][i]=='|      ')){
-               ligne = i;
-             }
-           }
-           if (joueur_actif == joueur_1){
-             tab_grille[3][ligne]=='|🔴';
-           }
-           else {
-             tab_grille[3][ligne]=='|🟠';
-           }
-         }
-         if((reaction_1 = '5️⃣')&&(tab_grille[4][0]=='|      ')){//Vérifier si ligne complète
-           //poser le simbole
-           ligne = 0;
-           for(i=tab_grille[4].lenght-1;i>=0;i--){
-             if((ligne==0)&&(tab_grille[4][i]=='|      ')){
-               ligne = i;
-             }
-           }
-           if (joueur_actif == joueur_1){
-             tab_grille[4][ligne]=='|🔴';
-           }
-           else {
-             tab_grille[4][ligne]=='|🟠';
-           }
-         }
-         if((reaction_1 = '6️⃣')&&(tab_grille[5][0]=='|      ')){//Vérifier si ligne complète
-           //poser le simbole
-           ligne = 0;
-           for(i=tab_grille[5].lenght-1;i>=0;i--){
-             if((ligne==0)&&(tab_grille[5][i]=='|      ')){
-               ligne = i;
-             }
-           }
-           if (joueur_actif == joueur_1){
-             tab_grille[5][ligne]=='|🔴';
-           }
-           else {
-             tab_grille[5][ligne]=='|🟠';
-           }
-         }
-         if (reaction_1 = '🛑'){
-           fin = 1;
-           gagant = joueur[joueur_prec];
-         }
-         else {
-           msg.channel.send('Apprend a jouer');
-         }
-       });
+         });
 
-       collector_1.on('end', collected => {
-         if (collected.size == 0) {
-           msg.channel.send('Sale couard !')
-           gagnant = tab_joueur[joueur_prec];
-         }
-         else{
-           // ---------- Affichage de la grille
-           msg.channel.bulkDelete(8).then(() => {//suprimer l'ancienne grille
-             for (i=0;i<=tab_grille.length-1;i++){
-               msg.channel.send(`${tab_grille[i][0]}${tab_grille[i][1]}${tab_grille[i][2]}${tab_grille[i][3]}${tab_grille[i][4]}${tab_grille[i][5]}${tab_grille[i][6]}|`)
-             }
-           })
-           //tour_suivant = 1;
-         }
-       });
-    });
+         collector_1.on('end', collected => {
+           if (collected.size == 0) {
+             msg.channel.send('Sale couard !')
+             gagnant = tab_joueur[joueur_prec];
+           }
+           else{
+             // ---------- Affichage de la grille
+             msg.channel.bulkDelete(8).then(() => {//suprimer l'ancienne grille
+               for (i=0;i<=tab_grille.length-1;i++){
+                 msg.channel.send(`${tab_grille[i][0]}${tab_grille[i][1]}${tab_grille[i][2]}${tab_grille[i][3]}${tab_grille[i][4]}${tab_grille[i][5]}${tab_grille[i][6]}|`)
+               }
+             })
+             tour_suivant = 1;
+           }
+         });
+      });
 
-    collector_0.on('end', collected => {
-      if (collected.size == 0){
-          msg.channel.send("Et la c'est le bug, applé le 36-30")
-          fin = 1;
-          tour_suivant = 1;
-      }
-    });
-
-    const filter_2 = m => m.author.id === bot.user.id && m.content === `|1️⃣|2️⃣|3️⃣|4️⃣|5️⃣|6️⃣|7️⃣|   🛑`;
-    msg.channel.awaitMessages(filter_2, { max: 1, time: 60000, errors: ['time'] })
-    	.then(collected => {
-        tour_suivant = 1;
-    	})
-    	.catch(collected => {
-    		msg.reply('you reacted with neither a thumbs up, nor a thumbs down.');
-    	});
+      collector_0.on('end', collected => {
+        if (collected.size == 0){
+            msg.channel.send("Et la c'est le bug, applé le 36-30")
+        }
+      });
+    }
 
     while(tour_suivant == 0);
-    tour_suivant = 0;
 
     // ---------- Vérification du gagnant
     if (gagnant == ''){
