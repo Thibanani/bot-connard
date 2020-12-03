@@ -183,6 +183,15 @@ module.exports.run = async (bot, msg, args)=> {
       }
     });
 
+    const filter_2 = m => m.author.id === bot.user.id && m.content === `|1️⃣|2️⃣|3️⃣|4️⃣|5️⃣|6️⃣|7️⃣|   🛑`;
+    msg.awaitMessage(filter_2, { max: 1, time: 60000, errors: ['time'] })
+    	.then(collected => {
+        tour_suivant = 1;
+    	})
+    	.catch(collected => {
+    		msg.reply('you reacted with neither a thumbs up, nor a thumbs down.');
+    	});
+
     while(tour_suivant == 0);
     tour_suivant = 0;
 
