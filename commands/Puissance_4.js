@@ -15,7 +15,7 @@ module.exports.run = async (bot, msg, args)=> {
 
 
   var fin = 0, joueur_prec,joueur_actif, gagnant ='',i,ligne;
-  const tab_joueur = [joueur_1,joueur_2];
+  let tab_joueur = [joueur_1,joueur_2];
   var tab_grille = [
                     ['|      ','|      ','|      ','|      ','|      ','|      ','|      '],
                     ['|      ','|      ','|      ','|      ','|      ','|      ','|      '],
@@ -184,7 +184,7 @@ module.exports.run = async (bot, msg, args)=> {
 
     while(tour_suivant == 0);
     tour_suivant = 0;
-    
+
     // ---------- Vérification du gagnant
     if (gagnant == ''){
       gagnant = tab_joueur[joueur_prec];
