@@ -14,7 +14,7 @@ module.exports.run = async (bot, msg, args)=> {
 
 
 
-  var fin = 0, joueur_prec,joueur_actif, gagnant ='',i,ligne;
+  var fin = 0, joueur_prec,joueur_actif, gagnant ='',i,ligne,tour_suivant = 0;
   let tab_joueur = [joueur_1,joueur_2];
   var tab_grille = [
                     ['|      ','|      ','|      ','|      ','|      ','|      ','|      '],
