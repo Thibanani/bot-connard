@@ -1,5 +1,5 @@
 module.exports.run = async (bot, msg, args)=> {
-  var temps = 30000;
+  var temps = 100000;
 
   /*const Discord = require('discord.js');
   const aff_grille = new Discord.MessageEmbed()*/
@@ -14,7 +14,7 @@ module.exports.run = async (bot, msg, args)=> {
 
 
 
-  var fin = 0, joueur_prec,joueur_actif, gagnant ='',i,ligne,tour_suivant = 0;
+  var fin = 0, joueur_prec,joueur_actif, gagnant ='',i,ligne,tour =0;;
   let tab_joueur = [joueur_1,joueur_2];
   var tab_grille = [
                     ['|      ','|      ','|      ','|      ','|      ','|      ','|      '],
@@ -45,13 +45,11 @@ module.exports.run = async (bot, msg, args)=> {
   do {
     // ---------- Collecteur de la colonne ou jettons a placer
 
-    if (tour_suivant == 1){
-      tour_suivant = 0;
       //collecteur pour être sur que le message est envoyée
       msg.channel.send(`|1️⃣|2️⃣|3️⃣|4️⃣|5️⃣|6️⃣|7️⃣|   🛑`)
 
       const filter_1 = (reaction, user) => user === tab_joueur[joueur_actif];
-      message.channel.awaitMessages(filter_1, { max: 1, time: temps, errors: ['time'] })
+      msg.channel.awaitMessages(filter_1, { max: 1, time: temps, errors: ['time'] })
         .then(collected => {
           //collecteur de l'émote
           console.log(`Collected ${reaction_1.emoji.name}`);
@@ -159,7 +157,7 @@ module.exports.run = async (bot, msg, args)=> {
                msg.channel.send(`${tab_grille[i][0]}${tab_grille[i][1]}${tab_grille[i][2]}${tab_grille[i][3]}${tab_grille[i][4]}${tab_grille[i][5]}${tab_grille[i][6]}|`)
              }
            })
-           tour_suivant = 1;
+           tour = tour +1;
         })
         .catch(collected => {
           if (collected.size == 0) {
@@ -167,9 +165,10 @@ module.exports.run = async (bot, msg, args)=> {
             gagnant = tab_joueur[joueur_prec];
           }
         });
-    }
 
-    /*while(tour_suivant == 0);
+    if (tour == 3){
+      fin = 1;
+    }
 
     // ---------- Vérification du gagnant
     if (gagnant == ''){
@@ -180,14 +179,14 @@ module.exports.run = async (bot, msg, args)=> {
     }*/
 
     // ---------- Vérification du joueur actif
-    /*if(joueur_prec == 0){
+    if(joueur_prec == 0){
       joueur_prec = 1;
       joueur_actif = 0;
     }
     else {
       joueur_prec = 0;
       joueur_actif = 1;
-    }*/
+    }
   }while (fin == 0);
 
   msg.channel.send(`${gagnant} à gagner`)
