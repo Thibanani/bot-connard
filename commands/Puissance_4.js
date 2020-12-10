@@ -48,7 +48,7 @@ module.exports.run = async (bot, msg, args)=> {
       //collecteur pour être sur que le message est envoyée
       msg.channel.send(`|1️⃣|2️⃣|3️⃣|4️⃣|5️⃣|6️⃣|7️⃣|   🛑`)
 
-      const filter_1 = (reaction_1, user) => user === tab_joueur[joueur_actif];
+      const filter_1 = (reaction_1, user) => user.id === tab_joueur[joueur_actif].id;
       msg.channel.awaitMessages(filter_1, { max: 1, time: temps, errors: ['time'] })
         .then(collected => {
           //collecteur de l'émote
