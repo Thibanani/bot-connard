@@ -187,7 +187,7 @@ module.exports.run = async (bot, msg, args)=> {
       joueur_prec = 0;
       joueur_actif = 1;
     }
-  msg.channel.Send("wsh")
+  msg.channel.send("wsh")
 
   //msg.channel.send(`${gagnant} à gagner`)
 }
