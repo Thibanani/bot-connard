@@ -42,7 +42,7 @@ module.exports.run = async (bot, msg, args)=> {
   	)*/
 
 
-  do {
+  //do {
     // ---------- Collecteur de la colonne ou jettons a placer
 
       //collecteur pour être sur que le message est envoyée
@@ -187,9 +187,9 @@ module.exports.run = async (bot, msg, args)=> {
       joueur_prec = 0;
       joueur_actif = 1;
     }
-  }while (fin == 0);
+  msg.channel.Send("wsh")
 
-  msg.channel.send(`${gagnant} à gagner`)
+  //msg.channel.send(`${gagnant} à gagner`)
 }
 module.exports.help = {
   name: 'P4'
