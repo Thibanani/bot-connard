@@ -4,9 +4,8 @@ module.exports.run = async (bot, msg, args)=> {
   //console.log(cible);
 
   if (args != ''){
-    user = args
     if (cible) {//Si la cible existe que se soit l'autheur ou un autre membre
-
+      msg.channel.bulkDelete(1);
       const connection = await cible.voice.channel.join();
       const dispatcher = connection.play(audio);//, {volume: 2});
 
@@ -30,7 +29,6 @@ module.exports.run = async (bot, msg, args)=> {
     dispatcher.on('finish', () => {
        connection.disconnect();
     });
-
   }
 }
 
