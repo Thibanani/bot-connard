@@ -1,5 +1,6 @@
 module.exports.run = async (bot, msg, args)=> {
   let cible = msg.mentions.members.first();
+  const audio = './src/Audio/AQSV_1.mp3'
   //console.log(cible);
 
   if (args != ''){
@@ -7,7 +8,7 @@ module.exports.run = async (bot, msg, args)=> {
     if (cible) {//Si la cible existe que se soit l'autheur ou un autre membre
 
       const connection = await cible.voice.channel.join();
-      const dispatcher = connection.play('./src/Audio/AQSV_1.mp3');//, {volume: 2});
+      const dispatcher = connection.play(audio);//, {volume: 2});
 
       dispatcher.setVolume(2);
 
@@ -22,7 +23,7 @@ module.exports.run = async (bot, msg, args)=> {
   }else {
 
     const connection = await msg.member.voice.channel.join();
-    const dispatcher = connection.play('./src/Audio/AQSV_1.mp3.mp3');//, {volume: 2});
+    const dispatcher = connection.play(audio);//, {volume: 2});
 
     dispatcher.setVolume(2);
 
