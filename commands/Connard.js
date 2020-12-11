@@ -6,9 +6,9 @@ module.exports.run = async (bot, msg, args)=> {
   console.log(args);
   if (args != ''){
     user = args
-    if (msg.author == cible) {
+    if (cible) {//Si la cible existe que se soit l'autheur ou un autre membre
 
-      const connection = await msg.member.voice.channel.join();
+      const connection = await cible.voice.channel.join();
       const dispatcher = connection.play('./src/Audio/connard.mp3');//, {volume: 2});
 
       dispatcher.setVolume(2);
@@ -18,12 +18,12 @@ module.exports.run = async (bot, msg, args)=> {
       });
 
     } else {
-      msg.reply('Il est pas la!');
+      msg.reply('Il existe pas ! Connard');
     }
 
-  }else if (cible.voice.channel != 0) {
+  }else {
 
-    const connection = await cible.voice.channel.join();
+    const connection = await msg.member.voice.channel.join();
     const dispatcher = connection.play('./src/Audio/connard.mp3');//, {volume: 2});
 
     dispatcher.setVolume(2);
@@ -32,8 +32,6 @@ module.exports.run = async (bot, msg, args)=> {
        connection.disconnect();
     });
 
-  }else {
-    msg.reply('Seules les dieux me donne des ordres!');
   }
 }
 
