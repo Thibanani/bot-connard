@@ -3,7 +3,7 @@ const fs = require('fs');
 module.exports.run = async (bot, msg, args)=> {
 
   let cible = msg.mentions.members.first();
-  console.log(args);
+  console.log(cible);
   if (args != ''){
     user = args
     if (cible) {//Si la cible existe que se soit l'autheur ou un autre membre
