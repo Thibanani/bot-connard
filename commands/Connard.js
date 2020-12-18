@@ -1,13 +1,13 @@
-const fs = require('fs');
-
 module.exports.run = async (bot, msg, args)=> {
-  console.log(args);
-  if (args != ''){
-    user = args
-    if (msg.users == args) {
+  let cible = msg.mentions.members.first();
+  const audio = './src/Audio/connard.mp3'
+  //console.log(cible);
 
-      const connection = await msg.member.voice.channel.join();
-      const dispatcher = connection.play('./src/Audio/connard.mp3');//, {volume: 2});
+  if (args != ''){
+    if (cible) {//Si la cible existe que se soit l'autheur ou un autre membre
+      msg.channel.bulkDelete(1);
+      const connection = await cible.voice.channel.join();
+      const dispatcher = connection.play(audio);//, {volume: 2});
 
       dispatcher.setVolume(2);
 
@@ -16,25 +16,23 @@ module.exports.run = async (bot, msg, args)=> {
       });
 
     } else {
-      msg.reply('Il est pas la!');
+      msg.reply('Il existe pas ! Connard');
     }
 
-  }else if (msg.member.voice.channel) {
+  }else {
+
     const connection = await msg.member.voice.channel.join();
-    const dispatcher = connection.play('./src/Audio/connard.mp3');//, {volume: 2});
+    const dispatcher = connection.play(audio);//, {volume: 2});
 
     dispatcher.setVolume(2);
 
     dispatcher.on('finish', () => {
        connection.disconnect();
     });
-
-  }else {
-    msg.reply('Seules les dieux me donne des ordres!');
   }
 }
 
 
 module.exports.help = {
-  name: 'connard'
+  name: 'c'
 }

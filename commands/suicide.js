@@ -1,6 +1,6 @@
 module.exports.run = async (bot, msg, args)=> {
     let cible = msg.mentions.members.first();
-    const audio = './src/Audio/topette.mp3'
+    const audio = './src/Audio/OutOfContexte_lou.mp3'
     //console.log(cible);
 
     if (args != ''){
@@ -34,5 +34,5 @@ module.exports.run = async (bot, msg, args)=> {
 
 
 module.exports.help = {
-  name: 'topette'
+  name: 'suicide'
 }
