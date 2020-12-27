@@ -6,6 +6,8 @@ module.exports.run = async (bot,msg,args) => {
 
   const pfc2 =["C'est entre vous","Quelqu'un ose te défier"]
 
+  console.log(`DEBUG ${args}`);
+
   if(args != ''){
 
     msg.channel.send(`${pfc1[Math.floor(Math.random() * pfc1.length)]}`)
