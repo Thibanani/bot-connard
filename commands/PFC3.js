@@ -6,8 +6,6 @@ module.exports.run = async (bot,msg,args) => {
     const pfc = ['✊','✋','✌️'];
     msg.channel.send(`${pfc1[Math.floor(Math.random() * pfc1.length)]}`)
 
-
-
     const filter_1 = m => m.author.id === bot.user.id && m.content === `On rappelle pour les débiles :  pierre :fist:    feuille :raised_hand:    ciseaux :v:`;
     const collector_1 = msg.channel.createMessageCollector(filter_1, { max: 1,time: temps });
     symb = pfc[Math.floor(Math.random() * pfc.length)]
