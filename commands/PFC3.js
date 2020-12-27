@@ -121,7 +121,7 @@ module.exports.run = async (bot,msg,args) => {
       //---------------------------collecteur de l'émoji du joueur 2
               const filter_2_2 = (reaction, user) => user.id === joueur_2.id;
               const collector_2_2 = m.createReactionCollector(filter_2_2, { max: 1,time: temps });
-              collector_2.on('collect', (reaction_2, user) => {
+              collector_2_2.on('collect', (reaction_2, user) => {
                  console.log(`Collected ${reaction_2.emoji.name}`);
 
                  if (reaction_1.emoji.name ==  '✊'){
