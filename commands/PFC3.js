@@ -6,9 +6,7 @@ module.exports.run = async (bot,msg,args) => {
 
   const pfc2 =["C'est entre vous","Quelqu'un ose te défier"]
 
-  console.log(`DEBUG ${args}`);
-
-  if(args != ''){
+  if(args == ''){
 
     msg.channel.send(`${pfc1[Math.floor(Math.random() * pfc1.length)]}`)
     const filter_1_1 = m => m.author.id === bot.user.id && m.content === `On rappelle pour les débiles :  pierre :fist:    feuille :raised_hand:    ciseaux :v:`;
