@@ -1,24 +1,27 @@
 module.exports.run = async (bot,msg,args) => {
   var temps = 30000;
 
-  if(args != ''){
-    const pfc1 = [`Ha ouai, tu veux qu'on se règle`,`Viens chte bz`];
-    const pfc = ['✊','✋','✌️'];
-    msg.channel.send(`${pfc1[Math.floor(Math.random() * pfc1.length)]}`)
+  const pfc1 = [`Ha ouai, tu veux qu'on se règle`,`Viens chte bz`];
+  const pfc = ['✊','✋','✌️'];
 
-    const filter_1 = m => m.author.id === bot.user.id && m.content === `On rappelle pour les débiles :  pierre :fist:    feuille :raised_hand:    ciseaux :v:`;
-    const collector_1 = msg.channel.createMessageCollector(filter_1, { max: 1,time: temps });
+  const pfc2 =["C'est entre vous","Quelqu'un ose te défier"]
+
+  if(args != ''){
+
+    msg.channel.send(`${pfc1[Math.floor(Math.random() * pfc1.length)]}`)
+    const filter_1_1 = m => m.author.id === bot.user.id && m.content === `On rappelle pour les débiles :  pierre :fist:    feuille :raised_hand:    ciseaux :v:`;
+    const collector_1_1 = msg.channel.createMessageCollector(filter_1_1, { max: 1,time: temps });
     symb = pfc[Math.floor(Math.random() * pfc.length)]
 
     msg.channel.send(`On rappelle pour les débiles :  pierre :fist:    feuille :raised_hand:    ciseaux :v:`)
 
-    collector_1.on('collect', m => {
+    collector_1_1.on('collect', m => {
     	console.log(`Collected :${m.content}`);
 
-      const filter_2 = (reaction, user) => user.id === msg.author.id;
-      const collector_2 = m.createReactionCollector(filter_2, { max: 1,time: temps });
+      const filter_1_2 = (reaction, user) => user.id === msg.author.id;
+      const collector_1_2 = m.createReactionCollector(filter_1_2, { max: 1,time: temps });
 
-      collector_2.on('collect', (reaction, user) => {
+      collector_1_2.on('collect', (reaction, user) => {
   	     console.log(`Collected ${reaction.emoji.name}`);
 
          if (symb ==  '✊'){
@@ -65,14 +68,14 @@ module.exports.run = async (bot,msg,args) => {
       });
 
 
-      collector_2.on('end', collected => {
+      collector_1_2.on('end', collected => {
         if (collected.size == 0) {
           msg.channel.send('Sale couard !')
         }
       });
     });
 
-    collector_1.on('end', collected => {
+    collector_1_1.on('end', collected => {
       if (collected.size == 0) {
         msg.channel.send("Et la c'est le bug, appeller le 36-30")
       }
@@ -87,39 +90,37 @@ module.exports.run = async (bot,msg,args) => {
       return msg.channel.send(`**${args[i]}**, Putain mais c'est personne`)
     }
 
-    const pfc1 =["C'est entre vous","Quelqu'un ose te défier"]
-
     joueur_1.createDM().then(channel_1 => {
-      channel_1.send(`${pfc1[Math.floor(Math.random() * pfc1.length)]}`)
+      channel_1.send(`${pfc2[Math.floor(Math.random() * pfc2.length)]}`)
 
       //---------------------------Message au joueur 1
-      const filter_0 = m => m.author.id === bot.user.id && m.content === `On rappelle pour les débiles :  pierre :fist:    feuille :raised_hand:    ciseaux :v:`;
-      const collector_0 = channel_1.createMessageCollector(filter_0, { max: 1,time: 15000 });
+      const filter_2_0 = m => m.author.id === bot.user.id && m.content === `On rappelle pour les débiles :  pierre :fist:    feuille :raised_hand:    ciseaux :v:`;
+      const collector_2_0 = channel_1.createMessageCollector(filter_2_0, { max: 1,time: 15000 });
       channel_1.send(`On rappelle pour les débiles :  pierre :fist:    feuille :raised_hand:    ciseaux :v:`)
       //collecteur du message envoyée
-      collector_0.on('collect', m => {
+      collector_2_0.on('collect', m => {
       	console.log(`Collected :${m.content}`);
 
     //---------------------------collecteur de l'émoji du joueur 1
-        const filter_1 = (reaction, user) => user.id === msg.author.id;
-        const collector_1 = m.createReactionCollector(filter_1, { max: 1,time: temps });
+        const filter_2_1 = (reaction, user) => user.id === msg.author.id;
+        const collector_2_1 = m.createReactionCollector(filter_2_1, { max: 1,time: temps });
 
-        collector_1.on('collect', (reaction_1, user) => {
+        collector_2_1.on('collect', (reaction_1, user) => {
            console.log(`Collected ${reaction_1.emoji.name}`);
 
     //---------------------------Message au joueur 2
           joueur_2.createDM().then(channel_2 => {
-            channel_2.send(`${pfc1[Math.floor(Math.random() * pfc1.length)]}`)
-            const filter_01 = m => m.author.id === bot.user.id && m.content === `On rappelle pour les débiles :  pierre :fist:    feuille :raised_hand:    ciseaux :v:`;
-            const collector_01 = channel_2.createMessageCollector(filter_0, { max: 1,time: 15000 });
+            channel_2.send(`${pfc2[Math.floor(Math.random() * pfc2.length)]}`)
+            const filter_2_01 = m => m.author.id === bot.user.id && m.content === `On rappelle pour les débiles :  pierre :fist:    feuille :raised_hand:    ciseaux :v:`;
+            const collector_2_01 = channel_2.createMessageCollector(filter_2_0, { max: 1,time: 15000 });
             channel_2.send(`On rappelle pour les débiles :  pierre :fist:    feuille :raised_hand:    ciseaux :v:`)
             //collecteur du message envoyée
-            collector_01.on('collect', m => {
+            collector_2_01.on('collect', m => {
             console.log(`Collected :${m.content}`);
 
       //---------------------------collecteur de l'émoji du joueur 2
-              const filter_2 = (reaction, user) => user.id === joueur_2.id;
-              const collector_2 = m.createReactionCollector(filter_2, { max: 1,time: temps });
+              const filter_2_2 = (reaction, user) => user.id === joueur_2.id;
+              const collector_2_2 = m.createReactionCollector(filter_2_2, { max: 1,time: temps });
               collector_2.on('collect', (reaction_2, user) => {
                  console.log(`Collected ${reaction_2.emoji.name}`);
 
@@ -172,7 +173,7 @@ module.exports.run = async (bot,msg,args) => {
                  }else{joueur_1.send(`Apprend à jouer avec $help`)}
               });
 
-              collector_2.on('end', collected => {
+              collector_2_2.on('end', collected => {
                 if (collected.size == 0) {
                   joueur_2.send('Sale couard !')
                   joueur_1.send('Ton adversaire a fui !')
@@ -183,7 +184,7 @@ module.exports.run = async (bot,msg,args) => {
         });
 
 
-        collector_1.on('end', collected => {
+        collector_2_1.on('end', collected => {
           if (collected.size == 0) {
             joueur_1.send('Sale couard !')
             joueur_2.send('Ton adversaire a fui !')
@@ -191,14 +192,15 @@ module.exports.run = async (bot,msg,args) => {
         });
       });
 
-      collector_0.on('end', collected => {
+      collector_2_0.on('end', collected => {
         if (collected.size == 0) {
           msg.channel.send("Et la c'est le bug, appeller le 36-30")
         }
       });
-
     })
+
   }
+
 }
 
 module.exports.help = {
