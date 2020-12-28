@@ -1,6 +1,6 @@
 module.exports.run = async (bot, msg, args)=> {
   let cible = msg.mentions.members.first();
-  const audio = './src/Audio/Jadore_rire.mp3'
+  const audio = './src/Audio/jadore_rire.mp3'
 
   if (args != ''){
     if (cible) {//Si la cible existe que se soit l'autheur ou un autre membre
