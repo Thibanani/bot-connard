@@ -1,5 +1,3 @@
-const Attachment = require('discord.js')
-
 module.exports.run = async (bot,msg,args) => {
 
   const charlou = ["Hello","Helloooooooooooooooooooooooooooo","Wow '^'","'^'","C'est Génial!",":sheep:","C'était Génial!"];
