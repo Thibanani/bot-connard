@@ -9,7 +9,7 @@ module.exports.run = async (bot, msg, args)=> {
       const connection = await cible.voice.channel.join();
       const dispatcher = connection.play(audio);//, {volume: 2});
 
-      dispatcher.setVolume(1);
+      dispatcher.setVolume(0.5);
 
       dispatcher.on('finish', () => {
          connection.disconnect();
@@ -24,7 +24,7 @@ module.exports.run = async (bot, msg, args)=> {
     const connection = await msg.member.voice.channel.join();
     const dispatcher = connection.play(audio);//, {volume: 2});
 
-    dispatcher.setVolume(1);
+    dispatcher.setVolume(0.5);
 
     dispatcher.on('finish', () => {
        connection.disconnect();
