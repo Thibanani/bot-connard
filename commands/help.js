@@ -10,12 +10,12 @@ module.exports.run = async (bot,msg,args) => {
   	.addFields( /*------------------- Pour Les commande vocale -------------*/
       { name: '\u200B', value: '\u200B' },
   		{ name: 'Mes meilleurs réactions vocale',
-      value: "$c : Pour en mettre plein la gueule à tes ennemis \n $tg : Pour fermer le claper de tes adversaires \n $q : Pour reçevoir ta question existentielle \n $r : Pour reçevoir la réponse existentielle \n $qr : Pour un max de mix \n $oof : Pour exprimer ton soulagement \n $vtfe : Pour détourner tes ennemis du droit chemin \n $spvntr : Nique un max de mére \n $tomber : Activité favorite de charlou \n $acc : PIERRE GASLY \n $clap : tape dans tes mains \n $maman : c'est dure comme... \n $jacceptepas : Ma meilleur phrase philosophique \n $rire : JE RIGOLE ENFAITE \n $FDP : T'es vraiment con \n $suicide : Je pense que quelqu'un est mal \n $topette : Juste la meilleur commande", inline: true },
+      value: "$c : Pour en mettre plein la gueule à tes ennemis \n $tg : Pour fermer le claper de tes adversaires \n $q : Pour reçevoir ta question existentielle \n $r : Pour reçevoir la réponse existentielle \n $qr : Pour un max de mix \n $oof : Pour exprimer ton soulagement \n $vtfe : Pour détourner tes ennemis du droit chemin \n $spvntr : Nique un max de mére \n $tomber : Activité favorite de charlou \n $acc : PIERRE GASLY \n $clap : Tape dans tes mains \n $maman : C'est dure comme... \n $jacceptepas : Ma meilleur phrase philosophique \n $rire : JE RIGOLE ENFAITE \n $FDP : T'es vraiment con \n $suicide : Je pense que quelqu'un est mal \n $topette : Juste la meilleur commande", inline: true },
   	)
     .addFields(/*------------------- Pour Les commande texte -------------*/
   		{ name: '\u200B', value: '\u200B' },
   		{ name: 'Mes meilleurs commandes texte',
-      value: "$Leboss : C'est toi le Boss ? \n $Charlou : :sheep: \n $PDF : Pour un max de rigolade \n $PFC : Teste moi dans un duel a mort \n $clean [N] Pour suprimer N message \n $motiv : A utiliser sans modération :Motiv:", inline: true },
+      value: "$Leboss : C'est toi le Boss ? \n $Charlou : :sheep: \n $PDF : Pour un max de rigolade \n $PFC : Teste moi dans un duel a mort \n $clean [N] Pour suprimer N message \n $tinder : Si tu habite dans la Moselle, et tu cherche des milfs \n $motiv : A utiliser sans modération :Motiv:", inline: true },
       { name: '\u200B', value: '\u200B' },
   	)
   	.setTimestamp()
