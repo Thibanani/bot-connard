@@ -1,6 +1,7 @@
 module.exports.run = async (bot, msg, args)=> {
   let cible = msg.mentions.members.first();
   const audio = './src/Audio/AQSV.mp3'
+  const volume = 2
   //console.log(cible);
 
   if (args != ''){
@@ -9,7 +10,7 @@ module.exports.run = async (bot, msg, args)=> {
       const connection = await cible.voice.channel.join();
       const dispatcher = connection.play(audio);//, {volume: 2});
 
-      dispatcher.setVolume(2);
+      dispatcher.setVolume(volume);
 
       dispatcher.on('finish', () => {
          connection.disconnect();
@@ -24,7 +25,7 @@ module.exports.run = async (bot, msg, args)=> {
     const connection = await msg.member.voice.channel.join();
     const dispatcher = connection.play(audio);//, {volume: 2});
 
-    dispatcher.setVolume(2);
+    dispatcher.setVolume(volume);
 
     dispatcher.on('finish', () => {
        connection.disconnect();
