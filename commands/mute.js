@@ -1,5 +1,5 @@
 module.exports.run = async (bot, msg, args)=> {
-  const audio = './src/Audio/connard.mp3'
+  const audio = './src/Audio/taggl.mp3'
   const volume = 0.5
 
   msg.channel.bulkDelete(1);
