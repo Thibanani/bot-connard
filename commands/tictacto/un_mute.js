@@ -12,7 +12,7 @@ module.exports.run = async (bot, msg, args)=> {
     return msg.channel.send(`**${msg.author.username}**, ... j'aimerai bien`)
   }
 
-  let channel = message.member.voiceChannel;
+  let channel = msg.member.voiceChannel;
   for (let member of channel.members) {
       member[1].setMute(true)
   }
