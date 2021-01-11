@@ -13,7 +13,7 @@ module.exports.run = async (bot, msg, args)=> {
     return msg.channel.send(`**${msg.author.username}**, ... j'aimerai bien`)
   }
 
-  if (ags != ''){
+  if (args != ''){
     /*---------- Vérification de l'id a kick ----------*/
     let target = msg.mentions.members.first();
 
