@@ -29,7 +29,7 @@ module.exports.run = async (bot, msg, args)=> {
     else {
       tab_membres = msg.member.voice.channel.members;
 
-      for(i=0; i<=tab_membres.length()-1; i++){
+      for(i=0; i<=tab_membres.length-1; i++){
         tab_membres[i].voice.setMute(true,"Oui")
       }
     }
