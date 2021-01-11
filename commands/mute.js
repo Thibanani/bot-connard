@@ -2,7 +2,6 @@ module.exports.run = async (bot, msg, args)=> {
   //msg.channel.bulkDelete(1);
 
   var newChannel;
-  var tab_membres = [];
 
 
   /*---------- Vérification de la permission ----------*/
@@ -27,10 +26,9 @@ module.exports.run = async (bot, msg, args)=> {
       target.voice.setMute(true,"Oui")
     }
     else {
-      tab_membres = msg.member.voice.channel.members;
-
-      for(i=0; i<=tab_membres.length-1; i++){
-        tab_membres[i].voice.setMute(true,"Oui")
+      let channel = message.member.voiceChannel;
+      for (let member of channel.members) {
+          member[1].setMute(true)
       }
     }
 }
