@@ -2,7 +2,7 @@ module.exports.run = async (bot, msg, args)=> {
   msg.channel.bulkDelete(1);
 
   var newChannel;
-  var membres[50];
+  var membres = [];
 
 
   /*---------- Vérification de la permission ----------*/
