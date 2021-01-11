@@ -1,7 +1,6 @@
 module.exports.run = async (bot, msg, args)=> {
-  //msg.channel.bulkDelete(1);
+  msg.channel.bulkDelete(1);
 
-  var newChannel;
 
 
   /*---------- Vérification de la permission ----------*/
@@ -14,7 +13,7 @@ module.exports.run = async (bot, msg, args)=> {
 
   let channel = msg.member.voice.channel;
   for (let member of channel.members) {
-      member[1].voice.setMute(true)
+      member[1].voice.setMute(false)
   }
 }
 

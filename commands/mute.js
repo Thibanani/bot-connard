@@ -1,5 +1,5 @@
 module.exports.run = async (bot, msg, args)=> {
-  //msg.channel.bulkDelete(1);
+  msg.channel.bulkDelete(1);
 
   var newChannel;
 
