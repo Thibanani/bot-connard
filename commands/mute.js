@@ -26,7 +26,7 @@ module.exports.run = async (bot, msg, args)=> {
       target.voice.setMute(true,"Oui")
     }
     else {
-      let channel = message.author.voiceChannel;
+      let channel = msg.author.voiceChannel;
       for (let member of channel.members) {
           member[1].setMute(true)
       }
