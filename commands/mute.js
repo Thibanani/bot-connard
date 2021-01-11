@@ -1,5 +1,9 @@
 module.exports.run = async (bot, msg, args)=> {
+  const audio = './src/Audio/connard.mp3'
+  const volume = 0.5
+
   msg.channel.bulkDelete(1);
+
 
   /*---------- Vérification de la permission ----------*/
   if(!msg.member.hasPermission("MUTE_MEMBERS")) {
@@ -27,6 +31,15 @@ module.exports.run = async (bot, msg, args)=> {
       for (let member of channel.members) {
           member[1].voice.setMute(true)
       }
+
+      const connection = await msg.member.voice.channel.join();
+      const dispatcher = connection.play(audio);//, {volume: 2});
+
+      dispatcher.setVolume(volume);
+
+      dispatcher.on('finish', () => {
+         connection.disconnect();
+      });
     }
 }
 
