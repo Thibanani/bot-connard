@@ -14,8 +14,6 @@ module.exports.run = async (bot, msg, args)=> {
     return msg.channel.send(`**${args[i]}**, Putain mais c'est personne`)
   }*/
 
-
-
   var fin = 0, joueur_prec,joueur_actif, gagnant ='',i,ligne,tour =0;;
   let tab_joueur = [joueur_1,joueur_2];
   var tab_grille = [
