@@ -1,4 +1,4 @@
-const fonction = require('./src/Lib/fonction_tictacto.js');
+const fonction = require('../src/Lib/fonction_tictacto.js');
 
 module.exports.run = async (bot, msg, args)=> {
   var temps = 100000;

@@ -1,4 +1,4 @@
-const fonction = require('./src/Lib/fonction_puissance_4.js');
+const fonction = require('../src/Lib/fonction_puissance_4.js');
 
 module.exports.run = async (bot, msg, args)=> {
   var temps = 100000;
