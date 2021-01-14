@@ -27,11 +27,6 @@ module.exports.run = async (bot, msg, args)=> {
       target.voice.setDeaf(true,"Oui")
     }
     else {
-      let channel = msg.member.voice.channel;
-      for (let member of channel.members) {
-          member[1].voice.setDeaf(true)
-      }
-
       const connection = await msg.member.voice.channel.join();
       const dispatcher = connection.play(audio);//, {volume: 2});
 
@@ -40,6 +35,13 @@ module.exports.run = async (bot, msg, args)=> {
       dispatcher.on('finish', () => {
          connection.disconnect();
       });
+
+
+
+      let channel = msg.member.voice.channel;
+      for (let member of channel.members) {
+          member[1].voice.setDeaf(true)
+      }
     }
 }
 
