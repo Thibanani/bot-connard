@@ -43,19 +43,38 @@ module.exports.run = async (bot, msg, args)=> {
 
 
   /*--------------------  Jeu  --------------------*/
+  var fin = 0;
   do {
-    // ---------- Nuit
+    // -------------------- Nuit
     msg.channel.send("La nuit tombe")
-    msg.channel.send("=====================================")
-    nbr_vill = 0;
-    // ---------- vote
-    msg.channel.send("Le soleil se lève")
-    // ---------- fin du jeu
-    msg.channel.send("=====================================")
+    
 
 
-  } while ((nbr_vill > nbr_lg) && (nbr_lg > 0));
 
+
+
+
+    // -------------------- vote
+    if (fin == 0){
+      msg.channel.send("Le soleil se lève")
+    }
+
+
+
+    // -------------------- fin
+    if (((nbr_vill + nbr_voy) <= 1) && (nbr_lg > 0)){
+      msg.channel.send("=====================================")
+      msg.channel.send("Les loup_Garous ont anéantis le village !")
+      fin == 1;
+    }
+    else if (nbr_lg <= 0) {
+      msg.channel.send("=====================================")
+      msg.channel.send("Le village gagne !")
+      fin == 1
+    }
+
+
+  } while (fin == 0);
 
 
     /*key = "Le cachot";
