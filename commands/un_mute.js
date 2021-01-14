@@ -12,6 +12,7 @@ module.exports.run = async (bot, msg, args)=> {
   let channel = msg.member.voice.channel;
   for (let member of channel.members) {
       member[1].voice.setMute(false)
+      member[1].voice.setDeaf(false)
   }
 }
 
