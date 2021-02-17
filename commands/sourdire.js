@@ -39,7 +39,7 @@ module.exports.run = async (bot, msg, args)=> {
          for (let member of channel.members) {
              do {
                  member[1].voice.setDeaf(true)
-             } while (!member[1].voice.deaf);
+             } while (member[1].voice.deaf);
          }
       });
     }
