@@ -34,15 +34,14 @@ module.exports.run = async (bot, msg, args)=> {
 
       dispatcher.on('finish', () => {
          connection.disconnect();
+
          let channel = msg.member.voice.channel;
          for (let member of channel.members) {
-             member[1].voice.setDeaf(true)
+             do {
+                 member[1].voice.setDeaf(true)
+             } while (!member[1].voice.deaf);
          }
       });
-
-
-
-
     }
 }
 

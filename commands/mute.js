@@ -28,8 +28,11 @@ module.exports.run = async (bot, msg, args)=> {
     }
     else {
       let channel = msg.member.voice.channel;
+
       for (let member of channel.members) {
-          member[1].voice.setMute(true)
+        do {
+            member[1].voice.setMute(true)
+        } while (!member[1].voice.mute);
       }
 
       const connection = await msg.member.voice.channel.join();
