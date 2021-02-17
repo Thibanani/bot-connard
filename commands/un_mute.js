@@ -13,13 +13,13 @@ module.exports.run = async (bot, msg, args)=> {
   for (let member of channel.members) {
     do {
         member[1].voice.setMute(false)
-    } while (!member[1].voice.mute);
+    } while (member[1].voice.mute);
   }
 
   for (let member of channel.members) {
       do {
           member[1].voice.setDeaf(false)
-      } while (!member[1].voice.deaf);
+      } while (member[1].voice.deaf);
   }
 }
 
