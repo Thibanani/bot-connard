@@ -1,6 +1,7 @@
 module.exports.run = async (bot, msg, args)=> {
     let cible = msg.mentions.members.first();
-    const audio = './src/Audio/xbox_1.mp3'
+    //const audio = './src/Audio/XBOX_1.mp3'
+    const audio = './src/Audio/XBOX_'+ (Math.floor(Math.random() * 4) +1) +'.mp3'
     const volume = 1
     //console.log(cible);
 
