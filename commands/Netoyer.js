@@ -1,7 +1,7 @@
 module.exports.run = async (bot, msg, args)=> {
   let cible = msg.mentions.members.first();
   const audio = './src/Audio/Netoyer.mp3'
-  const volume = 0.5
+  const volume = 0.25
   //console.log(cible);
 
   if (args != ''){
