@@ -1,6 +1,6 @@
 module.exports.run = async (bot, msg, args)=> {
   let cible = msg.mentions.members.first();
-  const audio = 'https://www.youtube.com/watch?v=wNch1OqYgIM'
+  const audio = 'https://youtu.be/wNch1OqYgIM'
   const volume = 0.25
   //console.log(cible);
 
