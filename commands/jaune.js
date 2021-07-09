@@ -23,7 +23,7 @@ module.exports.run = async (bot, msg, args)=> {
   }else {
 
     const connection = await msg.member.voice.channel.join();
-    const dispatcher = connection.play(ytdl(audio, { quality: 'highestaudio' }))
+    const dispatcher = connection.play(ytdl(audio, {filter: 'audioonly'}), { type: 'opus' });
 
     dispatcher.setVolume(volume);
 
