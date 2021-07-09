@@ -3,7 +3,6 @@ module.exports.run = async (bot, msg, args)=> {
   let cible = msg.mentions.members.first();
   const audio = 'https://youtu.be/wNch1OqYgIM'
   const volume = 0.25
-  //console.log(cible);
 
   if (args != ''){
     if (cible) {//Si la cible existe que se soit l'autheur ou un autre membre
