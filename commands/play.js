@@ -8,6 +8,7 @@ module.exports.run = async (bot, msg, args)=> {
 
   if(args != '') {
     const audio = args[1];
+    console.log('arguments ${audio}')
     const volume = 0.25;
     const connection = await msg.member.voice.channel.join();
     const dispatcher = connection.play( await ytdl(audio, {filter: 'audioonly'}));
