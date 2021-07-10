@@ -9,7 +9,7 @@ module.exports.run = async (bot, msg, args)=> {
       if (cible) {//Si la cible existe que se soit l'autheur ou un autre membre
         msg.channel.bulkDelete(1);
         const connection = await cible.voice.channel.join();
-        const dispatcher = connection.play(audio);//, {volume: 2});
+        const dispatcher = connection.play(audio);
 
         dispatcher.setVolume(1);
 
@@ -24,7 +24,7 @@ module.exports.run = async (bot, msg, args)=> {
     }else {
 
       const connection = await msg.member.voice.channel.join();
-      const dispatcher = connection.play(audio);//, {volume: 2});
+      const dispatcher = connection.play(audio);
 
       dispatcher.setVolume(1);
 
