@@ -8,7 +8,7 @@ module.exports.run = async (bot, msg, args)=> {
     if (cible) {//Si la cible existe que se soit l'autheur ou un autre membre
       msg.channel.bulkDelete(1);
       const connection = await cible.voice.channel.join();
-      const dispatcher = connection.play( await ytdl(audio, {filter: 'audioonly'}), { type: 'opus' });
+      const dispatcher = connection.play( await ytdl(audio, {filter: 'audioonly'}));
 
       dispatcher.setVolume(volume);
 
@@ -23,7 +23,7 @@ module.exports.run = async (bot, msg, args)=> {
   }else {
 
     const connection = await msg.member.voice.channel.join();
-    const dispatcher = connection.play( await ytdl(audio, {filter: 'audioonly'}), { type: 'opus' });
+    const dispatcher = connection.play( await ytdl(audio, {filter: 'audioonly'}));
 
     dispatcher.setVolume(volume);
 
