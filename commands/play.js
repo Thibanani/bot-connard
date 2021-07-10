@@ -18,13 +18,13 @@ module.exports.run = async (bot, msg, args)=> {
       });
 
 
-      const dispatcher = connection.play( await ytdl(audio, {filter: 'audioonly'}));
+      /*const dispatcher = connection.play( await ytdl(audio, {filter: 'audioonly'}));
 
       dispatcher.setVolume(volume);
 
       dispatcher.on('finish', () => {
          connection.disconnect();
-      });
+      });*/
 
     });
   }
