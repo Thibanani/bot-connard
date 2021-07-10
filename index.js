@@ -44,14 +44,18 @@ bot.on('message', async (msg) =>{
     }
 
 
-  }else if(msg.content.startsWith(config.prefix)){/*------- Command -------*/
+  }else if(msg.content.startsWith(config.prefix)){/*------- Commande -------*/
 
     cmdArray = msg.content.substring(config.prefix.length).split(" ")
     cmd = cmdArray[0]
     args = cmdArray.slice(1)
-
-    let command = commands.getCommand(cmd);
-    if(command) command.run(bot, msg, args);
+    try {
+      let command = commands.getCommand(cmd);
+      if(command) command.run(bot, msg, args);
+    }
+    catch(error) {
+      console.log('erreur ${error}');
+    };
   }
 });
 
