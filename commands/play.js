@@ -7,7 +7,7 @@ module.exports.run = async (bot, msg, args)=> {
 
 
   if(args != '') {
-    const audio = args[1];
+    const audio = args;
     console.log('arguments ${audio}')
     const volume = 0.25;
     const connection = await msg.member.voice.channel.join();
