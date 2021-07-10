@@ -13,7 +13,7 @@ module.exports.run = async (bot, msg, args)=> {
     const volume = 0.25;
     await msg.member.voice.channel.join().then((connection) => {
 
-      ytsr(args,{key: config.Google, maxResults: 1,type 'video'}).then((results) => {
+      ytsr(args,{key: config.Google, maxResults: 1,type: 'video'}).then((results) => {
           console.log(results); return
       });
 
