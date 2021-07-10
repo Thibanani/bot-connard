@@ -1,7 +1,7 @@
 const config = {
   prefix: "$",
   token: process.env.BOT_TOKEN,
-  GOOGLE: process.env.GOOGLE_API
+  Google: process.env.GOOGLE_API
 
 };
 
