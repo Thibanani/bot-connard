@@ -1,5 +1,5 @@
 module.exports.run = async (bot, msg, args)=> {
-  const ytdl = require('ytdl-core-discord');
+  const ytdl = require('ytdl-core');
   let cible = msg.mentions.members.first();
   const audio = 'https://www.youtube.com/watch?v=wNch1OqYgIM'
   const volume = 0.25
