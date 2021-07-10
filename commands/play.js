@@ -7,7 +7,7 @@ const ytsr = require('youtube-search');
 module.exports.run = async (bot, msg, args)=> {
 
   if(args != '') {
-    const serveur = message.bot.serveur;
+    const serveur = msg.bot.serveur;
     const audio = args;
 
     const volume = 0.25;
