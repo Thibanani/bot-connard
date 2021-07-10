@@ -14,7 +14,7 @@ module.exports.run = async (bot, msg, args)=> {
     await msg.member.voice.channel.join().then((connection) => {
 
       ytsr(args,{key: config.Google, maxResults: 1,type: 'video'}).then((results) => {
-          console.log(results); return
+          console.log(results); return ();
       });
 
 
