@@ -4,8 +4,6 @@ const ytdl = require('ytdl-core');
 
 module.exports.run = async (bot, msg, args)=> {
 
-
-
   if(args != '') {
     const audio = args;
     console.log('arguments ${audio}')
