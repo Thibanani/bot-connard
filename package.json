@@ -1,17 +1,17 @@
 {
-  "name": "bot-connard",
+  "name": "betazibot",
   "version": "1.0.0",
-  "description": "A discord bot",
+  "description": "",
   "main": "index.js",
-  "repository": "https://github.com/Thibanani/bot-connard.git",
-  "author": "Thibault BANSIERE <thibault.bansiere@etu.univ-nantes.fr>",
-  "license": "MIT",
   "scripts": {
-    "start": "node index.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "author": "",
+  "license": "ISC",
   "dependencies": {
-    "@discordjs/opus": "^0.1.0",
-    "discord.js": "^12.1.1",
+    "@discordjs/opus": "github:discordjs/opus",
+    "discord.js": "^12.5.3",
+    "discord.js-commando": "github:discordjs/Commando",
     "ffmpeg": "0.0.4",
     "ffmpeg-static": "^4.4.0",
     "youtube-search": "^1.1.6",
