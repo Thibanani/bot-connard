@@ -1,33 +1,64 @@
-const { CommandoClient} = require('discord.js-commando');
-const path = require('path');
-const config = require('./config');
+const Discord = require('discord.js');
+const bot = new Discord.Client({DisableEveryone: true});
+const config = require('./config.js');
+const commands = require('./commands.js');
 
-const client = new CommandoClient({
-    commandPrefix: config.prefix,
-    owner: '288369151687393281'
+
+const bonjour = ["Salut beau gosse","Ouai, salut ouai","Yo","Bonjour à toi","HOOOO, sa gambit ou quoi ?","jtm bb","https://tenor.com/view/penguin-hello-hi-heythere-cutie-gif-3950966"];
+const bonsoir = ["Bonsoir","Bonsoir, jeune gueux","Comment von-je ?","https://tenor.com/view/mcfly-carlito-bonsoir-gif-10468909"];
+
+bot.on('ready', async() =>{
+  console.log('Le bot est lancé.');
+  bot.user.setActivity('Québecqwé');
 });
 
-client.registry
-    .registerDefaultTypes()
-    .registerDefaultGroups()
-    //.registerDefaultCommands()
-    .registerGroup('music','Music')
-    .registerGroup('vocal','Vocal')
-    .registerGroup('texte','Texte')
-    .registerCommandsIn(path.join(__dirname, 'commands'));
 
-client.server = {
-    queue: [],
-    currentVideo: { url: "", title: "Rien"},
-    dispatcher: null,
-    connection: null
-};
+/*------------------------------ Réaction message ------------------------------*/
+bot.on('message', async (msg) =>{
+  if((msg.content == 'Bonjour')||(msg.content == 'Salut')||(msg.content == 'Coucou')){/*------- Bonjour -------*/
+    msg.channel.send(bonjour[Math.floor(Math.random() * bonjour.length)])
+
+  }else if(msg.content == 'Bonsoir'){/*------- Bonsoir -------*/
+    msg.channel.send(bonsoir[Math.floor(Math.random() * bonsoir.length)])
+
+  }else if((msg.content == 'Wow')){/*------- Chamy wow -------*/
+
+    msg.channel.send("Juste")
+    msg.channel.send("WOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOW")
+
+  }else if((msg.content == "'^'")){/*------- Charmy emote -------*/
+
+    msg.channel.send(":smiling_imp:")
+
+  }else if((msg.content == "oui")||(msg.content == "Oui")||(msg.content == "OUI")){/*------- Oui -------*/
+    val_temp = Math.floor(Math.random() * 2)
+    if (val_temp == 0){
+      msg.channel.send("O")
+      msg.channel.send("U")
+      msg.channel.send("I")
+    }
+    else {
+      msg.react(`🇴`);
+      msg.react(`🇺`);
+      msg.react(`🇮`);
+    }
 
 
-client.once('ready', () =>{
-    console.log(`Connecté en tant que ${client.user.tag} - (${client.user.id})`)
+  }else if(msg.content.startsWith(config.prefix)){/*------- Commande -------*/
+
+    cmdArray = msg.content.substring(config.prefix.length).split(" ")
+    cmd = cmdArray[0]
+    args = cmdArray.slice(1)
+    try {
+      let command = commands.getCommand(cmd);
+      if(command) command.run(bot, msg, args);
+    }
+    catch(error) {
+      console.log('erreur ${error}');
+    };
+  }
 });
 
-client.on('error',(error) => console.error(error));
 
-client.login(config.token);
+
+bot.login(config.token);
