@@ -1,13 +1,7 @@
 {
-<<<<<<< HEAD
-  "name": "betazibot",
-  "version": "2.0.0",
-  "description": "",
-=======
   "name": "bot-connard",
   "version": "1.0.0",
   "description": "A discord bot",
->>>>>>> parent of 9c624f6 (BOT 2.0)
   "main": "index.js",
   "repository": "https://github.com/Thibanani/bot-connard.git",
   "author": "Thibault BANSIERE <thibault.bansiere@etu.univ-nantes.fr>",
